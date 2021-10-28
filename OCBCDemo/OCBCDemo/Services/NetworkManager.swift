@@ -37,21 +37,21 @@ struct NetworkManager: NetworkManagerProtocol
                      headers: [String : String]?,
                      body: Data?,
                      onSuccess successBlock: @escaping (Data) -> Void,
-                     onFailure failureBlock: @escaping (NSError) -> Void) {
+                     onFailure failureBlock: @escaping (Data?, NSError) -> Void) {
         // check if the device has internet connectivity, either through wifi or cellular
         if isConnectedToNetwork {
             guard let urlRequest = _requestConstructor(urlPath, params: params, method: method, headers: headers, body: body) else {
                 // If the request is not valid.
                 let errorObject = self._errorConstructor(ERROR.INVALID_REQUEST.DOMAIN, code: ERROR.INVALID_REQUEST.CODE, description: ERROR.INVALID_REQUEST.DESCRIPTION)
-                failureBlock(errorObject)
+                failureBlock(nil, errorObject)
                 return
             }
             _sessionDataTask(urlRequest, onSuccess: successBlock, onFailure: failureBlock)
         }
         else {
-            // If no internet to make a call, invoke the nonetwork error.
+            // If no internet to make a call, invoke the no-network error.
             let errorObject = self._errorConstructor(ERROR.NO_INTERNET.DOMAIN, code: ERROR.NO_INTERNET.CODE, description: ERROR.NO_INTERNET.DESCRIPTION)
-            failureBlock(errorObject)
+            failureBlock(nil, errorObject)
         }
     }
     
@@ -60,7 +60,7 @@ struct NetworkManager: NetworkManagerProtocol
     // with appropriate success and failure blocks
     fileprivate func _sessionDataTask(_ urlRequest:URLRequest,
                      onSuccess successBlock:@escaping (Data)->Void,
-                     onFailure failureBlock:@escaping (NSError)->Void) {
+                     onFailure failureBlock:@escaping (Data?, NSError)->Void) {
         // urlsession's dataTask function call to fetch response from backent
         let dataTask = urlSession.dataTask(with: urlRequest) {
             (responseData, urlResponse, error) in
@@ -81,25 +81,25 @@ struct NetworkManager: NetworkManagerProtocol
                             // such case should never exist.
                             // something wrong on microservices - report to the respective team.
                             let errorObject = self._errorConstructor(ERROR.PARSING.DOMAIN, code: ERROR.PARSING.CODE, description: ERROR.PARSING.DESCRIPTION)
-                            failureBlock(errorObject)
+                            failureBlock(responseData, errorObject)
                         }
                     } else {
                         // if api call returns any other status code apart from success,
                         // construct the respective error and invoke the failure block
                         let errorObject = self._errorConstructor(ERROR.HTTPURLRESPONSE.DOMAIN, code: urlResponse.statusCode, description: HTTPURLResponse.localizedString(forStatusCode: urlResponse.statusCode))
-                        failureBlock(errorObject)
+                        failureBlock(responseData, errorObject)
                     }
                 } else {
                     // Oops we should never get here in the first place. Abort!!
                     // URLResponse is not convertable to HTTPURLResponse - such case should never exist.
                     // Report this bug to APPLE team.
                     let errorObject = self._errorConstructor(ERROR.PARSING.DOMAIN, code: ERROR.PARSING.CODE, description: ERROR.PARSING.DESCRIPTION)
-                    failureBlock(errorObject)
+                    failureBlock(responseData, errorObject)
                 }
             } else {
                 // if api call returned an error
                 // invoke failure block with the same error
-                failureBlock(error! as NSError)
+                failureBlock(responseData, error! as NSError)
             }
         }
         dataTask.resume()

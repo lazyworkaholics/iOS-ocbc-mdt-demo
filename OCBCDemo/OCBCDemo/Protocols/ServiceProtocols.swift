@@ -18,5 +18,28 @@ protocol NetworkManagerProtocol
                      headers: [String: String]?,
                      body: Data?,
                      onSuccess successBlock:@escaping (Data)->Void,
-                     onFailure failureBlock:@escaping (NSError)->Void)
+                     onFailure failureBlock:@escaping (Data?, NSError)->Void)
+}
+
+protocol ServiceManagerProtocol
+{
+    func login( _ userName: String, password: String,
+                onSuccess successBlock: @escaping (Session) -> Void,
+                onFailure failureBlock: @escaping (Session?, NSError) -> Void)
+    
+    func getBalance( _ token: String,
+                     onSuccess successBlock: @escaping (BalanceGetter) -> Void,
+                     onFailure failureBlock: @escaping (Session?, NSError) -> Void)
+    
+    func getPayees( _ token: String,
+                    onSuccess successBlock: @escaping (PayeeGetter) -> Void,
+                    onFailure failureBlock: @escaping (Session?, NSError) -> Void)
+    
+    func getTransactions( _ token: String,
+                          onSuccess successBlock: @escaping (TransactionGetter) -> Void,
+                          onFailure failureBlock: @escaping (Session?, NSError) -> Void)
+    
+    func makeTransfer( _ token: String, transfer: Transfer,
+                       onSuccess successBlock: @escaping (MakeTransfer) -> Void,
+                       onFailure failureBlock: @escaping (Session?, NSError) -> Void)
 }

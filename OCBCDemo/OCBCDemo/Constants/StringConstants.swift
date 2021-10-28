@@ -9,9 +9,28 @@ import Foundation
 
 struct NETWORK {
     static let BASE_URL = "http://localhost:8080/"
-    static let EDIT_SYMBOL_PRE_RELATIVE_PATH = "query"
-    static let PARAM_FUNCTION = "function"
-    static let API_KEY = "apikey"
+    struct HEADERS {
+        static let CONTENT_TYPE = "Content-Type"
+        static let APP_JSON = "application/json"
+        static let ACCEPT = "Accept"
+        static let AUTHORIZATION = "Authorization"
+    }
+    struct BODY {
+        static let USERNAME = "username"
+        static let PASSWORD = "password"
+    }
+    struct PATH {
+        static let LOGIN = "authenticate/login"
+        static let BALANCE = "account/balances"
+        static let PAYEES = "account/payees"
+        static let TRANSACTIONS = "account/transactions"
+        static let TRANSFER = "transfer"
+    }
+    struct RESPONSE {
+        struct KEYS {
+            
+        }
+    }
 }
 
 struct ERROR {

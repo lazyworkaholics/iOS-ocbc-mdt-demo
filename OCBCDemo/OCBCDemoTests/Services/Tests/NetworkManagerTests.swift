@@ -42,7 +42,7 @@ class NetworkManagerTests: XCTestCase {
                                             XCTFail("Success block should not be called if there is an internal server error.")
         },
                                           onFailure: {
-                                            (error) in
+                                            (data, error) in
                                             XCTAssertEqual(500, error.code, "Error object should return error code 500")
         })
     }
@@ -61,7 +61,7 @@ class NetworkManagerTests: XCTestCase {
                                             XCTFail("Success block should not be called if there is no network connection.")
         },
                                           onFailure: {
-                                            (error) in
+                                            (data, error) in
                                             XCTAssertEqual(ERROR.NO_INTERNET.CODE, error.code, "Error object should return error code 1009")
         })
     }
@@ -89,7 +89,7 @@ class NetworkManagerTests: XCTestCase {
                                             (responseData) in
                                             XCTAssertEqual(responseData, mockResponseData, "response data is mismatched")
         },
-                                          onFailure: { (error) in
+                                          onFailure: { (data, error) in
                                             XCTFail("Error should not be received for this success scenario")
                                             
         })
@@ -119,7 +119,7 @@ class NetworkManagerTests: XCTestCase {
                                             (responseData) in
                                             XCTFail("Success block should not be called if there is no data in response.")
         },
-                                          onFailure: { (error) in
+                                          onFailure: { (data, error) in
                                             XCTAssertEqual(ERROR.PARSING.CODE, error.code, "Error object should return error code 1010")
         })
     }
@@ -147,7 +147,7 @@ class NetworkManagerTests: XCTestCase {
                                             (responseData) in
                                             XCTFail("Success block should not be called if the status code is non 200s")
         },
-                                          onFailure: { (error) in
+                                          onFailure: { (data, error) in
                                             XCTAssertEqual(400, error.code, "Error object should return error code 400 as specified above")
         })
     }
@@ -173,7 +173,7 @@ class NetworkManagerTests: XCTestCase {
                                             (responseData) in
                                             XCTFail("Success block should not be called if there is no response.")
         },
-                                          onFailure: { (error) in
+                                          onFailure: { (data, error) in
                                             XCTAssertEqual(ERROR.PARSING.CODE, error.code, "Error object should return error code 1010")
         })
     }
@@ -198,7 +198,7 @@ class NetworkManagerTests: XCTestCase {
                                             (responseData) in
                                             XCTFail("Success block should not be called if there is error in response.")
         },
-                                          onFailure: { (error) in
+                                          onFailure: { (data, error) in
                                             XCTAssertEqual(error1, error, "Error object should match as specified above")
         })
     }
@@ -218,7 +218,7 @@ class NetworkManagerTests: XCTestCase {
                                             XCTFail("Success block should not be called if there is an internal server error.")
         },
                                           onFailure: {
-                                            (error) in
+                                            (data, error) in
                                             XCTAssertEqual(ERROR.INVALID_REQUEST.CODE, error.code, "Error object should return error code 500")
         })
     }
