@@ -3,5 +3,5 @@ os: osx
 osx_image: xcode12.5.1
 xcode_project: OCBCDemo/OCBCDemo.xcodeproj
 xcode_scheme: OCBCDemoTests
-xcode_destination: platform=iOS Simulator,OS=13.1,name=iPhone XR
-script: xcodebuild -project OCBCDemo/OCBCDemo.xcodeproj -scheme OCBCDemoTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone XR,OS=13.1' build test
+xcode_destination: platform=iOS Simulator,OS=14.5,name=iPhone 12
+script: xcodebuild -project OCBCDemo/OCBCDemo.xcodeproj -scheme OCBCDemoTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12,OS=14.5' build test
