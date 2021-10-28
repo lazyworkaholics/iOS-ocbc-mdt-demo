@@ -8,6 +8,7 @@
 import Foundation
 
 enum ServiceStatus: Decodable {
+    
     case success
     case failed
     init(from decoder: Decoder) throws {

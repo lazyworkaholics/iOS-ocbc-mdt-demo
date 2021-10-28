@@ -32,7 +32,7 @@ struct Transfer: Codable {
             dateString = try container.decodeIfPresent(String.self, forKey: .dateString)
             description = try container.decodeIfPresent(String.self, forKey: .description)
         } catch {
-            print(error.localizedDescription)
+            throw error
         }
     }
     
@@ -42,7 +42,6 @@ struct Transfer: Codable {
         self.dateString = dateString
         self.description = description
     }
-    
 }
 
 struct MakeTransfer: Decodable {

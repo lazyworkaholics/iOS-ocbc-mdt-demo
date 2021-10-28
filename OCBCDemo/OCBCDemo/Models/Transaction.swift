@@ -66,7 +66,7 @@ struct Transaction: Decodable {
                 accountName = try nestedContainer.decodeIfPresent(String.self, forKey: .accountName)
             }
         } catch {
-            print(error.localizedDescription)
+            throw error
         }
     }
 }

@@ -111,7 +111,7 @@ struct ServiceManager: ServiceManagerProtocol   {
                        NETWORK.HEADERS.ACCEPT: NETWORK.HEADERS.APP_JSON,
                        NETWORK.HEADERS.AUTHORIZATION: token]
         do {
-            let data = try JSONSerialization.data(withJSONObject: transfer, options: JSONSerialization.WritingOptions.prettyPrinted)
+            let data = try JSONEncoder().encode(transfer)
             _networkRequest(urlPath: path, params: nil, method: .POST, headers: headers, body: data,
                             onSuccess: {
                                 transferReport in

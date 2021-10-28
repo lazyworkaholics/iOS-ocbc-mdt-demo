@@ -26,7 +26,7 @@ struct Payee: Decodable {
             accountName = try container.decodeIfPresent(String.self, forKey: .accountName)
             accountNo = try container.decodeIfPresent(String.self, forKey: .accountNo)
         } catch {
-            print(error.localizedDescription)
+            throw error
         }
     }
 }
