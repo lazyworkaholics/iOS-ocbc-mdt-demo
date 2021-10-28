@@ -52,7 +52,7 @@ class TransferTests: XCTestCase {
     // when Transfer's init is invoked with valid parameter, init should return a valid transfer object
     // This function tests for the transfers init
     func test_transfer_init() {
-        let transfer = Transfer.init(with: 200, recipientAccountNo: "TestAccountNo", dateString: "testDate", description: "testDescription")
+        let transfer = Transfer.init(with: 200, recipientAccountNo: "TestAccountNo", dateString: "2021-09-12T00:00:00.000Z", description: "testDescription")
         XCTAssertNotNil(transfer)
     }
 }

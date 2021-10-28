@@ -31,6 +31,7 @@
 		3A65BAE3272AECA100332E69 /* NetworkManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65BAE2272AECA100332E69 /* NetworkManagerMock.swift */; };
 		3A65BAE5272AEE0800332E69 /* ServiceManagerPostServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65BAE4272AEE0800332E69 /* ServiceManagerPostServiceTests.swift */; };
 		3A65BAE7272AF37A00332E69 /* ServiceManagerAllGetServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65BAE6272AF37A00332E69 /* ServiceManagerAllGetServiceTests.swift */; };
+		3A65BAE9272B101600332E69 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65BAE8272B101600332E69 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		3A65BAE2272AECA100332E69 /* NetworkManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerMock.swift; sourceTree = "<group>"; };
 		3A65BAE4272AEE0800332E69 /* ServiceManagerPostServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManagerPostServiceTests.swift; sourceTree = "<group>"; };
 		3A65BAE6272AF37A00332E69 /* ServiceManagerAllGetServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManagerAllGetServiceTests.swift; sourceTree = "<group>"; };
+		3A65BAE8272B101600332E69 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		3A2DB7272729A18600F8AA1E /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				3A65BAE8272B101600332E69 /* Utilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 			files = (
 				3A2DB74C272A8ADD00F8AA1E /* Session.swift in Sources */,
 				3A2DB746272A7CEE00F8AA1E /* Transaction.swift in Sources */,
+				3A65BAE9272B101600332E69 /* Utilities.swift in Sources */,
 				3A2DB738272A439E00F8AA1E /* NetworkManager.swift in Sources */,
 				3A2DB748272A81A500F8AA1E /* Payee.swift in Sources */,
 				3A2DB6FC27299E9900F8AA1E /* ViewController.swift in Sources */,

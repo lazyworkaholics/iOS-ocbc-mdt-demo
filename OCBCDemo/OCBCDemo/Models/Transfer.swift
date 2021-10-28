@@ -12,14 +12,14 @@ struct Transfer: Codable {
     var id: String?
     var recipientAccountNo: String!
     var amount: Double!
-    var dateString: String!
+    var date: Date!
     var description: String!
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case recipientAccountNo = "recipientAccountNo"
         case amount = "amount"
-        case dateString = "date"
+        case date = "date"
         case description = "description"
     }
     
@@ -29,7 +29,7 @@ struct Transfer: Codable {
             id = try container.decodeIfPresent(String.self, forKey: .id)
             recipientAccountNo = try container.decodeIfPresent(String.self, forKey: .recipientAccountNo)
             amount = try container.decodeIfPresent(Double.self, forKey: .amount)
-            dateString = try container.decodeIfPresent(String.self, forKey: .dateString)
+            date = try Utilities().getDate(container.decodeIfPresent(String.self, forKey: .date)!)
             description = try container.decodeIfPresent(String.self, forKey: .description)
         } catch {
             throw error
@@ -39,7 +39,7 @@ struct Transfer: Codable {
     init(with amount: Double, recipientAccountNo: String, dateString: String, description: String) {
         self.amount = amount
         self.recipientAccountNo = recipientAccountNo
-        self.dateString = dateString
+        self.date = Utilities().getDate(dateString)
         self.description = description
     }
 }

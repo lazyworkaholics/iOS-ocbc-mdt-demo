@@ -97,7 +97,7 @@ class ServiceManagerPostServiceTests: XCTestCase {
     func test_makeTransfer_failed() {
         mockNetworkManager?.isSuccess = false
         serviceManagerToTest?.networkManager = mockNetworkManager!
-        serviceManagerToTest?.makeTransfer("*****", transfer: Transfer.init(with: 200, recipientAccountNo: "***", dateString: "***",  description: "***"), onSuccess: {
+        serviceManagerToTest?.makeTransfer("*****", transfer: Transfer.init(with: 200, recipientAccountNo: "***", dateString: "2021-09-12T00:00:00.000Z",  description: "***"), onSuccess: {
             session in
             XCTFail("Success block should not be called if there is an internal network error.")
         }, onFailure: {
@@ -111,7 +111,7 @@ class ServiceManagerPostServiceTests: XCTestCase {
         mockNetworkManager?.isSuccess = true
         serviceManagerToTest?.networkManager = mockNetworkManager!
         mockNetworkManager?.data = "{\"status\":\"success\", \"data\":{\"id\":\"2d6a58fb-f779-47d4-9fa0-4c3a889ae96e\", \"recipientAccountNo\":\"4992-992-9021\", \"amount\":100, \"date\": \"2021-09-12T00:00:00.000Z\", \"description\": \"room rent\"}}".data(using: .utf8)
-        serviceManagerToTest?.makeTransfer("*****", transfer: Transfer.init(with: 200, recipientAccountNo: "***", dateString: "***",  description: "***"), onSuccess: {
+        serviceManagerToTest?.makeTransfer("*****", transfer: Transfer.init(with: 200, recipientAccountNo: "***", dateString: "2021-09-12T00:00:00.000Z",  description: "***"), onSuccess: {
             makeTransfer in
             XCTAssertEqual(makeTransfer.status, .success, "failed to parse the given data into required model")
         }, onFailure: {

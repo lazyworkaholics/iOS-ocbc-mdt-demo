@@ -30,7 +30,7 @@ struct Transaction: Decodable {
     var accountNo: String!
     var accountName: String!
     var description: String?
-    var dateString: String!
+    var date: Date!
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -38,7 +38,7 @@ struct Transaction: Decodable {
         case amount = "amount"
         case currency = "currency"
         case description = "description"
-        case dateString = "date"
+        case date = "date"
         case to = "to"
         case from = "from"
         case accountNo = "accountNo"
@@ -53,7 +53,7 @@ struct Transaction: Decodable {
             description = try container.decodeIfPresent(String.self, forKey: .description)
             amount = try container.decodeIfPresent(Double.self, forKey: .amount)
             currency = try container.decodeIfPresent(String.self, forKey: .currency)
-            dateString = try container.decodeIfPresent(String.self, forKey: .dateString)
+            date = try Utilities().getDate(container.decodeIfPresent(String.self, forKey: .date)!)
             
             if container.allKeys.contains(.to) {
                 let nestedContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .to)
