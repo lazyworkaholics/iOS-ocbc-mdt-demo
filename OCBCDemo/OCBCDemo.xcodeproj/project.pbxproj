@@ -28,6 +28,9 @@
 		3A2DB753272AC8F300F8AA1E /* SessionModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2DB752272AC8F300F8AA1E /* SessionModelTests.swift */; };
 		3A2DB755272AD69A00F8AA1E /* PayeeAndTransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2DB754272AD69A00F8AA1E /* PayeeAndTransactionTests.swift */; };
 		3A2DB757272AE37A00F8AA1E /* TransferTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2DB756272AE37A00F8AA1E /* TransferTests.swift */; };
+		3A65BAE3272AECA100332E69 /* NetworkManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65BAE2272AECA100332E69 /* NetworkManagerMock.swift */; };
+		3A65BAE5272AEE0800332E69 /* ServiceManagerPostServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65BAE4272AEE0800332E69 /* ServiceManagerPostServiceTests.swift */; };
+		3A65BAE7272AF37A00332E69 /* ServiceManagerAllGetServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65BAE6272AF37A00332E69 /* ServiceManagerAllGetServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,9 @@
 		3A2DB752272AC8F300F8AA1E /* SessionModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionModelTests.swift; sourceTree = "<group>"; };
 		3A2DB754272AD69A00F8AA1E /* PayeeAndTransactionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeeAndTransactionTests.swift; sourceTree = "<group>"; };
 		3A2DB756272AE37A00F8AA1E /* TransferTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferTests.swift; sourceTree = "<group>"; };
+		3A65BAE2272AECA100332E69 /* NetworkManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerMock.swift; sourceTree = "<group>"; };
+		3A65BAE4272AEE0800332E69 /* ServiceManagerPostServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManagerPostServiceTests.swift; sourceTree = "<group>"; };
+		3A65BAE6272AF37A00332E69 /* ServiceManagerAllGetServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManagerAllGetServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				3A2DB740272A55FE00F8AA1E /* URLSessionMock.swift */,
+				3A65BAE2272AECA100332E69 /* NetworkManagerMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -243,6 +250,8 @@
 			isa = PBXGroup;
 			children = (
 				3A2DB73D272A556000F8AA1E /* NetworkManagerTests.swift */,
+				3A65BAE4272AEE0800332E69 /* ServiceManagerPostServiceTests.swift */,
+				3A65BAE6272AF37A00332E69 /* ServiceManagerAllGetServiceTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -250,17 +259,9 @@
 		3A2DB74D272AC4F400F8AA1E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3A2DB750272AC58A00F8AA1E /* Mocks */,
 				3A2DB751272AC59100F8AA1E /* Tests */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		3A2DB750272AC58A00F8AA1E /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Mocks;
 			sourceTree = "<group>";
 		};
 		3A2DB751272AC59100F8AA1E /* Tests */ = {
@@ -395,6 +396,9 @@
 			files = (
 				3A2DB753272AC8F300F8AA1E /* SessionModelTests.swift in Sources */,
 				3A2DB757272AE37A00F8AA1E /* TransferTests.swift in Sources */,
+				3A65BAE7272AF37A00332E69 /* ServiceManagerAllGetServiceTests.swift in Sources */,
+				3A65BAE5272AEE0800332E69 /* ServiceManagerPostServiceTests.swift in Sources */,
+				3A65BAE3272AECA100332E69 /* NetworkManagerMock.swift in Sources */,
 				3A2DB755272AD69A00F8AA1E /* PayeeAndTransactionTests.swift in Sources */,
 				3A2DB73E272A556000F8AA1E /* NetworkManagerTests.swift in Sources */,
 				3A2DB741272A55FE00F8AA1E /* URLSessionMock.swift in Sources */,
