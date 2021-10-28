@@ -1,0 +1,46 @@
+//
+//  StringConstants.swift
+//  OCBCDemo
+//
+//  Created by Pabbineedi Harsha on 28/10/21.
+//
+
+import Foundation
+
+struct NETWORK {
+    static let BASE_URL = "http://localhost:8080/"
+    static let EDIT_SYMBOL_PRE_RELATIVE_PATH = "query"
+    static let PARAM_FUNCTION = "function"
+    static let API_KEY = "apikey"
+}
+
+struct ERROR {
+    static let ERROR_MESSAGE_KEY = "Error Message"
+    struct INVALID_REQUEST {
+        static let DOMAIN = "ocbc_demo.local_error.invalid_request"
+        static let CODE = 1008
+        static let DESCRIPTION = "The request is not valid"
+    }
+    struct NO_INTERNET {
+        static let DOMAIN = "ocbc_demo.local_error.no_internet"
+        static let CODE = 1009
+        static let DESCRIPTION = "Internet connection appears to be offline"
+    }
+    struct PARSING {
+        static let DOMAIN = "ocbc_demo.local_error.parsing_failure"
+        static let CODE = 1010
+        static let DESCRIPTION = "Cannot parse response of the httpclient"
+    }
+    struct HTTPURLRESPONSE {
+        static let DOMAIN = "ocbc_demo.local_error.httpurlresponse_error"
+    }
+    struct STATUS_200 {
+        static let DOMAIN = "ocbc_demo.local_error.200_status_error"
+        static let CODE = 1012
+        static let DESCRIPTION = "Internet connection appears to be offline"
+    }
+}
+
+struct LITERALS {
+    
+}

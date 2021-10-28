@@ -12,10 +12,14 @@
 		3A2DB6FF27299E9900F8AA1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DB6FD27299E9900F8AA1E /* Main.storyboard */; };
 		3A2DB70127299E9B00F8AA1E /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DB70027299E9B00F8AA1E /* Icons.xcassets */; };
 		3A2DB70427299E9B00F8AA1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DB70227299E9B00F8AA1E /* LaunchScreen.storyboard */; };
-		3A2DB70F27299E9B00F8AA1E /* OCBCDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2DB70E27299E9B00F8AA1E /* OCBCDemoTests.swift */; };
 		3A2DB7332729A40D00F8AA1E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DB7322729A40D00F8AA1E /* Colors.xcassets */; };
 		3A2DB7342729A43100F8AA1E /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DB70027299E9B00F8AA1E /* Icons.xcassets */; };
 		3A2DB7352729A43500F8AA1E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DB7322729A40D00F8AA1E /* Colors.xcassets */; };
+		3A2DB738272A439E00F8AA1E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2DB737272A439E00F8AA1E /* NetworkManager.swift */; };
+		3A2DB73A272A45FA00F8AA1E /* ServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2DB739272A45FA00F8AA1E /* ServiceProtocols.swift */; };
+		3A2DB73C272A465900F8AA1E /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2DB73B272A465900F8AA1E /* StringConstants.swift */; };
+		3A2DB73E272A556000F8AA1E /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2DB73D272A556000F8AA1E /* NetworkManagerTests.swift */; };
+		3A2DB741272A55FE00F8AA1E /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2DB740272A55FE00F8AA1E /* URLSessionMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +41,13 @@
 		3A2DB70327299E9B00F8AA1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A2DB70527299E9B00F8AA1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A2DB70A27299E9B00F8AA1E /* OCBCDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OCBCDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A2DB70E27299E9B00F8AA1E /* OCBCDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCBCDemoTests.swift; sourceTree = "<group>"; };
 		3A2DB71027299E9B00F8AA1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A2DB7322729A40D00F8AA1E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		3A2DB737272A439E00F8AA1E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		3A2DB739272A45FA00F8AA1E /* ServiceProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocols.swift; sourceTree = "<group>"; };
+		3A2DB73B272A465900F8AA1E /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		3A2DB73D272A556000F8AA1E /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		3A2DB740272A55FE00F8AA1E /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +109,7 @@
 		3A2DB70D27299E9B00F8AA1E /* OCBCDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				3A2DB70E27299E9B00F8AA1E /* OCBCDemoTests.swift */,
+				3A2DB736272A434600F8AA1E /* Services */,
 				3A2DB71027299E9B00F8AA1E /* Info.plist */,
 			);
 			path = OCBCDemoTests;
@@ -124,6 +132,7 @@
 		3A2DB7292729A19C00F8AA1E /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				3A2DB73B272A465900F8AA1E /* StringConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -140,6 +149,7 @@
 		3A2DB72B2729A1B100F8AA1E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3A2DB737272A439E00F8AA1E /* NetworkManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -185,8 +195,34 @@
 		3A2DB7312729A1E500F8AA1E /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				3A2DB739272A45FA00F8AA1E /* ServiceProtocols.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3A2DB736272A434600F8AA1E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3A2DB73F272A55D100F8AA1E /* Mocks */,
+				3A2DB742272A562500F8AA1E /* Tests */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3A2DB73F272A55D100F8AA1E /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3A2DB740272A55FE00F8AA1E /* URLSessionMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		3A2DB742272A562500F8AA1E /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3A2DB73D272A556000F8AA1E /* NetworkManagerTests.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,8 +328,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A2DB738272A439E00F8AA1E /* NetworkManager.swift in Sources */,
 				3A2DB6FC27299E9900F8AA1E /* ViewController.swift in Sources */,
 				3A2DB6F827299E9900F8AA1E /* AppDelegate.swift in Sources */,
+				3A2DB73C272A465900F8AA1E /* StringConstants.swift in Sources */,
+				3A2DB73A272A45FA00F8AA1E /* ServiceProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +340,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A2DB70F27299E9B00F8AA1E /* OCBCDemoTests.swift in Sources */,
+				3A2DB73E272A556000F8AA1E /* NetworkManagerTests.swift in Sources */,
+				3A2DB741272A55FE00F8AA1E /* URLSessionMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
