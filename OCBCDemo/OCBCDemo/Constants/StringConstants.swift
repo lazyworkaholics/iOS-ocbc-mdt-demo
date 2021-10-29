@@ -26,11 +26,6 @@ struct NETWORK {
         static let TRANSACTIONS = "account/transactions"
         static let TRANSFER = "transfer"
     }
-    struct RESPONSE {
-        struct KEYS {
-            
-        }
-    }
 }
 
 struct ERROR {
@@ -60,6 +55,16 @@ struct ERROR {
     }
 }
 
-struct LITERALS {
+struct VIEWCONTROLLERS {
     
+    static let DASHBOARD = "DashboardViewController"
+    static let LOGIN = "LoginViewController"
+    static let TRANSFER = "TransferViewController"
+    static let SETTINGS = "SettingsViewController"
+    static let DETAIL = "DetailViewController"
+}
+
+struct LITERALS {
+    static let MAIN = "Main"
+    static let OK = "OK"
 }

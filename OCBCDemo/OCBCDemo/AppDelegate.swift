@@ -7,18 +7,16 @@
 
 import UIKit
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var apiToken: String?
+    var router:RouterProtocol = Router.sharedInstance
     
-    var viewController: ViewController?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
         window = UIWindow(frame: UIScreen.main.bounds)
-        let storyBoardRef = UIStoryboard.init(name: "Main", bundle: nil)
-        window?.rootViewController = storyBoardRef.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-        window?.makeKeyAndVisible()
+        router.launch()
         return true
     }
 }
-
