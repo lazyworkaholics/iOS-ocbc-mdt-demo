@@ -13,6 +13,20 @@ protocol ViewModelProtocol {
     func reload()
 }
 
+extension ViewModelProtocol {
+    func errorHandlerOnFailure(session:Session?, error:NSError, delegate: ViewModelProtocol) {
+        DataManager.apiToken = nil
+        var message = ""
+        if session?.failureDescription != nil {
+            message = (session?.failureDescription)!
+        } else {
+            message = error.localizedDescription
+        }
+        delegate.showAlert(LITERAL.ERROR, message: message, onClick: nil)
+        delegate.loadingActivity(false)
+    }
+}
+
 protocol LoginProtocol: ViewModelProtocol {
     
 }

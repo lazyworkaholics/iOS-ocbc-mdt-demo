@@ -67,7 +67,7 @@ class LoginViewModelTests: XCTestCase {
         
         let userdefaults = UserDefaults.standard
         XCTAssertEqual(userdefaults.value(forKey: "stored_username") as! String, "test_username")
-        XCTAssertEqual(ServiceManager.token, test_token)
+        XCTAssertEqual(DataManager.apiToken, test_token)
         XCTAssertTrue(mockRouter.is_login_called)
     }
     
@@ -92,13 +92,13 @@ class LoginViewModelTests: XCTestCase {
         viewmodel.serviceManager = mockServiceManager
         
         viewmodel.doLogin(username: "test_username", password: "test_password")
-        XCTAssertNil(ServiceManager.token)
+        XCTAssertNil(DataManager.apiToken)
         XCTAssertTrue(mockDelegate.is_showStaticAlert_Called)
         
         mockServiceManager.mock_error_session = nil
         viewmodel.serviceManager = mockServiceManager
         viewmodel.doLogin(username: "test_username", password: "test_password")
-        XCTAssertNil(ServiceManager.token)
+        XCTAssertNil(DataManager.apiToken)
         XCTAssertTrue(mockDelegate.is_showStaticAlert_Called)
     }
     

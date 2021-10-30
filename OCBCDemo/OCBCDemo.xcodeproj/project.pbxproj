@@ -61,6 +61,13 @@
 		3AA1363B272D17A400DB7C7D /* RouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1363A272D17A400DB7C7D /* RouterMock.swift */; };
 		3AA1363D272D22A800DB7C7D /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1363C272D22A800DB7C7D /* LoginViewModelTests.swift */; };
 		3AA13641272D30C200DB7C7D /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13640272D30C200DB7C7D /* LoginViewControllerTests.swift */; };
+		3AC4479D272D450C00F7E78B /* KeyValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC4479C272D450C00F7E78B /* KeyValueCell.swift */; };
+		3AC4479F272D460200F7E78B /* DashboardViewController+UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC4479E272D460200F7E78B /* DashboardViewController+UIExtension.swift */; };
+		3AC447A1272D505B00F7E78B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447A0272D505B00F7E78B /* DataManager.swift */; };
+		3AC447A3272D5DC800F7E78B /* PayeeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447A2272D5DC800F7E78B /* PayeeCollectionCell.swift */; };
+		3AC447A5272D5E3900F7E78B /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447A4272D5E3900F7E78B /* TransactionCell.swift */; };
+		3AC447A7272D753600F7E78B /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447A6272D753600F7E78B /* Labels.swift */; };
+		3AC447A9272D8E0500F7E78B /* PayeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447A8272D8E0500F7E78B /* PayeeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +136,13 @@
 		3AA1363A272D17A400DB7C7D /* RouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterMock.swift; sourceTree = "<group>"; };
 		3AA1363C272D22A800DB7C7D /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		3AA13640272D30C200DB7C7D /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
+		3AC4479C272D450C00F7E78B /* KeyValueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeyValueCell.swift; path = ../../../../../../../KeyValueCell.swift; sourceTree = "<group>"; };
+		3AC4479E272D460200F7E78B /* DashboardViewController+UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DashboardViewController+UIExtension.swift"; path = "../../../../../../../DashboardViewController+UIExtension.swift"; sourceTree = "<group>"; };
+		3AC447A0272D505B00F7E78B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		3AC447A2272D5DC800F7E78B /* PayeeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeeCollectionCell.swift; sourceTree = "<group>"; };
+		3AC447A4272D5E3900F7E78B /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
+		3AC447A6272D753600F7E78B /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
+		3AC447A8272D8E0500F7E78B /* PayeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +249,7 @@
 			children = (
 				3A2DB749272A85F400F8AA1E /* ServiceManager.swift */,
 				3A2DB737272A439E00F8AA1E /* NetworkManager.swift */,
+				3AC447A0272D505B00F7E78B /* DataManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -254,6 +269,9 @@
 				3AA1361F272C3D8A00DB7C7D /* TextFieldCell.swift */,
 				3AA1362B272CDE2E00DB7C7D /* ButtonCell.swift */,
 				3AA1362D272CE3DF00DB7C7D /* ImageCell.swift */,
+				3AC4479C272D450C00F7E78B /* KeyValueCell.swift */,
+				3AC447A2272D5DC800F7E78B /* PayeeCollectionCell.swift */,
+				3AC447A4272D5E3900F7E78B /* TransactionCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -264,6 +282,7 @@
 				3A2DB6FB27299E9900F8AA1E /* LoginViewController.swift */,
 				3AA1362F272CECC700DB7C7D /* LoginViewController+UIExtension.swift */,
 				3AA13600272BC4F500DB7C7D /* DashboardViewController.swift */,
+				3AC4479E272D460200F7E78B /* DashboardViewController+UIExtension.swift */,
 				3AA13602272BC50C00DB7C7D /* TransferViewController.swift */,
 				3AA13604272BC52700DB7C7D /* DetailViewController.swift */,
 				3AA13610272BCB3400DB7C7D /* SettingsViewController.swift */,
@@ -355,6 +374,8 @@
 			children = (
 				3AA13622272C41F300DB7C7D /* Buttons.swift */,
 				3AA13627272C61E900DB7C7D /* TextFields.swift */,
+				3AC447A6272D753600F7E78B /* Labels.swift */,
+				3AC447A8272D8E0500F7E78B /* PayeeView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -525,19 +546,26 @@
 				3AA13615272BCECF00DB7C7D /* ViewModelProtocols.swift in Sources */,
 				3A65BAEB272B9DF500332E69 /* UIView+Extension.swift in Sources */,
 				3AA13632272D0DAE00DB7C7D /* Literals.swift in Sources */,
+				3AC447A3272D5DC800F7E78B /* PayeeCollectionCell.swift in Sources */,
 				3AA1360D272BC5F900DB7C7D /* DetailViewModel.swift in Sources */,
 				3AA13611272BCB3400DB7C7D /* SettingsViewController.swift in Sources */,
+				3AC447A5272D5E3900F7E78B /* TransactionCell.swift in Sources */,
 				3AA13607272BC54E00DB7C7D /* LoginViewModel.swift in Sources */,
 				3AA13623272C41F300DB7C7D /* Buttons.swift in Sources */,
+				3AC447A7272D753600F7E78B /* Labels.swift in Sources */,
 				3A2DB6F827299E9900F8AA1E /* AppDelegate.swift in Sources */,
+				3AC447A1272D505B00F7E78B /* DataManager.swift in Sources */,
+				3AC4479F272D460200F7E78B /* DashboardViewController+UIExtension.swift in Sources */,
 				3AA1360F272BC67B00DB7C7D /* RouterProtocol.swift in Sources */,
 				3A2DB74A272A85F400F8AA1E /* ServiceManager.swift in Sources */,
+				3AC447A9272D8E0500F7E78B /* PayeeView.swift in Sources */,
 				3AA13620272C3D8A00DB7C7D /* TextFieldCell.swift in Sources */,
 				3AA1362C272CDE2E00DB7C7D /* ButtonCell.swift in Sources */,
 				3A2DB73C272A465900F8AA1E /* Identifiers.swift in Sources */,
 				3AA1361E272C33E100DB7C7D /* Font.swift in Sources */,
 				3A2DB744272A7A1D00F8AA1E /* Transfer.swift in Sources */,
 				3A2DB73A272A45FA00F8AA1E /* ServiceProtocols.swift in Sources */,
+				3AC4479D272D450C00F7E78B /* KeyValueCell.swift in Sources */,
 				3AA135FF272BC40400DB7C7D /* Router.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

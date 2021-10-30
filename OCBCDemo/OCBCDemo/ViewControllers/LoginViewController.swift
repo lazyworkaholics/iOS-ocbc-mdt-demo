@@ -15,8 +15,9 @@ class LoginViewController: UIViewController {
     
     //MARK:- init and viewDidLoads
     class func initWithViewModel(_ viewModel: LoginViewModel) -> LoginViewController {
-        let storyBoardRef = UIStoryboard.init(name: CONSTANTS.MAIN, bundle: nil)
-        let viewController = storyBoardRef.instantiateViewController(withIdentifier: VIEWCONTROLLERS.LOGIN) as! LoginViewController
+//        let storyBoardRef = UIStoryboard.init(name: CONSTANTS.MAIN, bundle: nil)
+//        let viewController = storyBoardRef.instantiateViewController(withIdentifier: VIEWCONTROLLERS.LOGIN) as! LoginViewController
+        let viewController = LoginViewController.init()
         viewController.viewModel = viewModel
         viewController.viewModel.delegate = viewController
         viewController.setupUILayout()
@@ -51,6 +52,7 @@ extension LoginViewController: ButtonCellProtocol {
         if reuseIdentifier == TextFieldCell.reuseidentifier() {
             viewModel.notUsername()
         } else if reuseIdentifier == ButtonCell.reuseidentifier() {
+            dismissKeyboard(UITapGestureRecognizer.init())
             let usernameCell = collectionView.cellForItem(at: IndexPath.init(item: 0, section: 1)) as! TextFieldCell
             let passwordCell = collectionView.cellForItem(at: IndexPath.init(item: 0, section: 2)) as! TextFieldCell
             viewModel.doLogin(username: usernameCell.textField.text ?? "", password: passwordCell.textField.text ?? "")

@@ -42,4 +42,7 @@ protocol ServiceManagerProtocol
     func makeTransfer( _ token: String, transfer: Transfer,
                        onSuccess successBlock: @escaping (MakeTransfer) -> Void,
                        onFailure failureBlock: @escaping (Session?, NSError) -> Void)
+    
+    func getDashboardData( _ token: String,
+                           onCompletion completionBlock: @escaping (BalanceGetter?, PayeeGetter?, TransactionGetter?, Session?, NSError?) -> Void)
 }

@@ -9,7 +9,6 @@ import Foundation
 struct ServiceManager: ServiceManagerProtocol   {
     
     var networkManager:NetworkManagerProtocol
-    static var token:String?
     
     init() {
         self.networkManager = NetworkManager.init(NETWORK.BASE_URL)
@@ -123,6 +122,50 @@ struct ServiceManager: ServiceManagerProtocol   {
             })
         } catch let jsonError {
             failureBlock(nil, jsonError as NSError)
+        }
+    }
+    
+    func getDashboardData( _ token: String,
+                           onCompletion completionBlock: @escaping (BalanceGetter?, PayeeGetter?, TransactionGetter?, Session?, NSError?) -> Void) {
+        
+        var balanceGetter1:BalanceGetter?
+        var errorSession: Session?
+        var error1: NSError?
+        let dispatchGroup = DispatchGroup()
+        dispatchGroup.enter()
+        getBalance(token, onSuccess: { balanceGetter in
+            balanceGetter1 = balanceGetter
+            dispatchGroup.leave()
+        }, onFailure: { session, error in
+            errorSession = session
+            error1 = error
+            dispatchGroup.leave()
+        })
+        
+        var payeeGetter1:PayeeGetter?
+        dispatchGroup.enter()
+        getPayees(token, onSuccess: { payeeGetter in
+            payeeGetter1 = payeeGetter
+            dispatchGroup.leave()
+        }, onFailure: { session, error in
+            errorSession = session
+            error1 = error
+            dispatchGroup.leave()
+        })
+        
+        var transactionsGetter1:TransactionGetter?
+        dispatchGroup.enter()
+        getTransactions(token, onSuccess: { transactionGetter in
+            transactionsGetter1 = transactionGetter
+            dispatchGroup.leave()
+        }, onFailure: { session, error in
+            errorSession = session
+            error1 = error
+            dispatchGroup.leave()
+        })
+        
+        dispatchGroup.notify(queue: .main) {
+            completionBlock(balanceGetter1, payeeGetter1, transactionsGetter1, errorSession, error1)
         }
     }
     

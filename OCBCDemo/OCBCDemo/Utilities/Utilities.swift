@@ -31,4 +31,15 @@ struct Utilities {
         let userdefaults = UserDefaults.standard
         return userdefaults.value(forKey: "stored_username") as? String
     }
+    
+    func errorHandlerOnFailure(session:Session?, error:Error, delegate: ViewModelProtocol) {
+        var message = ""
+        if session?.failureDescription != nil {
+            message = (session?.failureDescription)!
+        } else {
+            message = error.localizedDescription
+        }
+        delegate.showAlert(LITERAL.ERROR, message: message, onClick: nil)
+        delegate.loadingActivity(false)
+    }
 }

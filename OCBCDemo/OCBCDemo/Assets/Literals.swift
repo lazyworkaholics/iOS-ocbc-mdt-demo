@@ -19,6 +19,9 @@ struct LITERAL {
     static let PASSWORD = "Password"
     static let LOGIN = "Login"
     static let NOTYOU = "Not you?"
+    static let BALANCE = "Current Balance:"
+    
+    static let DASHBOARD_TITLE = "Your Account Overview"
 }
 
 struct ICON {
@@ -27,6 +30,7 @@ struct ICON {
     static let LAUNCH = "launch"
     static let USERNAME = "username"
     static let PASSWORD = "password"
+    static let SETTINGS = "settings"
 }
 
 struct CUSTOM_COLOR {

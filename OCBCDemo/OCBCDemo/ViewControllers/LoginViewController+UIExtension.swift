@@ -22,6 +22,17 @@ extension LoginViewController {
         activityindicator.hidesWhenStopped = true
         activityindicator.color = UIColor.init(named: CUSTOM_COLOR.TINT.SECONDARY)
         activityindicator.wrap(into: self.view, contentMode: .centerWithSize(CGSize.init(width: 20, height: 20)))
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+        self.view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        for cell in collectionView.visibleCells {
+            if cell.isKind(of: TextFieldCell.self) {
+                (cell as! TextFieldCell).textField.resignFirstResponder()
+            }
+        }
     }
 }
 

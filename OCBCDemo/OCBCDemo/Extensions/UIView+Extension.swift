@@ -123,26 +123,38 @@ extension UIView {
     }
     
     func startShimmering() {
-        let light = UIColor.white.cgColor
-        let darkColor = UIColor(red: 0.56, green: 0.71, blue: 0.93, alpha: 1.0).cgColor
-        let gradient = CAGradientLayer()
-        gradient.frame = CGRect(x: -self.bounds.size.width, y: 0, width: 3*self.bounds.size.width, height: self.bounds.size.height)
-        gradient.colors = [light, darkColor, light]
-        gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
-        gradient.endPoint = CGPoint(x: 1.0, y: 0.525)
-        gradient.locations = [0.35, 0.5, 0.65]
-        self.layer.mask = gradient
+//        let light = UIColor.white.cgColor
+//        let darkColor = UIColor.init(named: CUSTOM_COLOR.THEME)!.cgColor
+//        let gradient = CAGradientLayer()
+//        gradient.frame = CGRect(x: -self.bounds.size.width, y: 0, width: 3*self.bounds.size.width, height: 3*self.bounds.size.height)
+//        gradient.colors = [light, darkColor, light, darkColor]
+//        gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
+//        gradient.endPoint = CGPoint(x: 1.0, y: 0.525)
+//        gradient.locations = [0.35, 0.5, 0.65]
+//        self.layer.mask = gradient
+//
+//        let animation = CABasicAnimation(keyPath: "locations")
+//        animation.fromValue = [0.0, 0.1, 0.2]
+//        animation.toValue = [0.8, 0.9, 1.0]
+//        animation.duration = 0.9
+//        animation.repeatCount = HUGE
+//        gradient.add(animation, forKey: "shimmer")
         
-        let animation = CABasicAnimation(keyPath: "locations")
-        animation.fromValue = [0.0, 0.1, 0.2]
-        animation.toValue = [0.8, 0.9, 1.0]
-        animation.duration = 0.9
-        animation.repeatCount = HUGE
-        gradient.add(animation, forKey: "shimmer")
+        let activityIndicator = UIActivityIndicatorView.init(style: .medium)
+        activityIndicator.color = UIColor.init(named: CUSTOM_COLOR.TINT.SECONDARY)
+        activityIndicator.wrap(into: self, contentMode: .centerWithSize(CGSize.init(width: 20, height: 20)))
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
+        
     }
     
     func stopShimmering() {
         self.layer.mask = nil
+        for subView in self.subviews {
+            if subView.isKind(of: UIActivityIndicatorView.self) {
+                (subView as! UIActivityIndicatorView).stopAnimating()
+            }
+        }
     }
 }
 

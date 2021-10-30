@@ -23,23 +23,16 @@ struct LoginViewModel {
     func doLogin(username: String, password: String) {
         if username != "", password != "" {
             delegate?.loadingActivity(true)
+            
             serviceManager?.login(username, password: password, onSuccess: {
                 session in
                 delegate?.loadingActivity(true)
                 Utilities().saveUsername(username: username)
-                ServiceManager.token = session.token
+                DataManager.apiToken = session.token
                 router.login()
             }, onFailure: {
                 session, error in
-                ServiceManager.token = nil
-                var message = ""
-                if session?.failureDescription != nil {
-                    message = (session?.failureDescription)!
-                } else {
-                    message = error.localizedDescription
-                }
-                delegate?.showAlert(LITERAL.ERROR, message: message, onClick: nil)
-                delegate?.loadingActivity(false)
+                delegate?.errorHandlerOnFailure(session: session, error: error, delegate: delegate!)
             })
         } else {
             delegate?.showAlert(LITERAL.ERROR, message: LITERAL.DESCRIPTION.ERROR.LOGIN, onClick: nil)

@@ -36,23 +36,26 @@ class Router: RouterProtocol {
     var currentRouteState:AppRouteState?
     
     func launch() {
-        ServiceManager.token = nil
+        DataManager.apiToken = nil
         currentRouteState = nil
-        logout()
+        launchLoginView()
     }
     
     func login() {
         DispatchQueue.main.async(execute: {() -> Void in
             
-            let appdelegate = UIApplication.shared.delegate as! AppDelegate
-            if ServiceManager.token != nil, self.currentRouteState == .loginView {
+            if DataManager.apiToken != nil, self.currentRouteState == .loginView {
                 self.dashboardViewModel = DashboardViewModel.init()
                 self.dashboardViewController = DashboardViewController.initWithViewModel(self.dashboardViewModel!)
                 self.loggedInNavigationController = UINavigationController(rootViewController: self.dashboardViewController)
-    //            loggedInNavigationController?.navigationBar.barTintColor = UIColor.init(named: "STRINGS.COLORS.NAVIGATION")
+                self.loggedInNavigationController?.navigationBar.barTintColor = UIColor.init(named: CUSTOM_COLOR.TINT.SECONDARY)
+                let appdelegate = UIApplication.shared.delegate as! AppDelegate
                 appdelegate.window?.rootViewController = self.loggedInNavigationController!
                 appdelegate.window?.makeKeyAndVisible()
+                
                 self.currentRouteState = AppRouteState.dashboardView
+                self.loginViewController = nil
+                self.loginViewModel = nil
             }
         })
     }
@@ -70,7 +73,16 @@ class Router: RouterProtocol {
     }
     
     func presentSettings() {
-        
+        DispatchQueue.main.async(execute: {() -> Void in
+            
+            if self.currentRouteState == .dashboardView {
+                
+                self.settingsViewModel = SettingsViewModel.init()
+                self.settingsViewController = SettingsViewController.initWithViewModel(self.settingsViewModel!)
+                let navigationController = UINavigationController(rootViewController: self.settingsViewController)
+                self.loggedInNavigationController?.present(navigationController, animated: true, completion: nil)
+            }
+        })
     }
     
     func dismissSettings() {
@@ -80,16 +92,23 @@ class Router: RouterProtocol {
     func logout() {
         DispatchQueue.main.async(execute: {() -> Void in
             
-            let appdelegate = UIApplication.shared.delegate as! AppDelegate
-            if ServiceManager.token == nil, self.currentRouteState != .loginView {
+            if DataManager.apiToken == nil, self.currentRouteState != .loginView {
+                self.launchLoginView()
                 self.loggedInNavigationController = nil
-                self.loginViewModel = LoginViewModel.init()
-                self.loginViewController = LoginViewController.initWithViewModel(self.loginViewModel!)
-                appdelegate.window?.tintColor = .lightGray
-                appdelegate.window?.rootViewController = self.loginViewController!
-                appdelegate.window?.makeKeyAndVisible()
-                self.currentRouteState = AppRouteState.loginView
+                self.dashboardViewModel = nil
+                self.dashboardViewController = nil
             }
         })
+    }
+    
+    fileprivate func launchLoginView() {
+        self.loginViewModel = LoginViewModel.init()
+        self.loginViewController = LoginViewController.initWithViewModel(self.loginViewModel!)
+        let appdelegate = UIApplication.shared.delegate as! AppDelegate
+        appdelegate.window?.tintColor = .lightGray
+        appdelegate.window?.rootViewController = self.loginViewController!
+        appdelegate.window?.makeKeyAndVisible()
+        
+        self.currentRouteState = AppRouteState.loginView
     }
 }
