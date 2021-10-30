@@ -9,7 +9,9 @@ import UIKit
 
 class PayeeView: UIView {
     
-    var index: Int?
+    var indexpath: IndexPath!
+    var reuseIdentifier: String!
+    var delegate: ButtonCellProtocol?
     
     var imageView: UIImageView!
     var accountNameLabel: PrimaryLabel!
@@ -19,8 +21,10 @@ class PayeeView: UIView {
         super.init(coder: coder)
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(_ indexpath: IndexPath, and reuseIdentifier: String) {
+        super.init(frame: .zero)
+        self.indexpath = indexpath
+        self.reuseIdentifier = reuseIdentifier
         
         self.backgroundColor = UIColor.init(named: CUSTOM_COLOR.THEME)
         let stackView = UIStackView.init()
@@ -44,6 +48,13 @@ class PayeeView: UIView {
         stackView.addArrangedSubview(accountNoLabel)
         
         self.setWidth(width: 200)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.onClick))
+        addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func onClick() {
+        delegate?.buttonClick(indexpath, and: reuseIdentifier)
     }
     
     func setImage(_ image: UIImage) {

@@ -59,7 +59,12 @@ class Router: RouterProtocol {
     }
     
     func navigateToTransferView(with payee:Payee?) {
-        
+        if DataManager.apiToken != nil, self.currentRouteState == .dashboardView {
+            self.transferViewModel = TransferViewModel.init(payee)
+            self.transferViewController = TransferViewController.initWithViewModel(self.transferViewModel!)
+            self.loggedInNavigationController?.pushViewController(self.transferViewController, animated: true)
+            self.currentRouteState = AppRouteState.transferView
+        }
     }
     
     func navigateToDetailView(with transactionDetails:Transaction?, or transferAcknowledgment:Transfer?) {
@@ -67,7 +72,8 @@ class Router: RouterProtocol {
     }
     
     func goHome() {
-        
+        self.loggedInNavigationController?.popToRootViewController(animated: true)
+        self.currentRouteState = AppRouteState.dashboardView
     }
     
     func logout() {

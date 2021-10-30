@@ -66,6 +66,8 @@
 		3AC447A9272D8E0500F7E78B /* PayeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447A8272D8E0500F7E78B /* PayeeView.swift */; };
 		3AC447AB272DB35A00F7E78B /* KeyValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447AA272DB35A00F7E78B /* KeyValueCell.swift */; };
 		3AC447AD272DB37200F7E78B /* DashboardViewController+UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447AC272DB37200F7E78B /* DashboardViewController+UIExtension.swift */; };
+		3AC447AF272DBAB900F7E78B /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447AE272DBAB900F7E78B /* UIStackView+Extension.swift */; };
+		3AC447B1272DBEF800F7E78B /* TransferViewController+UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447B0272DBEF800F7E78B /* TransferViewController+UIExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +141,8 @@
 		3AC447A8272D8E0500F7E78B /* PayeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeeView.swift; sourceTree = "<group>"; };
 		3AC447AA272DB35A00F7E78B /* KeyValueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueCell.swift; sourceTree = "<group>"; };
 		3AC447AC272DB37200F7E78B /* DashboardViewController+UIExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DashboardViewController+UIExtension.swift"; sourceTree = "<group>"; };
+		3AC447AE272DBAB900F7E78B /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		3AC447B0272DBEF800F7E78B /* TransferViewController+UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransferViewController+UIExtension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +228,7 @@
 				3A65BAEA272B9DF500332E69 /* UIView+Extension.swift */,
 				3AA13616272BD9F500DB7C7D /* UIViewController+Extension.swift */,
 				3AA13629272C647000DB7C7D /* UICollectionViewCell+Extension.swift */,
+				3AC447AE272DBAB900F7E78B /* UIStackView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 				3AA13600272BC4F500DB7C7D /* DashboardViewController.swift */,
 				3AC447AC272DB37200F7E78B /* DashboardViewController+UIExtension.swift */,
 				3AA13602272BC50C00DB7C7D /* TransferViewController.swift */,
+				3AC447B0272DBEF800F7E78B /* TransferViewController+UIExtension.swift */,
 				3AA13604272BC52700DB7C7D /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
@@ -533,11 +539,13 @@
 				3A2DB738272A439E00F8AA1E /* NetworkManager.swift in Sources */,
 				3AA13628272C61E900DB7C7D /* TextFields.swift in Sources */,
 				3A2DB748272A81A500F8AA1E /* Payee.swift in Sources */,
+				3AC447AF272DBAB900F7E78B /* UIStackView+Extension.swift in Sources */,
 				3AA1362E272CE3DF00DB7C7D /* ImageCell.swift in Sources */,
 				3A2DB6FC27299E9900F8AA1E /* LoginViewController.swift in Sources */,
 				3AA13605272BC52700DB7C7D /* DetailViewController.swift in Sources */,
 				3AA13630272CECC700DB7C7D /* LoginViewController+UIExtension.swift in Sources */,
 				3AA13615272BCECF00DB7C7D /* ViewModelProtocols.swift in Sources */,
+				3AC447B1272DBEF800F7E78B /* TransferViewController+UIExtension.swift in Sources */,
 				3A65BAEB272B9DF500332E69 /* UIView+Extension.swift in Sources */,
 				3AA13632272D0DAE00DB7C7D /* Literals.swift in Sources */,
 				3AC447A3272D5DC800F7E78B /* PayeeCollectionCell.swift in Sources */,

@@ -10,14 +10,21 @@ import UIKit
 class TransferViewController: UIViewController {
     //MARK:- iboutlets and variables
     var viewModel: TransferViewModel!
+    var collectionView: UICollectionView = UICollectionView.init(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout.init())
+    var activityindicator: UIActivityIndicatorView! = UIActivityIndicatorView.init(style: .medium)
     
     //MARK:- init and viewDidLoads
     class func initWithViewModel(_ viewModel: TransferViewModel) -> TransferViewController {
-        let storyBoardRef = UIStoryboard.init(name: CONSTANTS.MAIN, bundle: nil)
-        let viewController = storyBoardRef.instantiateViewController(withIdentifier: VIEWCONTROLLERS.TRANSFER) as! TransferViewController
+        let viewController = TransferViewController()
         viewController.viewModel = viewModel
         viewController.viewModel.delegate = viewController
+        viewController.setupUILayout()
         return viewController
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupBarButtons()
     }
 }
 

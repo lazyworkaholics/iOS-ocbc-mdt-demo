@@ -10,8 +10,9 @@ import UIKit
 class PayeeCollectionCell: UICollectionViewCell {
 
     static let height:CGFloat = 200
-    
-    var stackView:UIStackView?
+    var indexpath: IndexPath?
+    var delegate: ButtonCellProtocol?
+    var stackView: UIStackView?
     
     func setupLayout() {
         let parentStackView = UIStackView.init()
@@ -40,14 +41,17 @@ class PayeeCollectionCell: UICollectionViewCell {
         footerLabel.wrap(into: contentView, contentMode: .bottomWithHeight(21), with: UIEdgeInsets.init(top: 0, left: 16.0, bottom: 8.0, right: 16.0))
     }
     
-    func loadData(_ payees:[Payee]) {
+    func loadData(_ payees:[Payee], indexpath: IndexPath) {
+        stackView?.removeAllArrangedSubviews()
+        self.indexpath = indexpath
         for (index, payee) in payees.enumerated() {
             addPayee(payee, index: index)
         }
     }
     
     func addPayee(_ payee: Payee, index: Int) {
-        let payeeView = PayeeView.init(frame: .zero)
+        let payeeView = PayeeView.init(indexpath!, and: PayeeCollectionCell.reuseidentifier())
+        payeeView.delegate = delegate
         payeeView.layer.cornerRadius = 8.0
         stackView?.addArrangedSubview(payeeView)
         payeeView.setAccountName(payee.accountName)

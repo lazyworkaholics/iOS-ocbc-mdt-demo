@@ -52,6 +52,7 @@ extension DashboardViewController: UICollectionViewDataSource {
             let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: KeyValueCell.reuseidentifier(), for: indexPath) as! KeyValueCell
             if cell.keyLabel == nil {
                 cell.setupLayout(LITERAL.BALANCE, isButtonShown: true)
+                cell.delegate = self
             }
             cell.loadData(viewModel.getBalance(), buttonTitle: "Pay & Transfer", indexPath: indexPath)
             return cell
@@ -59,8 +60,9 @@ extension DashboardViewController: UICollectionViewDataSource {
             let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: PayeeCollectionCell.reuseidentifier(), for: indexPath) as! PayeeCollectionCell
             if cell.stackView == nil {
                 cell.setupLayout()
+                cell.delegate = self
             }
-            cell.loadData(viewModel.getAllPayees())
+            cell.loadData(viewModel.getAllPayees(), indexpath: indexPath)
             return cell
         default:
             let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: TransactionCell.reuseidentifier(), for: indexPath) as! TransactionCell

@@ -15,8 +15,6 @@ class LoginViewController: UIViewController {
     
     //MARK:- init and viewDidLoads
     class func initWithViewModel(_ viewModel: LoginViewModel) -> LoginViewController {
-//        let storyBoardRef = UIStoryboard.init(name: CONSTANTS.MAIN, bundle: nil)
-//        let viewController = storyBoardRef.instantiateViewController(withIdentifier: VIEWCONTROLLERS.LOGIN) as! LoginViewController
         let viewController = LoginViewController.init()
         viewController.viewModel = viewModel
         viewController.viewModel.delegate = viewController

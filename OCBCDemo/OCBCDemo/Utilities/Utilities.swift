@@ -22,13 +22,6 @@ struct Utilities {
         return date
     }
     
-//    func getDate(_ dateString:String) -> Date? {
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "dd-MM-yyyy"
-//        let date = dateFormatter.date(from: dateString)
-//        return date
-//    }
-    
     func getDateString(_ date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"

@@ -38,6 +38,10 @@ struct DashboardViewModel {
         router.logout()
     }
     
+    func onTransferClick(_ payee: Payee? = nil)  {
+        router.navigateToTransferView(with: payee)
+    }
+    
     // MARK: - DashboardViewController - data handlers
     func getBalance() -> String? {
         if let balance = DataManager.balanceGetter?.balance {

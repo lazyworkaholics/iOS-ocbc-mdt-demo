@@ -15,8 +15,7 @@ class DashboardViewController: UIViewController {
     
     //MARK:- init and viewDidLoads
     class func initWithViewModel(_ viewModel: DashboardViewModel) -> DashboardViewController {
-        let storyBoardRef = UIStoryboard.init(name: CONSTANTS.MAIN, bundle: nil)
-        let viewController = storyBoardRef.instantiateViewController(withIdentifier: VIEWCONTROLLERS.DASHBOARD) as! DashboardViewController
+        let viewController = DashboardViewController()
         viewController.viewModel = viewModel
         viewController.viewModel.delegate = viewController
         viewController.setupUILayout()
@@ -53,5 +52,16 @@ extension DashboardViewController: DashboardProtocol {
         DispatchQueue.main.async(execute: {() -> Void in
             self.collectionView.reloadData()
         })
+    }
+}
+
+extension DashboardViewController: ButtonCellProtocol {
+    func buttonClick(_ indexPath: IndexPath, and reuseIdentifier: String) {
+        if indexPath.section == 0 && reuseIdentifier == KeyValueCell.reuseidentifier() {
+            viewModel.onTransferClick()
+        }
+        else if indexPath.section == 1 && reuseIdentifier == PayeeCollectionCell.reuseidentifier() {
+            viewModel.onTransferClick(viewModel.getPayee(for: indexPath.item))
+        }
     }
 }

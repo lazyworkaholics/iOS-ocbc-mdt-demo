@@ -22,11 +22,13 @@ struct LITERAL {
     static let BALANCE = "Balance:"
     
     static let DASHBOARD_TITLE = "Your Account Overview"
+    static let TRANSFER_TITLE = "Make Transfer"
 }
 
 struct ICON {
     static let APPICON = "appIcon"
     static let BACKGROUND = "background"
+    static let BACK = "back"
     static let LAUNCH = "launch"
     static let USERNAME = "username"
     static let PASSWORD = "password"
