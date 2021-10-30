@@ -9,7 +9,6 @@ import Foundation
 @testable import OCBCDemo
 
 struct ServiceManagerMock: ServiceManagerProtocol {
-    
     var isServiceCallSuccess: Bool?
     var mock_session: Session?
     var mock_balanceGetter: BalanceGetter?
@@ -56,6 +55,14 @@ struct ServiceManagerMock: ServiceManagerProtocol {
             successBlock(mock_MakeTransfer!)
         } else {
             failureBlock(mock_error_session, mock_error!)
+        }
+    }
+    
+    func getDashboardData(_ token: String, onCompletion completionBlock: @escaping (BalanceGetter?, PayeeGetter?, TransactionGetter?, Session?, NSError?) -> Void) {
+        if isServiceCallSuccess! {
+            completionBlock(mock_balanceGetter, mock_PayeeGetter, mock_TransactionGetter, nil,nil)
+        } else {
+            completionBlock(nil, nil, nil, mock_error_session,mock_error)
         }
     }
 }
