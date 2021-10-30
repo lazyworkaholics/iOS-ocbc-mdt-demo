@@ -8,7 +8,9 @@
 import UIKit
 
 protocol ViewModelProtocol {
-    
+    func showAlert(_ title: String, message: String, onClick: ((UIAlertAction) -> Void)?)
+    func loadingActivity(_ isShow:Bool)
+    func reload()
 }
 
 protocol LoginProtocol: ViewModelProtocol {
@@ -17,9 +19,6 @@ protocol LoginProtocol: ViewModelProtocol {
 
 protocol DashboardProtocol: ViewModelProtocol {
     
-    func showAlert(_ title: String, message: String, onClick: ((UIAlertAction) -> Void)?)
-    func showLoadingIndicator()
-    func hideLoadingIndicator()
 }
 
 protocol TransferProtocol: ViewModelProtocol {

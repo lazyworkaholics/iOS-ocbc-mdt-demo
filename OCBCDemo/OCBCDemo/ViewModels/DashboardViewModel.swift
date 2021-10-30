@@ -9,5 +9,5 @@ import Foundation
 
 struct DashboardViewModel {
     //MARK:- variables and initializers
-    var protocolVC: DashboardProtocol?
+    var delegate: DashboardProtocol?
 }

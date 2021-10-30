@@ -9,5 +9,5 @@ import Foundation
 
 struct SettingsViewModel {
     //MARK:- variables and initializers
-    var protocolVC: SettingsProtocol?
+    var delegate: SettingsProtocol?
 }

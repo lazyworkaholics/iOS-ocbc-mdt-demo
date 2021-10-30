@@ -76,9 +76,9 @@ extension UIView {
         layer.mask = mask
     }
     
-    public func applyBorderWithCornerRadius() {
+    public func applyBorder(with color:CGColor? = UIColor.init(named: "border_primary")?.cgColor) {
         layer.borderWidth = 1
-        layer.borderColor = UIColor.lightGray.cgColor
+        layer.borderColor = color
         layer.cornerRadius = 4.0
         clipsToBounds = true
     }
@@ -164,6 +164,16 @@ extension UIView {
         case trailingWithProportion(CGFloat)
         case center
         case centerWithSize(CGSize)
+    }
+    
+    public func setWidth(width: CGFloat) {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.widthAnchor.constraint(equalToConstant: width).isActive = true
+    }
+    
+    public func setHeight(height: CGFloat) {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.heightAnchor.constraint(equalToConstant: height).isActive = true
     }
     
     public func setSize(width: CGFloat, height: CGFloat) {

@@ -9,5 +9,5 @@ import Foundation
 
 struct TransferViewModel {
     //MARK:- variables and initializers
-    var protocolVC: TransferProtocol?
+    var delegate: TransferProtocol?
 }

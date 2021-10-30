@@ -16,11 +16,21 @@ class DetailViewController: UIViewController {
         let storyBoardRef = UIStoryboard.init(name: LITERALS.MAIN, bundle: nil)
         let viewController = storyBoardRef.instantiateViewController(withIdentifier: VIEWCONTROLLERS.DETAIL) as! DetailViewController
         viewController.viewModel = viewModel
-        viewController.viewModel.protocolVC = viewController
+        viewController.viewModel.delegate = viewController
         return viewController
     }
 }
 
 extension DetailViewController: DetailProtocol {
+    func showAlert(_ title: String, message: String, onClick: ((UIAlertAction) -> Void)?) {
+        presentAlert(with: title, message: message, onClick: onClick)
+    }
     
+    func loadingActivity(_ isShow:Bool) {
+        
+    }
+    
+    func reload() {
+        
+    }
 }

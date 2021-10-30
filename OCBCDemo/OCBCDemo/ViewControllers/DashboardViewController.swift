@@ -16,7 +16,7 @@ class DashboardViewController: UIViewController {
         let storyBoardRef = UIStoryboard.init(name: LITERALS.MAIN, bundle: nil)
         let viewController = storyBoardRef.instantiateViewController(withIdentifier: VIEWCONTROLLERS.DASHBOARD) as! DashboardViewController
         viewController.viewModel = viewModel
-        viewController.viewModel.protocolVC = viewController
+        viewController.viewModel.delegate = viewController
         return viewController
     }
 }
@@ -26,11 +26,11 @@ extension DashboardViewController: DashboardProtocol {
         presentAlert(with: title, message: message, onClick: onClick)
     }
     
-    func showLoadingIndicator() {
+    func loadingActivity(_ isShow:Bool) {
         
     }
     
-    func hideLoadingIndicator() {
+    func reload() {
         
     }
 }

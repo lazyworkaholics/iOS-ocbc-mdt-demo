@@ -104,7 +104,7 @@ struct NetworkManager: NetworkManagerProtocol
         }
         dataTask.resume()
     }
-    // MARK: - private helper functions
+    // MARK: - private functions
     // helper function to construct a urlRequest from given path, parameters, body etc
     fileprivate func _requestConstructor(_ urlPath:String,
                                      params: [String: String]?,

@@ -9,5 +9,5 @@ import Foundation
 
 struct DetailViewModel {
     //MARK:- variables and initializers
-    var protocolVC: DetailProtocol?
+    var delegate: DetailProtocol?
 }

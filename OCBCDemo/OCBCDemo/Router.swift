@@ -36,27 +36,25 @@ class Router: RouterProtocol {
     var currentRouteState:AppRouteState?
     
     func launch() {
-        let appdelegate = UIApplication.shared.delegate as! AppDelegate
-        appdelegate.apiToken = nil
+        ServiceManager.token = nil
         currentRouteState = nil
         logout()
     }
     
     func login() {
-        let appdelegate = UIApplication.shared.delegate as! AppDelegate
-        if appdelegate.apiToken == nil, currentRouteState == .loginView {
-            dashboardViewModel = DashboardViewModel.init()
-            dashboardViewController = DashboardViewController.initWithViewModel(self.dashboardViewModel!)
-            rootNavigationController = UINavigationController(rootViewController: dashboardViewController)
+        DispatchQueue.main.async(execute: {() -> Void in
             
-//            rootNavigationController?.navigationBar.barTintColor = UIColor.init(named: "STRINGS.COLORS.NAVIGATION")
-            appdelegate.window?.tintColor = UIColor.black
-            
-            appdelegate.window?.rootViewController = rootNavigationController!
-            appdelegate.window?.makeKeyAndVisible()
-            
-            currentRouteState = AppRouteState.dashboardView
-        }
+            let appdelegate = UIApplication.shared.delegate as! AppDelegate
+            if ServiceManager.token != nil, self.currentRouteState == .loginView {
+                self.dashboardViewModel = DashboardViewModel.init()
+                self.dashboardViewController = DashboardViewController.initWithViewModel(self.dashboardViewModel!)
+                self.rootNavigationController = UINavigationController(rootViewController: self.dashboardViewController)
+    //            rootNavigationController?.navigationBar.barTintColor = UIColor.init(named: "STRINGS.COLORS.NAVIGATION")
+                appdelegate.window?.rootViewController = self.rootNavigationController!
+                appdelegate.window?.makeKeyAndVisible()
+                self.currentRouteState = AppRouteState.dashboardView
+            }
+        })
     }
     
     func navigateToTransferView(with payee:Payee?) {
@@ -80,14 +78,17 @@ class Router: RouterProtocol {
     }
     
     func logout() {
-        
-        let appdelegate = UIApplication.shared.delegate as! AppDelegate
-        if appdelegate.apiToken == nil, currentRouteState != .loginView {
-            loginViewModel = LoginViewModel.init()
-            loginViewController = LoginViewController.initWithViewModel(loginViewModel!)
-            appdelegate.window?.rootViewController = loginViewController!
-            appdelegate.window?.makeKeyAndVisible()
-            currentRouteState = AppRouteState.loginView
-        }
+        DispatchQueue.main.async(execute: {() -> Void in
+            
+            let appdelegate = UIApplication.shared.delegate as! AppDelegate
+            if ServiceManager.token == nil, self.currentRouteState != .loginView {
+                self.loginViewModel = LoginViewModel.init()
+                self.loginViewController = LoginViewController.initWithViewModel(self.loginViewModel!)
+                appdelegate.window?.tintColor = .lightGray
+                appdelegate.window?.rootViewController = self.loginViewController!
+                appdelegate.window?.makeKeyAndVisible()
+                self.currentRouteState = AppRouteState.loginView
+            }
+        })
     }
 }

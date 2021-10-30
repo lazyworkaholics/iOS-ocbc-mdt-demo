@@ -5,7 +5,7 @@
 //  Created by Pabbineedi Harsha on 29/10/21.
 //
 
-import Foundation
+import UIKit
 
 struct Utilities {
     
@@ -20,5 +20,15 @@ struct Utilities {
             date = dateFormatter.date(from: dateString)
         }
         return date
+    }
+    
+    func saveUsername(username: String) {
+        let userdefaults = UserDefaults.standard
+        userdefaults.setValue(username, forKey: "stored_username")
+    }
+    
+    func getStoredUsername() -> String? {
+        let userdefaults = UserDefaults.standard
+        return userdefaults.value(forKey: "stored_username") as? String
     }
 }
