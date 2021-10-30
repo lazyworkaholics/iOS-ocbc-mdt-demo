@@ -17,7 +17,7 @@
 		3A2DB7352729A43500F8AA1E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2DB7322729A40D00F8AA1E /* Colors.xcassets */; };
 		3A2DB738272A439E00F8AA1E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2DB737272A439E00F8AA1E /* NetworkManager.swift */; };
 		3A2DB73A272A45FA00F8AA1E /* ServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2DB739272A45FA00F8AA1E /* ServiceProtocols.swift */; };
-		3A2DB73C272A465900F8AA1E /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2DB73B272A465900F8AA1E /* StringConstants.swift */; };
+		3A2DB73C272A465900F8AA1E /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2DB73B272A465900F8AA1E /* Identifiers.swift */; };
 		3A2DB73E272A556000F8AA1E /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2DB73D272A556000F8AA1E /* NetworkManagerTests.swift */; };
 		3A2DB741272A55FE00F8AA1E /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2DB740272A55FE00F8AA1E /* URLSessionMock.swift */; };
 		3A2DB744272A7A1D00F8AA1E /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2DB743272A7A1D00F8AA1E /* Transfer.swift */; };
@@ -46,7 +46,7 @@
 		3AA13613272BCB8D00DB7C7D /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13612272BCB8D00DB7C7D /* SettingsViewModel.swift */; };
 		3AA13615272BCECF00DB7C7D /* ViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13614272BCECF00DB7C7D /* ViewModelProtocols.swift */; };
 		3AA13617272BD9F500DB7C7D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13616272BD9F500DB7C7D /* UIViewController+Extension.swift */; };
-		3AA1361C272C33CF00DB7C7D /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2DB73B272A465900F8AA1E /* StringConstants.swift */; };
+		3AA1361C272C33CF00DB7C7D /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2DB73B272A465900F8AA1E /* Identifiers.swift */; };
 		3AA1361E272C33E100DB7C7D /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1361D272C33E100DB7C7D /* Font.swift */; };
 		3AA13620272C3D8A00DB7C7D /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1361F272C3D8A00DB7C7D /* TextFieldCell.swift */; };
 		3AA13623272C41F300DB7C7D /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13622272C41F300DB7C7D /* Buttons.swift */; };
@@ -55,6 +55,7 @@
 		3AA1362C272CDE2E00DB7C7D /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1362B272CDE2E00DB7C7D /* ButtonCell.swift */; };
 		3AA1362E272CE3DF00DB7C7D /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1362D272CE3DF00DB7C7D /* ImageCell.swift */; };
 		3AA13630272CECC700DB7C7D /* LoginViewController+UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1362F272CECC700DB7C7D /* LoginViewController+UIExtension.swift */; };
+		3AA13632272D0DAE00DB7C7D /* Literals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13631272D0DAE00DB7C7D /* Literals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +81,7 @@
 		3A2DB7322729A40D00F8AA1E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		3A2DB737272A439E00F8AA1E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		3A2DB739272A45FA00F8AA1E /* ServiceProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocols.swift; sourceTree = "<group>"; };
-		3A2DB73B272A465900F8AA1E /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		3A2DB73B272A465900F8AA1E /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
 		3A2DB73D272A556000F8AA1E /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		3A2DB740272A55FE00F8AA1E /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		3A2DB743272A7A1D00F8AA1E /* Transfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
@@ -117,6 +118,7 @@
 		3AA1362B272CDE2E00DB7C7D /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 		3AA1362D272CE3DF00DB7C7D /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		3AA1362F272CECC700DB7C7D /* LoginViewController+UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+UIExtension.swift"; sourceTree = "<group>"; };
+		3AA13631272D0DAE00DB7C7D /* Literals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Literals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,7 +209,8 @@
 		3A2DB72A2729A1A700F8AA1E /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				3A2DB73B272A465900F8AA1E /* StringConstants.swift */,
+				3A2DB73B272A465900F8AA1E /* Identifiers.swift */,
+				3AA13631272D0DAE00DB7C7D /* Literals.swift */,
 				3AA1361D272C33E100DB7C7D /* Font.swift */,
 				3A2DB70027299E9B00F8AA1E /* Icons.xcassets */,
 				3A2DB7322729A40D00F8AA1E /* Colors.xcassets */,
@@ -466,6 +469,7 @@
 				3AA13630272CECC700DB7C7D /* LoginViewController+UIExtension.swift in Sources */,
 				3AA13615272BCECF00DB7C7D /* ViewModelProtocols.swift in Sources */,
 				3A65BAEB272B9DF500332E69 /* UIView+Extension.swift in Sources */,
+				3AA13632272D0DAE00DB7C7D /* Literals.swift in Sources */,
 				3AA1360D272BC5F900DB7C7D /* DetailViewModel.swift in Sources */,
 				3AA13611272BCB3400DB7C7D /* SettingsViewController.swift in Sources */,
 				3AA13607272BC54E00DB7C7D /* LoginViewModel.swift in Sources */,
@@ -475,7 +479,7 @@
 				3A2DB74A272A85F400F8AA1E /* ServiceManager.swift in Sources */,
 				3AA13620272C3D8A00DB7C7D /* TextFieldCell.swift in Sources */,
 				3AA1362C272CDE2E00DB7C7D /* ButtonCell.swift in Sources */,
-				3A2DB73C272A465900F8AA1E /* StringConstants.swift in Sources */,
+				3A2DB73C272A465900F8AA1E /* Identifiers.swift in Sources */,
 				3AA1361E272C33E100DB7C7D /* Font.swift in Sources */,
 				3A2DB744272A7A1D00F8AA1E /* Transfer.swift in Sources */,
 				3A2DB73A272A45FA00F8AA1E /* ServiceProtocols.swift in Sources */,
@@ -489,7 +493,7 @@
 			files = (
 				3A2DB753272AC8F300F8AA1E /* SessionModelTests.swift in Sources */,
 				3A2DB757272AE37A00F8AA1E /* TransferTests.swift in Sources */,
-				3AA1361C272C33CF00DB7C7D /* StringConstants.swift in Sources */,
+				3AA1361C272C33CF00DB7C7D /* Identifiers.swift in Sources */,
 				3A65BAE7272AF37A00332E69 /* ServiceManagerAllGetServiceTests.swift in Sources */,
 				3A65BAE5272AEE0800332E69 /* ServiceManagerPostServiceTests.swift in Sources */,
 				3A65BAE3272AECA100332E69 /* NetworkManagerMock.swift in Sources */,
@@ -648,7 +652,7 @@
 		3A2DB71F27299E9B00F8AA1E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = appIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = OCBCDemo/Info.plist;
@@ -666,7 +670,7 @@
 		3A2DB72027299E9B00F8AA1E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = appIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = OCBCDemo/Info.plist;

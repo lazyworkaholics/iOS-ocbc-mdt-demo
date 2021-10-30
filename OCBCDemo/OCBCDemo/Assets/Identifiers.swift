@@ -56,7 +56,6 @@ struct ERROR {
 }
 
 struct VIEWCONTROLLERS {
-    
     static let DASHBOARD = "DashboardViewController"
     static let LOGIN = "LoginViewController"
     static let TRANSFER = "TransferViewController"
@@ -64,7 +63,6 @@ struct VIEWCONTROLLERS {
     static let DETAIL = "DetailViewController"
 }
 
-struct LITERALS {
+struct CONSTANTS {
     static let MAIN = "Main"
-    static let OK = "OK"
 }

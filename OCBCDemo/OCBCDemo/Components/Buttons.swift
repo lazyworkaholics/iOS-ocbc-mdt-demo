@@ -11,12 +11,12 @@ class PrimaryButton: UIButton {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         let context = UIGraphicsGetCurrentContext()
-        context!.setFillColor(UIColor.init(named: "background_tertiary")!.cgColor)
+        context!.setFillColor(UIColor.init(named: COLOR.BACKGROUND.TERTIARY)!.cgColor)
         context!.fill(CGRect(x: 0, y: 0, width: 500, height: 500))
         let colorImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         setBackgroundImage(colorImage, for: .normal)
-        titleLabel?.textColor = UIColor.init(named: "font_primary")
+        titleLabel?.textColor = UIColor.init(named: COLOR.FONT.PRIMARY)
         layer.cornerRadius = 8.0
         layer.masksToBounds = true
     }
@@ -25,13 +25,13 @@ class PrimaryButton: UIButton {
 class TertiaryButton: UIButton {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        titleLabel?.textColor = UIColor.init(named: "font_tertiary")
+        titleLabel?.textColor = UIColor.init(named: COLOR.FONT.TERTIARY)
     }
 }
 
 class SecondaryButton: TertiaryButton {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        applyBorder(with: UIColor.init(named: "border_tertiary")?.cgColor)
+        applyBorder(with: UIColor.init(named: COLOR.BORDER.TERTIARY)?.cgColor)
     }
 }

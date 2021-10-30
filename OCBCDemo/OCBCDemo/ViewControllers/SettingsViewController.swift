@@ -13,7 +13,7 @@ class SettingsViewController: UIViewController {
     
     //MARK:- init and viewDidLoads
     class func initWithViewModel(_ viewModel: SettingsViewModel) -> SettingsViewController {
-        let storyBoardRef = UIStoryboard.init(name: LITERALS.MAIN, bundle: nil)
+        let storyBoardRef = UIStoryboard.init(name: CONSTANTS.MAIN, bundle: nil)
         let viewController = storyBoardRef.instantiateViewController(withIdentifier: VIEWCONTROLLERS.SETTINGS) as! SettingsViewController
         viewController.viewModel = viewModel
         viewController.viewModel.delegate = viewController

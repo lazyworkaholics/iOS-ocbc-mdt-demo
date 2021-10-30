@@ -76,7 +76,7 @@ extension UIView {
         layer.mask = mask
     }
     
-    public func applyBorder(with color:CGColor? = UIColor.init(named: "border_primary")?.cgColor) {
+    public func applyBorder(with color:CGColor? = UIColor.init(named: COLOR.BORDER.PRIMARY)?.cgColor) {
         layer.borderWidth = 1
         layer.borderColor = color
         layer.cornerRadius = 4.0

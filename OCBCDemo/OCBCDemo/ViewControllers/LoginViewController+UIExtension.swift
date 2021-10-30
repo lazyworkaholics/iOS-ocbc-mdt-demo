@@ -10,7 +10,7 @@ import UIKit
 extension LoginViewController {
     
     func setupUILayout() {
-        self.view.backgroundColor = UIColor.init(named: "background_secondary")
+        self.view.backgroundColor = UIColor.init(named: COLOR.BACKGROUND.SECONDARY)
         collectionView.backgroundColor = .clear
         collectionView.register(ImageCell.self, forCellWithReuseIdentifier: ImageCell.reuseidentifier())
         collectionView.register(TextFieldCell.self, forCellWithReuseIdentifier: TextFieldCell.reuseidentifier())
@@ -34,7 +34,7 @@ extension LoginViewController: UICollectionViewDataSource {
         case 0:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCell.reuseidentifier(), for: indexPath) as! ImageCell
             cell.setupLayout()
-            cell.loadData(UIImage.init(named: "launch")!)
+            cell.loadData(UIImage.init(named: ICON.LAUNCH)!)
             return cell
         case 1,2:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TextFieldCell.reuseidentifier(), for: indexPath) as! TextFieldCell
@@ -48,16 +48,16 @@ extension LoginViewController: UICollectionViewDataSource {
                     }
                 }
                 if username != nil {
-                    cell.loadData(UIImage.init(named: "username"), text: username ?? "", placeholder: "username", buttonTitle: "Not you?", indexPath: indexPath)
+                    cell.loadData(UIImage.init(named: ICON.USERNAME), text: username ?? "", placeholder: LITERAL.USERNAME, buttonTitle: LITERAL.NOTYOU, indexPath: indexPath)
                     cell.delegate = self
                 } else {
-                    cell.loadData(UIImage.init(named: "username"), text: username ?? "", placeholder: "username", indexPath: indexPath)
+                    cell.loadData(UIImage.init(named: ICON.USERNAME), text: username ?? "", placeholder: LITERAL.USERNAME, indexPath: indexPath)
                 }
             } else {
                 if cell.textField == nil {
                     cell.setupLayout(true)
                 }
-                cell.loadData(UIImage.init(named: "password"), text: "", placeholder: "password", indexPath: indexPath)
+                cell.loadData(UIImage.init(named: ICON.PASSWORD), text: "", placeholder: LITERAL.PASSWORD, indexPath: indexPath)
                 cell.textField.isSecureTextEntry = true
             }
             return cell
@@ -67,7 +67,7 @@ extension LoginViewController: UICollectionViewDataSource {
                 cell.setupLayout()
                 cell.delegate = self
             }
-            cell.loadData("Login", indexPath: indexPath)
+            cell.loadData(LITERAL.LOGIN, indexPath: indexPath)
             return cell
         }
     }

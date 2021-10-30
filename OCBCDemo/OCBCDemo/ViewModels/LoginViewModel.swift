@@ -36,10 +36,10 @@ struct LoginViewModel {
                 } else {
                     message = error.localizedDescription
                 }
-                delegate?.showAlert("Error", message: message, onClick: nil)
+                delegate?.showAlert(LITERAL.ERROR, message: message, onClick: nil)
             })
         } else {
-            delegate?.showAlert("Error", message: "Username and Password cannot be nil", onClick: nil)
+            delegate?.showAlert(LITERAL.ERROR, message: LITERAL.DESCRIPTION.ERROR.LOGIN, onClick: nil)
         }
     }
     

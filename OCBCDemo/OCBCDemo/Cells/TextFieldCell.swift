@@ -22,7 +22,7 @@ class TextFieldCell: UICollectionViewCell {
     var button: TertiaryButton?
     
     func setupLayout(_ isLeftIcon:Bool = false, isRightButton:Bool = false) {
-        contentView.backgroundColor = UIColor.init(named: "background_quad")
+        contentView.backgroundColor = UIColor.init(named: COLOR.BACKGROUND.QUATERNARY)
         let stackView = UIStackView.init()
         stackView.axis = .horizontal
         stackView.spacing = 8.0

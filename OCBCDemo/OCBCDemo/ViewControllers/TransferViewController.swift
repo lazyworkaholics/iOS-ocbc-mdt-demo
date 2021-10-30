@@ -13,7 +13,7 @@ class TransferViewController: UIViewController {
     
     //MARK:- init and viewDidLoads
     class func initWithViewModel(_ viewModel: TransferViewModel) -> TransferViewController {
-        let storyBoardRef = UIStoryboard.init(name: LITERALS.MAIN, bundle: nil)
+        let storyBoardRef = UIStoryboard.init(name: CONSTANTS.MAIN, bundle: nil)
         let viewController = storyBoardRef.instantiateViewController(withIdentifier: VIEWCONTROLLERS.TRANSFER) as! TransferViewController
         viewController.viewModel = viewModel
         viewController.viewModel.delegate = viewController
