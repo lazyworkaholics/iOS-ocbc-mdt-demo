@@ -17,7 +17,11 @@ extension LoginViewController {
         collectionView.register(ButtonCell.self, forCellWithReuseIdentifier: ButtonCell.reuseidentifier())
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.wrap(into: self, with: UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0))
+        collectionView.wrap(into: self, with: .zero)
+        
+        activityindicator.hidesWhenStopped = true
+        activityindicator.color = UIColor.init(named: CUSTOM_COLOR.TINT.SECONDARY)
+        activityindicator.wrap(into: self.view, contentMode: .centerWithSize(CGSize.init(width: 20, height: 20)))
     }
 }
 

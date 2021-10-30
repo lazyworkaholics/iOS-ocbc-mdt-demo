@@ -19,7 +19,7 @@ enum AppRouteState:String {
 class Router: RouterProtocol {
     
     static var sharedInstance:Router = Router()
-    var rootNavigationController:UINavigationController?
+    var loggedInNavigationController:UINavigationController?
     
     var loginViewController: LoginViewController!
     var dashboardViewController: DashboardViewController!
@@ -48,9 +48,9 @@ class Router: RouterProtocol {
             if ServiceManager.token != nil, self.currentRouteState == .loginView {
                 self.dashboardViewModel = DashboardViewModel.init()
                 self.dashboardViewController = DashboardViewController.initWithViewModel(self.dashboardViewModel!)
-                self.rootNavigationController = UINavigationController(rootViewController: self.dashboardViewController)
-    //            rootNavigationController?.navigationBar.barTintColor = UIColor.init(named: "STRINGS.COLORS.NAVIGATION")
-                appdelegate.window?.rootViewController = self.rootNavigationController!
+                self.loggedInNavigationController = UINavigationController(rootViewController: self.dashboardViewController)
+    //            loggedInNavigationController?.navigationBar.barTintColor = UIColor.init(named: "STRINGS.COLORS.NAVIGATION")
+                appdelegate.window?.rootViewController = self.loggedInNavigationController!
                 appdelegate.window?.makeKeyAndVisible()
                 self.currentRouteState = AppRouteState.dashboardView
             }
@@ -82,6 +82,7 @@ class Router: RouterProtocol {
             
             let appdelegate = UIApplication.shared.delegate as! AppDelegate
             if ServiceManager.token == nil, self.currentRouteState != .loginView {
+                self.loggedInNavigationController = nil
                 self.loginViewModel = LoginViewModel.init()
                 self.loginViewController = LoginViewController.initWithViewModel(self.loginViewModel!)
                 appdelegate.window?.tintColor = .lightGray

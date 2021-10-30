@@ -56,6 +56,11 @@
 		3AA1362E272CE3DF00DB7C7D /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1362D272CE3DF00DB7C7D /* ImageCell.swift */; };
 		3AA13630272CECC700DB7C7D /* LoginViewController+UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1362F272CECC700DB7C7D /* LoginViewController+UIExtension.swift */; };
 		3AA13632272D0DAE00DB7C7D /* Literals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13631272D0DAE00DB7C7D /* Literals.swift */; };
+		3AA13637272D178700DB7C7D /* LoginProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13636272D178700DB7C7D /* LoginProtocolMock.swift */; };
+		3AA13639272D179900DB7C7D /* ServiceManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13638272D179900DB7C7D /* ServiceManagerMock.swift */; };
+		3AA1363B272D17A400DB7C7D /* RouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1363A272D17A400DB7C7D /* RouterMock.swift */; };
+		3AA1363D272D22A800DB7C7D /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1363C272D22A800DB7C7D /* LoginViewModelTests.swift */; };
+		3AA13641272D30C200DB7C7D /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13640272D30C200DB7C7D /* LoginViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +124,11 @@
 		3AA1362D272CE3DF00DB7C7D /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		3AA1362F272CECC700DB7C7D /* LoginViewController+UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+UIExtension.swift"; sourceTree = "<group>"; };
 		3AA13631272D0DAE00DB7C7D /* Literals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Literals.swift; sourceTree = "<group>"; };
+		3AA13636272D178700DB7C7D /* LoginProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocolMock.swift; sourceTree = "<group>"; };
+		3AA13638272D179900DB7C7D /* ServiceManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManagerMock.swift; sourceTree = "<group>"; };
+		3AA1363A272D17A400DB7C7D /* RouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterMock.swift; sourceTree = "<group>"; };
+		3AA1363C272D22A800DB7C7D /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		3AA13640272D30C200DB7C7D /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,8 +191,10 @@
 		3A2DB70D27299E9B00F8AA1E /* OCBCDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				3A2DB74D272AC4F400F8AA1E /* Models */,
 				3A2DB736272A434600F8AA1E /* Services */,
+				3AA13633272D175400DB7C7D /* ViewModels */,
+				3AA1363E272D309A00DB7C7D /* ViewControllers */,
+				3A2DB74D272AC4F400F8AA1E /* Models */,
 				3A2DB71027299E9B00F8AA1E /* Info.plist */,
 			);
 			path = OCBCDemoTests;
@@ -347,6 +359,49 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		3AA13633272D175400DB7C7D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3AA13634272D175D00DB7C7D /* Mocks */,
+				3AA13635272D176300DB7C7D /* Tests */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3AA13634272D175D00DB7C7D /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3AA13636272D178700DB7C7D /* LoginProtocolMock.swift */,
+				3AA13638272D179900DB7C7D /* ServiceManagerMock.swift */,
+				3AA1363A272D17A400DB7C7D /* RouterMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		3AA13635272D176300DB7C7D /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3AA1363C272D22A800DB7C7D /* LoginViewModelTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		3AA1363E272D309A00DB7C7D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3AA1363F272D30AF00DB7C7D /* Tests */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3AA1363F272D30AF00DB7C7D /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3AA13640272D30C200DB7C7D /* LoginViewControllerTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -494,12 +549,17 @@
 				3A2DB753272AC8F300F8AA1E /* SessionModelTests.swift in Sources */,
 				3A2DB757272AE37A00F8AA1E /* TransferTests.swift in Sources */,
 				3AA1361C272C33CF00DB7C7D /* Identifiers.swift in Sources */,
+				3AA1363D272D22A800DB7C7D /* LoginViewModelTests.swift in Sources */,
 				3A65BAE7272AF37A00332E69 /* ServiceManagerAllGetServiceTests.swift in Sources */,
 				3A65BAE5272AEE0800332E69 /* ServiceManagerPostServiceTests.swift in Sources */,
+				3AA13637272D178700DB7C7D /* LoginProtocolMock.swift in Sources */,
+				3AA1363B272D17A400DB7C7D /* RouterMock.swift in Sources */,
 				3A65BAE3272AECA100332E69 /* NetworkManagerMock.swift in Sources */,
 				3A2DB755272AD69A00F8AA1E /* PayeeAndTransactionTests.swift in Sources */,
+				3AA13641272D30C200DB7C7D /* LoginViewControllerTests.swift in Sources */,
 				3A2DB73E272A556000F8AA1E /* NetworkManagerTests.swift in Sources */,
 				3A2DB741272A55FE00F8AA1E /* URLSessionMock.swift in Sources */,
+				3AA13639272D179900DB7C7D /* ServiceManagerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

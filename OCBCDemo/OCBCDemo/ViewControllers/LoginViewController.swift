@@ -11,6 +11,7 @@ class LoginViewController: UIViewController {
     //MARK:- iboutlets and variables
     var viewModel: LoginViewModel!
     var collectionView: UICollectionView = UICollectionView.init(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout.init())
+    var activityindicator: UIActivityIndicatorView! = UIActivityIndicatorView.init(style: .medium)
     
     //MARK:- init and viewDidLoads
     class func initWithViewModel(_ viewModel: LoginViewModel) -> LoginViewController {
@@ -29,11 +30,19 @@ extension LoginViewController: LoginProtocol {
     }
     
     func loadingActivity(_ isShow:Bool) {
-        
+        DispatchQueue.main.async(execute: {() -> Void in
+            if isShow {
+                self.activityindicator.startAnimating()
+            } else {
+                self.activityindicator.stopAnimating()
+            }
+        })
     }
     
     func reload() {
-        collectionView.reloadData()
+        DispatchQueue.main.async(execute: {() -> Void in
+            self.collectionView.reloadData()
+        })
     }
 }
 

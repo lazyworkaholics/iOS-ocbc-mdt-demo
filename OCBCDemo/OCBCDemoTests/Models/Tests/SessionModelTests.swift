@@ -10,7 +10,7 @@ import XCTest
 
 class SessionModelTests: XCTestCase {
     // when a non parsable data is passed Session's init - it should throw an exception
-    // This function tests for the trowing of exception in such case
+    // This function tests for the trowing of exception in such case...
     func testSession_invalidData() {
         let utf8str = "testData".data(using: .utf8)
         do {
@@ -23,7 +23,7 @@ class SessionModelTests: XCTestCase {
     }
     
     // when a valid success data is passed session's init - should return session object with .success status
-    // This function tests whether the session.status is success or not
+    // This function tests whether the session.status is success or not...
     func testSession_with_token() {
         let utf8str = "{\"status\":\"success\", \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..gBsfbCL01IkpMuIlDC-\"}".data(using: .utf8)
         do {
@@ -36,7 +36,7 @@ class SessionModelTests: XCTestCase {
     }
     
     // when an invalid failed data is passed session's init - should return a session object with .failed status
-    // This function tests whether the session.status is failed or not
+    // This function tests whether the session.status is failed or not...
     func testSession_with_failure() {
         let utf8str = "{\"status\":\"failed\", \"description\": \"Invalid username or password\"}".data(using: .utf8)
         do {
@@ -50,7 +50,7 @@ class SessionModelTests: XCTestCase {
     }
 
     // when a non parsable data is passed ServiceStatus's init - it should throw an exception
-    // This function tests for the trowing of exception in such case
+    // This function tests for the trowing of exception in such case...
     func testServiceStatus_invalidData() {
         let utf8str = "testData".data(using: .utf8)
         do {
@@ -63,7 +63,7 @@ class SessionModelTests: XCTestCase {
     }
     
     // when a valid success data is passed ServiceStatus's init - should return .success
-    // This function tests whether the value is success or not
+    // This function tests whether the value is success or not...
     func testServiceStatus_failed_status() {
         let utf8str = "{\"status\": \"failed\"}".data(using: .utf8)
         do {
@@ -76,7 +76,7 @@ class SessionModelTests: XCTestCase {
     }
     
     // when a non parsable data is passed BalanceGetter's init - it should throw an exception
-    // This function tests for the trowing of exception in such case
+    // This function tests for the trowing of exception in such case...
     func test_balanceGetter_invalidData() {
         let utf8str = "testData".data(using: .utf8)
         do {
@@ -89,7 +89,7 @@ class SessionModelTests: XCTestCase {
     }
     
     // when a valid success data is passed balanceGetter's init - should return balanceGetter object with .success status
-    // This function tests whether the .status is success or not
+    // This function tests whether the .status is success or not...
     func test_balanceGetter_with_balance() {
         let utf8str = "{\"status\":\"success\", \"balance\": 100000}".data(using: .utf8)
         do {
@@ -103,7 +103,7 @@ class SessionModelTests: XCTestCase {
     }
     
     // when an invalid failed data is passed balanceGetter's init - should return an object with .failed status
-    // This function tests whether the .status is failed or not
+    // This function tests whether the .status is failed or not...
     func test_balanceGetter_with_failure() {
         let utf8str = "{\"status\":\"failed\", \"description\": \"Invalid username or password\"}".data(using: .utf8)
         do {

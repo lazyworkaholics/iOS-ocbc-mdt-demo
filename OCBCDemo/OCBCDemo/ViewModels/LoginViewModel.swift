@@ -12,7 +12,7 @@ struct LoginViewModel {
     var delegate: LoginProtocol?
     var serviceManager: ServiceManagerProtocol!
     var router:RouterProtocol!
-    var isNotUsernameEnabled = false
+    private var isNotUsernameEnabled = false
     
     init() {
         serviceManager = ServiceManager.init()
@@ -22,8 +22,10 @@ struct LoginViewModel {
     // MARK: - LoginViewController - Action Handlers
     func doLogin(username: String, password: String) {
         if username != "", password != "" {
+            delegate?.loadingActivity(true)
             serviceManager?.login(username, password: password, onSuccess: {
                 session in
+                delegate?.loadingActivity(true)
                 Utilities().saveUsername(username: username)
                 ServiceManager.token = session.token
                 router.login()
@@ -37,6 +39,7 @@ struct LoginViewModel {
                     message = error.localizedDescription
                 }
                 delegate?.showAlert(LITERAL.ERROR, message: message, onClick: nil)
+                delegate?.loadingActivity(false)
             })
         } else {
             delegate?.showAlert(LITERAL.ERROR, message: LITERAL.DESCRIPTION.ERROR.LOGIN, onClick: nil)
@@ -55,6 +58,4 @@ struct LoginViewModel {
         }
         return nil
     }
-    
-    // MARK: - private functions
 }
