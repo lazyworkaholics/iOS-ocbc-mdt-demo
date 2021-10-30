@@ -10,7 +10,7 @@ import UIKit
 extension LoginViewController {
     
     func setupUILayout() {
-        self.view.backgroundColor = UIColor.init(named: COLOR.BACKGROUND.SECONDARY)
+        self.view.backgroundColor = UIColor.init(named: CUSTOM_COLOR.BACKGROUND.SECONDARY)
         collectionView.backgroundColor = .clear
         collectionView.register(ImageCell.self, forCellWithReuseIdentifier: ImageCell.reuseidentifier())
         collectionView.register(TextFieldCell.self, forCellWithReuseIdentifier: TextFieldCell.reuseidentifier())

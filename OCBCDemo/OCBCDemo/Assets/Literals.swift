@@ -29,7 +29,7 @@ struct ICON {
     static let PASSWORD = "password"
 }
 
-struct COLOR {
+struct CUSTOM_COLOR {
     static let THEME = "theme"
     struct BACKGROUND {
         static let PRIMARY = "background_primary"

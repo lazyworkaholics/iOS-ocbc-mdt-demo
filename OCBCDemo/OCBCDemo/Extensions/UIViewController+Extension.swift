@@ -13,7 +13,7 @@ extension UIViewController {
         DispatchQueue.main.async(execute: {() -> Void in
             
             let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
-            alert.addAction(UIAlertAction.init(title: LITERALS.OK, style: .default, handler: onClick))
+            alert.addAction(UIAlertAction.init(title: LITERAL.OK, style: .default, handler: onClick))
             self.present(alert, animated: true, completion: nil)
         })
     }
