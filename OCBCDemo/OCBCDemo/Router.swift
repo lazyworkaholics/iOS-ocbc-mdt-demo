@@ -25,13 +25,11 @@ class Router: RouterProtocol {
     var dashboardViewController: DashboardViewController!
     var transferViewController: TransferViewController!
     var detailViewController: DetailViewController!
-    var settingsViewController: SettingsViewController!
     
     var loginViewModel: LoginViewModel?
     var dashboardViewModel: DashboardViewModel?
     var transferViewModel: TransferViewModel?
     var detailViewModel: DetailViewModel?
-    var settingsViewModel: SettingsViewModel?
     
     var currentRouteState:AppRouteState?
     
@@ -69,23 +67,6 @@ class Router: RouterProtocol {
     }
     
     func goHome() {
-        
-    }
-    
-    func presentSettings() {
-        DispatchQueue.main.async(execute: {() -> Void in
-            
-            if self.currentRouteState == .dashboardView {
-                
-                self.settingsViewModel = SettingsViewModel.init()
-                self.settingsViewController = SettingsViewController.initWithViewModel(self.settingsViewModel!)
-                let navigationController = UINavigationController(rootViewController: self.settingsViewController)
-                self.loggedInNavigationController?.present(navigationController, animated: true, completion: nil)
-            }
-        })
-    }
-    
-    func dismissSettings() {
         
     }
     

@@ -19,7 +19,7 @@ struct LITERAL {
     static let PASSWORD = "Password"
     static let LOGIN = "Login"
     static let NOTYOU = "Not you?"
-    static let BALANCE = "Current Balance:"
+    static let BALANCE = "Balance:"
     
     static let DASHBOARD_TITLE = "Your Account Overview"
 }

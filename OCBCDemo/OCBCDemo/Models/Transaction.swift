@@ -69,6 +69,25 @@ struct Transaction: Decodable {
             throw error
         }
     }
+    
+    func dateString() -> String {
+        return Utilities().getDateString(date)
+    }
+    
+    func nameAndNumber() -> String {
+        return (accountName + " - " + accountNo)
+    }
+    
+    func amountString() -> String {
+        var tuple = currency
+        if type == .transfer {
+            tuple = tuple! + " - "
+        } else  {
+            tuple = tuple! + " "
+        }
+        tuple = tuple! + String(format: "%.2f", amount)
+        return tuple!
+    }
 }
 
 struct TransactionGetter: Decodable {

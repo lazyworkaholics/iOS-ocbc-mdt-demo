@@ -38,14 +38,10 @@ struct DashboardViewModel {
         router.logout()
     }
     
-    func presentSettings() {
-        router.presentSettings()
-    }
-    
     // MARK: - DashboardViewController - data handlers
     func getBalance() -> String? {
         if let balance = DataManager.balanceGetter?.balance {
-            return String(balance)
+            return "SGD " + String(format: "%.2f", balance)
         }
         return nil
     }

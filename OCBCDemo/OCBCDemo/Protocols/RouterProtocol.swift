@@ -19,9 +19,5 @@ protocol RouterProtocol {
     
     func goHome()
     
-    func presentSettings()
-    
-    func dismissSettings()
-    
     func logout()
 }

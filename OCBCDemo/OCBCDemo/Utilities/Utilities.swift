@@ -22,6 +22,19 @@ struct Utilities {
         return date
     }
     
+//    func getDate(_ dateString:String) -> Date? {
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "dd-MM-yyyy"
+//        let date = dateFormatter.date(from: dateString)
+//        return date
+//    }
+    
+    func getDateString(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        return dateFormatter.string(from: date)
+    }
+    
     func saveUsername(username: String) {
         let userdefaults = UserDefaults.standard
         userdefaults.setValue(username, forKey: "stored_username")
@@ -30,16 +43,5 @@ struct Utilities {
     func getStoredUsername() -> String? {
         let userdefaults = UserDefaults.standard
         return userdefaults.value(forKey: "stored_username") as? String
-    }
-    
-    func errorHandlerOnFailure(session:Session?, error:Error, delegate: ViewModelProtocol) {
-        var message = ""
-        if session?.failureDescription != nil {
-            message = (session?.failureDescription)!
-        } else {
-            message = error.localizedDescription
-        }
-        delegate.showAlert(LITERAL.ERROR, message: message, onClick: nil)
-        delegate.loadingActivity(false)
     }
 }

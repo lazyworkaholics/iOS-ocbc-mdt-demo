@@ -19,7 +19,7 @@ class PayeeCollectionCell: UICollectionViewCell {
         parentStackView.wrap(into: contentView, contentMode: .fill, with: .init(top: 8.0, left: 16.0, bottom: 8.0, right: 16.0))
         
         let headerLable = PrimaryLabel.init()
-        headerLable.text = "Your Payees"
+        headerLable.text = "Payees"
         headerLable.font = .boldSystemFont(ofSize: 20)
         parentStackView.addArrangedSubview(headerLable)
         
@@ -48,6 +48,7 @@ class PayeeCollectionCell: UICollectionViewCell {
     
     func addPayee(_ payee: Payee, index: Int) {
         let payeeView = PayeeView.init(frame: .zero)
+        payeeView.layer.cornerRadius = 8.0
         stackView?.addArrangedSubview(payeeView)
         payeeView.setAccountName(payee.accountName)
         payeeView.setAccountNo(payee.accountNo)
