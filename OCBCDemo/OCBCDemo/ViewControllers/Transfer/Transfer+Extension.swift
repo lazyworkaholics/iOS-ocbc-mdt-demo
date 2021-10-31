@@ -72,8 +72,10 @@ extension TransferViewController: UICollectionViewDataSource {
             switch indexPath.section {
             case 0:
                 cell.loadData(leftLabelText: viewModel.getAccountName(), text: viewModel.getAccountNumber(), placeholder: "", indexPath: indexPath)
+                cell.textField.keyboardType = .numberPad
             case 1:
                 cell.loadData(leftLabelText: LITERAL.AMOUNT, text: "", placeholder: "", indexPath: indexPath)
+                cell.textField.keyboardType = .decimalPad
             default:
                 cell.loadData(leftLabelText: LITERAL.DESC, text: "", placeholder: "", indexPath: indexPath)
             }

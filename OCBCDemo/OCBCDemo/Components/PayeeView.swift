@@ -14,8 +14,8 @@ class PayeeView: UIView {
     var delegate: ButtonCellProtocol?
     
     var imageView: UIImageView!
-    var accountNameLabel: PrimaryLabel!
-    var accountNoLabel: PrimaryLabel!
+    var accountNameLabel: UILabel!
+    var accountNoLabel: UILabel!
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -37,12 +37,12 @@ class PayeeView: UIView {
         imageView.image = UIImage.init(named: ICON.USERNAME)
         stackView.addArrangedSubview(imageView)
         
-        accountNameLabel = PrimaryLabel.init()
+        accountNameLabel = UILabel.init()
         accountNameLabel.textAlignment = .center
         accountNameLabel.setHeight(height: 21)
         stackView.addArrangedSubview(accountNameLabel)
         
-        accountNoLabel = PrimaryLabel.init()
+        accountNoLabel = UILabel.init()
         accountNoLabel.textAlignment = .center
         accountNoLabel.setHeight(height: 21)
         stackView.addArrangedSubview(accountNoLabel)

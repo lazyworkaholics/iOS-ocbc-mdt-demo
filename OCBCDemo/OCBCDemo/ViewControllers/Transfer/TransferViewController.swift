@@ -48,8 +48,31 @@ extension TransferViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         let tag = textField.tag
+        switch tag {
+        case 0:
+            viewModel.setAccountNumber(textField.text ?? "")
+        case 1:
+            viewModel.setAmount(Double(textField.text ?? "")!)
+        default:
+            viewModel.setDescription(textField.text ?? "")
+        }
         if tag == 2 {
             buttonClick(IndexPath.init(row: 0, section: tag+1), and: ButtonCell.reuseidentifier())
         }
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if string != "" {
+            if textField.tag == 1 {
+                let splitArray = textField.text?.components(separatedBy: ".") ?? []
+                if splitArray.count > 1 {
+                    let decimalString = splitArray[1]
+                    if decimalString.count >= 2 {
+                        return false
+                    }
+                }
+            }
+        }
+        return true
     }
 }

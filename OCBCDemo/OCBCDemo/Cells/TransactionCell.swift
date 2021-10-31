@@ -10,10 +10,10 @@ import UIKit
 class TransactionCell: UICollectionViewCell {
     static let height:CGFloat = 90
     var indexPath: IndexPath!
-    var dateLabel: PrimaryLabel!
-    var nameLabel: PrimaryLabel!
-    var descLabel: PrimaryLabel!
-    var amountLable: PrimaryLabel!
+    var dateLabel: UILabel!
+    var nameLabel: UILabel!
+    var descLabel: UILabel!
+    var amountLable: UILabel!
     
     func setupLayout() {
         let parentStackView = UIStackView.init()
@@ -26,19 +26,19 @@ class TransactionCell: UICollectionViewCell {
         stackView.spacing = 8.0
         parentStackView.addArrangedSubview(stackView)
         
-        amountLable = PrimaryLabel.init()
+        amountLable = UILabel.init()
         amountLable.setWidth(width: 180.0)
         amountLable.textAlignment = .right
         amountLable.font = .boldSystemFont(ofSize: 20)
         parentStackView.addArrangedSubview(amountLable)
         
-        dateLabel = PrimaryLabel.init()
+        dateLabel = UILabel.init()
         dateLabel.font = .boldSystemFont(ofSize: 12)
         stackView.addArrangedSubview(dateLabel)
-        nameLabel = PrimaryLabel.init()
+        nameLabel = UILabel.init()
         nameLabel.font = .boldSystemFont(ofSize: 12)
         stackView.addArrangedSubview(nameLabel)
-        descLabel = PrimaryLabel.init()
+        descLabel = UILabel.init()
         descLabel.font = .boldSystemFont(ofSize: 12)
         stackView.addArrangedSubview(descLabel)
     }

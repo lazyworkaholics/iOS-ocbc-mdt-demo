@@ -32,6 +32,8 @@ struct TransferViewModel {
         dateString = Utilities().getCurrentDateString()
         if transferAccountNumber == nil || transferAccountNumber == "" || transferAmount == nil || transferAmount == 0 {
             delegate?.showAlert(LITERAL.ERROR, message: LITERAL.DESCRIPTION.ERROR.EMPTY_ACC, actionTitles: [], actions: [])
+        } else if transferAccountNumber!.count < 8 {
+            delegate?.showAlert(LITERAL.DESCRIPTION.TITLE.INVALID_ACC, message: LITERAL.DESCRIPTION.ERROR.INVALID_ACC, actionTitles: [], actions: [])
         }
         else if description == nil || description == "" {
             delegate?.showAlert(LITERAL.ERROR, message: LITERAL.DESCRIPTION.ERROR.EMPTY_DESC, actionTitles: [], actions: [])
@@ -77,6 +79,17 @@ struct TransferViewModel {
         router.goHome()
     }
     
+    // MARK:- setter functions
+    mutating func setAccountNumber(_ accoutNumber: String) {
+        transferAccountNumber = accoutNumber
+    }
+    mutating func setAmount(_ amount: Double) {
+        transferAmount = amount
+    }
+    mutating func setDescription(_ desc: String) {
+        description = desc
+    }
+        
     // MARK: - TransferViewController - data handlers
     mutating func getAccountNumber() -> String {
         if transferAccountNumber == nil {

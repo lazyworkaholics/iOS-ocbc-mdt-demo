@@ -53,7 +53,7 @@ extension DashboardViewController: UICollectionViewDataSource {
                 cell.setupLayout(LITERAL.BALANCE, isButtonShown: true)
                 cell.delegate = self
             }
-            cell.loadData(viewModel.getBalance(), buttonTitle: "Pay & Transfer", indexPath: indexPath)
+            cell.loadData(viewModel.getBalance(), buttonTitle: LITERAL.TRANSFER, indexPath: indexPath)
             return cell
         case 1:
             let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: PayeeCollectionCell.reuseidentifier(), for: indexPath) as! PayeeCollectionCell

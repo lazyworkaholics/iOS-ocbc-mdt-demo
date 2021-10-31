@@ -12,8 +12,8 @@ class KeyValueCell: UICollectionViewCell {
     var delegate: ButtonCellProtocol?
     var indexPath: IndexPath?
     
-    var keyLabel: SecondaryLabel!
-    var valueLabel: PrimaryLabel!
+    var keyLabel: UILabel!
+    var valueLabel: UILabel!
     var accessoryButton: SecondaryButton?
     
     func setupLayout(_ keyText:String, isButtonShown:Bool = false) {
@@ -23,13 +23,13 @@ class KeyValueCell: UICollectionViewCell {
         stackView.spacing = 8.0
         stackView.wrap(into: contentView, contentMode: .fill, with: .init(top: 8.0, left: 16.0, bottom: 8.0, right: 16.0))
         
-        keyLabel = SecondaryLabel.init()
+        keyLabel = UILabel.init()
         keyLabel.font = .boldSystemFont(ofSize: 12)
         keyLabel.text = keyText
         keyLabel.textAlignment = .right
         stackView.addArrangedSubview(keyLabel)
         
-        valueLabel = PrimaryLabel.init()
+        valueLabel = UILabel.init()
         valueLabel.setWidth(width: 140)
         valueLabel.font = .boldSystemFont(ofSize: 18)
         stackView.addArrangedSubview(valueLabel)

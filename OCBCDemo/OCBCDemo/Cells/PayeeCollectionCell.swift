@@ -19,7 +19,7 @@ class PayeeCollectionCell: UICollectionViewCell {
         parentStackView.axis = .vertical
         parentStackView.wrap(into: contentView, contentMode: .fill, with: .init(top: 8.0, left: 16.0, bottom: 8.0, right: 16.0))
         
-        let headerLable = PrimaryLabel.init()
+        let headerLable = UILabel.init()
         headerLable.text = "Payees"
         headerLable.font = .boldSystemFont(ofSize: 20)
         parentStackView.addArrangedSubview(headerLable)
@@ -35,7 +35,7 @@ class PayeeCollectionCell: UICollectionViewCell {
         stackView?.spacing = 8.0
         stackView?.wrap(into: scrollView)
         
-        let footerLabel = PrimaryLabel.init()
+        let footerLabel = UILabel.init()
         footerLabel.text = "Recent Transactions"
         footerLabel.font = .boldSystemFont(ofSize: 20)
         footerLabel.wrap(into: contentView, contentMode: .bottomWithHeight(21), with: UIEdgeInsets.init(top: 0, left: 16.0, bottom: 8.0, right: 16.0))
@@ -50,7 +50,7 @@ class PayeeCollectionCell: UICollectionViewCell {
     }
     
     func addPayee(_ payee: Payee, index: Int) {
-        let payeeView = PayeeView.init(indexpath!, and: PayeeCollectionCell.reuseidentifier())
+        let payeeView = PayeeView.init(IndexPath.init(item: index, section: indexpath!.section), and: PayeeCollectionCell.reuseidentifier())
         payeeView.delegate = delegate
         payeeView.layer.cornerRadius = 8.0
         stackView?.addArrangedSubview(payeeView)

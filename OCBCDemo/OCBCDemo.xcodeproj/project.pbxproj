@@ -50,7 +50,7 @@
 		3AA1362A272C647000DB7C7D /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13629272C647000DB7C7D /* UICollectionViewCell+Extension.swift */; };
 		3AA1362C272CDE2E00DB7C7D /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1362B272CDE2E00DB7C7D /* ButtonCell.swift */; };
 		3AA1362E272CE3DF00DB7C7D /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1362D272CE3DF00DB7C7D /* ImageCell.swift */; };
-		3AA13630272CECC700DB7C7D /* Login+UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1362F272CECC700DB7C7D /* Login+UIExtension.swift */; };
+		3AA13630272CECC700DB7C7D /* Login+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1362F272CECC700DB7C7D /* Login+Extension.swift */; };
 		3AA13632272D0DAE00DB7C7D /* Literals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13631272D0DAE00DB7C7D /* Literals.swift */; };
 		3AA13637272D178700DB7C7D /* LoginProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13636272D178700DB7C7D /* LoginProtocolMock.swift */; };
 		3AA13639272D179900DB7C7D /* ServiceManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13638272D179900DB7C7D /* ServiceManagerMock.swift */; };
@@ -60,12 +60,11 @@
 		3AC447A1272D505B00F7E78B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447A0272D505B00F7E78B /* DataManager.swift */; };
 		3AC447A3272D5DC800F7E78B /* PayeeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447A2272D5DC800F7E78B /* PayeeCollectionCell.swift */; };
 		3AC447A5272D5E3900F7E78B /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447A4272D5E3900F7E78B /* TransactionCell.swift */; };
-		3AC447A7272D753600F7E78B /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447A6272D753600F7E78B /* Labels.swift */; };
 		3AC447A9272D8E0500F7E78B /* PayeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447A8272D8E0500F7E78B /* PayeeView.swift */; };
 		3AC447AB272DB35A00F7E78B /* KeyValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447AA272DB35A00F7E78B /* KeyValueCell.swift */; };
-		3AC447AD272DB37200F7E78B /* Dashboard+UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447AC272DB37200F7E78B /* Dashboard+UIExtension.swift */; };
+		3AC447AD272DB37200F7E78B /* Dashboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447AC272DB37200F7E78B /* Dashboard+Extension.swift */; };
 		3AC447AF272DBAB900F7E78B /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447AE272DBAB900F7E78B /* UIStackView+Extension.swift */; };
-		3AC447B1272DBEF800F7E78B /* Transfer+UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447B0272DBEF800F7E78B /* Transfer+UIExtension.swift */; };
+		3AC447B1272DBEF800F7E78B /* Transfer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447B0272DBEF800F7E78B /* Transfer+Extension.swift */; };
 		3AC447B3272E59D200F7E78B /* GenericViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447B2272E59D200F7E78B /* GenericViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -124,7 +123,7 @@
 		3AA13629272C647000DB7C7D /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
 		3AA1362B272CDE2E00DB7C7D /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 		3AA1362D272CE3DF00DB7C7D /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
-		3AA1362F272CECC700DB7C7D /* Login+UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login+UIExtension.swift"; sourceTree = "<group>"; };
+		3AA1362F272CECC700DB7C7D /* Login+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login+Extension.swift"; sourceTree = "<group>"; };
 		3AA13631272D0DAE00DB7C7D /* Literals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Literals.swift; sourceTree = "<group>"; };
 		3AA13636272D178700DB7C7D /* LoginProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocolMock.swift; sourceTree = "<group>"; };
 		3AA13638272D179900DB7C7D /* ServiceManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManagerMock.swift; sourceTree = "<group>"; };
@@ -134,12 +133,11 @@
 		3AC447A0272D505B00F7E78B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		3AC447A2272D5DC800F7E78B /* PayeeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeeCollectionCell.swift; sourceTree = "<group>"; };
 		3AC447A4272D5E3900F7E78B /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
-		3AC447A6272D753600F7E78B /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
 		3AC447A8272D8E0500F7E78B /* PayeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeeView.swift; sourceTree = "<group>"; };
 		3AC447AA272DB35A00F7E78B /* KeyValueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueCell.swift; sourceTree = "<group>"; };
-		3AC447AC272DB37200F7E78B /* Dashboard+UIExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dashboard+UIExtension.swift"; sourceTree = "<group>"; };
+		3AC447AC272DB37200F7E78B /* Dashboard+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dashboard+Extension.swift"; sourceTree = "<group>"; };
 		3AC447AE272DBAB900F7E78B /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
-		3AC447B0272DBEF800F7E78B /* Transfer+UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transfer+UIExtension.swift"; sourceTree = "<group>"; };
+		3AC447B0272DBEF800F7E78B /* Transfer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transfer+Extension.swift"; sourceTree = "<group>"; };
 		3AC447B2272E59D200F7E78B /* GenericViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -265,9 +263,9 @@
 		3A2DB72D2729A1C700F8AA1E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				3AA1362D272CE3DF00DB7C7D /* ImageCell.swift */,
 				3AA1361F272C3D8A00DB7C7D /* TextFieldCell.swift */,
 				3AA1362B272CDE2E00DB7C7D /* ButtonCell.swift */,
-				3AA1362D272CE3DF00DB7C7D /* ImageCell.swift */,
 				3AC447AA272DB35A00F7E78B /* KeyValueCell.swift */,
 				3AC447A2272D5DC800F7E78B /* PayeeCollectionCell.swift */,
 				3AC447A4272D5E3900F7E78B /* TransactionCell.swift */,
@@ -368,7 +366,6 @@
 			children = (
 				3AA13622272C41F300DB7C7D /* Buttons.swift */,
 				3AA13627272C61E900DB7C7D /* TextFields.swift */,
-				3AC447A6272D753600F7E78B /* Labels.swift */,
 				3AC447A8272D8E0500F7E78B /* PayeeView.swift */,
 			);
 			path = Components;
@@ -421,7 +418,7 @@
 			isa = PBXGroup;
 			children = (
 				3A2DB6FB27299E9900F8AA1E /* LoginViewController.swift */,
-				3AA1362F272CECC700DB7C7D /* Login+UIExtension.swift */,
+				3AA1362F272CECC700DB7C7D /* Login+Extension.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -430,7 +427,7 @@
 			isa = PBXGroup;
 			children = (
 				3AA13600272BC4F500DB7C7D /* DashboardViewController.swift */,
-				3AC447AC272DB37200F7E78B /* Dashboard+UIExtension.swift */,
+				3AC447AC272DB37200F7E78B /* Dashboard+Extension.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -439,7 +436,7 @@
 			isa = PBXGroup;
 			children = (
 				3AA13602272BC50C00DB7C7D /* TransferViewController.swift */,
-				3AC447B0272DBEF800F7E78B /* Transfer+UIExtension.swift */,
+				3AC447B0272DBEF800F7E78B /* Transfer+Extension.swift */,
 			);
 			path = Transfer;
 			sourceTree = "<group>";
@@ -548,7 +545,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A2DB74C272A8ADD00F8AA1E /* Session.swift in Sources */,
-				3AC447AD272DB37200F7E78B /* Dashboard+UIExtension.swift in Sources */,
+				3AC447AD272DB37200F7E78B /* Dashboard+Extension.swift in Sources */,
 				3AA13617272BD9F500DB7C7D /* UIViewController+Extension.swift in Sources */,
 				3AA1360B272BC56900DB7C7D /* TransferViewModel.swift in Sources */,
 				3AA1362A272C647000DB7C7D /* UICollectionViewCell+Extension.swift in Sources */,
@@ -564,16 +561,15 @@
 				3AC447AF272DBAB900F7E78B /* UIStackView+Extension.swift in Sources */,
 				3AA1362E272CE3DF00DB7C7D /* ImageCell.swift in Sources */,
 				3A2DB6FC27299E9900F8AA1E /* LoginViewController.swift in Sources */,
-				3AA13630272CECC700DB7C7D /* Login+UIExtension.swift in Sources */,
+				3AA13630272CECC700DB7C7D /* Login+Extension.swift in Sources */,
 				3AA13615272BCECF00DB7C7D /* ViewModelProtocol.swift in Sources */,
-				3AC447B1272DBEF800F7E78B /* Transfer+UIExtension.swift in Sources */,
+				3AC447B1272DBEF800F7E78B /* Transfer+Extension.swift in Sources */,
 				3A65BAEB272B9DF500332E69 /* UIView+Extension.swift in Sources */,
 				3AA13632272D0DAE00DB7C7D /* Literals.swift in Sources */,
 				3AC447A3272D5DC800F7E78B /* PayeeCollectionCell.swift in Sources */,
 				3AC447A5272D5E3900F7E78B /* TransactionCell.swift in Sources */,
 				3AA13607272BC54E00DB7C7D /* LoginViewModel.swift in Sources */,
 				3AA13623272C41F300DB7C7D /* Buttons.swift in Sources */,
-				3AC447A7272D753600F7E78B /* Labels.swift in Sources */,
 				3A2DB6F827299E9900F8AA1E /* AppDelegate.swift in Sources */,
 				3AC447A1272D505B00F7E78B /* DataManager.swift in Sources */,
 				3AA1360F272BC67B00DB7C7D /* RouterProtocol.swift in Sources */,

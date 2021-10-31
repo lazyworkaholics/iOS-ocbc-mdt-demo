@@ -18,7 +18,7 @@ class TextFieldCell: UICollectionViewCell {
     var indexPath: IndexPath?
     
     var leftIconView: UIImageView?
-    var leftLabel: PrimaryLabel?
+    var leftLabel: UILabel?
     var textField: PrimaryTextField!
     var button: TertiaryButton?
     
@@ -36,7 +36,7 @@ class TextFieldCell: UICollectionViewCell {
             stackView.addArrangedSubview(leftIconView!)
         } else if isLeftLabel {
             leftIconView = nil
-            leftLabel = PrimaryLabel.init()
+            leftLabel = UILabel.init()
             leftLabel?.setWidth(width: 120)
             leftLabel?.font = .boldSystemFont(ofSize: 12)
             stackView.addArrangedSubview(leftLabel!)

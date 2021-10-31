@@ -9,10 +9,14 @@ import Foundation
 
 struct LITERAL {
     struct DESCRIPTION {
+        struct TITLE {
+            static let INVALID_ACC = "Invalid account number"
+        }
         struct ERROR {
             static let LOGIN = "Username and Password cannot be nil"
             static let EMPTY_ACC = "Account number and Amount cannot be empty"
             static let EMPTY_DESC = "Give a valid description for the purpose of this transfer"
+            static let INVALID_ACC = "Enter a valid account number"
         }
     }
     static let OK = "OK"
@@ -23,6 +27,7 @@ struct LITERAL {
     static let PASSWORD = "Password"
     static let LOGIN = "Login"
     static let SEND = "Send"
+    static let TRANSFER = "Transfer"
     static let SUCCESSFUL = "SUCCESSFUL"
     static let ACCOUNT_NO = "Account Number"
     static let AMOUNT = "Amount"
