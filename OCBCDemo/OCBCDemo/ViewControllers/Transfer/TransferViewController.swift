@@ -8,10 +8,12 @@
 import UIKit
 
 class TransferViewController: GenericViewController {
+    
     //MARK:- variables and initializers
     var viewModel: TransferViewModel!
     
     class func initWithViewModel(_ viewModel: TransferViewModel) -> TransferViewController {
+        
         let viewController = TransferViewController()
         viewController.viewModel = viewModel
         viewController.viewModel.delegate = viewController
@@ -26,7 +28,9 @@ class TransferViewController: GenericViewController {
 }
 
 extension TransferViewController: ButtonCellProtocol {
+    
     func buttonClick(_ indexPath: IndexPath, and reuseIdentifier: String) {
+        
         viewModel.onTransferClick()
     }
 }
@@ -35,6 +39,7 @@ extension TransferViewController: ButtonCellProtocol {
 extension TransferViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
         let tag = textField.tag
         if tag < 4 {
             let cell = collectionView.cellForItem(at: IndexPath.init(row: 0, section: tag+1)) as? TextFieldCell
@@ -47,6 +52,7 @@ extension TransferViewController: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
+        
         let tag = textField.tag
         switch tag {
         case 0:
@@ -62,6 +68,7 @@ extension TransferViewController: UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
         if string != "" {
             if textField.tag == 1 {
                 let splitArray = textField.text?.components(separatedBy: ".") ?? []

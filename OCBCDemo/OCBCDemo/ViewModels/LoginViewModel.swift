@@ -43,12 +43,14 @@ struct LoginViewModel {
     }
     
     mutating func notUsername() {
+        
         isNotUsernameEnabled = true
         delegate?.reload()
     }
     
     // MARK: - LoginViewController - Data Handlers
     func getUsername() -> String? {
+        
         if isNotUsernameEnabled == false {
             return Utilities().getStoredUsername()
         }

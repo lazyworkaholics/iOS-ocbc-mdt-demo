@@ -36,6 +36,7 @@ struct Transfer: Codable {
     }
     
     init(with amount: Double, recipientAccountNo: String, dateString: String, description: String) {
+        
         self.amount = amount
         self.recipientAccountNo = recipientAccountNo
         self.date = Utilities().getDate(dateString)

@@ -10,6 +10,7 @@ import UIKit
 extension LoginViewController {
     
     func setupUILayout() {
+        
         self.view.backgroundColor = UIColor.init(named: CUSTOM_COLOR.BACKGROUND.SECONDARY)
         collectionView.backgroundColor = .clear
         collectionView.register(ImageCell.self, forCellWithReuseIdentifier: ImageCell.reuseidentifier())
@@ -28,6 +29,7 @@ extension LoginViewController {
     }
     
     @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        
         for cell in collectionView.visibleCells {
             if cell.isKind(of: TextFieldCell.self) {
                 (cell as! TextFieldCell).textField.resignFirstResponder()
@@ -38,9 +40,11 @@ extension LoginViewController {
 
 extension LoginViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
+        
         return 4
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         return 1
     }
     
@@ -94,6 +98,7 @@ extension LoginViewController: UICollectionViewDataSource {
 
 extension LoginViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
         let window = UIApplication.shared.windows[0]
         switch indexPath.section
         {

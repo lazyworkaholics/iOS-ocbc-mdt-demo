@@ -79,6 +79,7 @@ struct Transaction: Decodable {
     }
     
     func amountString() -> String {
+        
         var tuple = currency
         if type == .transfer {
             tuple = tuple! + " - "

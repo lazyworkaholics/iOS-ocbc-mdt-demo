@@ -8,7 +8,9 @@
 import UIKit
 
 class PrimaryButton: UIButton {
+    
     override func draw(_ rect: CGRect) {
+        
         super.draw(rect)
         let context = UIGraphicsGetCurrentContext()
         context!.setFillColor(UIColor.init(named: CUSTOM_COLOR.BACKGROUND.TERTIARY)!.cgColor)
@@ -23,14 +25,18 @@ class PrimaryButton: UIButton {
 }
 
 class TertiaryButton: UIButton {
+    
     override func draw(_ rect: CGRect) {
+        
         super.draw(rect)
         titleLabel?.textColor = UIColor.init(named: CUSTOM_COLOR.FONT.TERTIARY)
     }
 }
 
 class SecondaryButton: TertiaryButton {
+    
     override func draw(_ rect: CGRect) {
+        
         super.draw(rect)
         applyBorder(with: UIColor.init(named: CUSTOM_COLOR.BORDER.TERTIARY)?.cgColor)
     }

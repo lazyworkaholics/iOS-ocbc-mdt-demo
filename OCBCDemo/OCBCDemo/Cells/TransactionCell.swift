@@ -8,6 +8,7 @@
 import UIKit
 
 class TransactionCell: UICollectionViewCell {
+    
     static let height:CGFloat = 90
     var indexPath: IndexPath!
     var dateLabel: UILabel!
@@ -16,6 +17,7 @@ class TransactionCell: UICollectionViewCell {
     var amountLable: UILabel!
     
     func setupLayout() {
+        
         let parentStackView = UIStackView.init()
         contentView.backgroundColor = UIColor.init(named: CUSTOM_COLOR.BACKGROUND.QUATERNARY)
         parentStackView.axis = .horizontal
@@ -44,6 +46,7 @@ class TransactionCell: UICollectionViewCell {
     }
     
     func loadData(_ dateText: String, nameText: String, descText: String, amountText: String, indexPath: IndexPath) {
+        
         dateLabel.text = dateText
         nameLabel.text = nameText
         descLabel.text = descText

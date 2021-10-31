@@ -13,12 +13,14 @@ class ImageCell: UICollectionViewCell {
     var imageView: UIImageView!
     
     func setupLayout() {
+        
         imageView = UIImageView.init()
         imageView?.wrap(into: contentView, contentMode: .fill, with: .zero)
         imageView.contentMode = .scaleAspectFill
     }
     
     func loadData(_ image: UIImage) {
+        
         imageView.image = image
     }
 }

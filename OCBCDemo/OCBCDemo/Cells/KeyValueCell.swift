@@ -8,6 +8,7 @@
 import UIKit
 
 class KeyValueCell: UICollectionViewCell {
+    
     static let height:CGFloat = 80
     var delegate: ButtonCellProtocol?
     var indexPath: IndexPath?
@@ -17,6 +18,7 @@ class KeyValueCell: UICollectionViewCell {
     var accessoryButton: SecondaryButton?
     
     func setupLayout(_ keyText:String, isButtonShown:Bool = false) {
+        
         contentView.backgroundColor = UIColor.init(named: CUSTOM_COLOR.BACKGROUND.QUATERNARY)
         let stackView = UIStackView.init()
         stackView.axis = .horizontal
@@ -42,6 +44,7 @@ class KeyValueCell: UICollectionViewCell {
     }
     
     func loadData(_ text:String?, buttonTitle: String? = nil, indexPath:IndexPath) {
+        
         if text != nil {
             valueLabel.text = text
         }
@@ -55,6 +58,7 @@ class KeyValueCell: UICollectionViewCell {
     }
     
     @objc func onButtonClick() {
+        
         delegate?.buttonClick(indexPath ?? IndexPath.init(item: 0, section: 0), and: self.reuseIdentifier!)
     }
 }

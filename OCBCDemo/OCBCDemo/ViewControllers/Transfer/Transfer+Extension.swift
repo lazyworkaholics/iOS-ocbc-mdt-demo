@@ -9,6 +9,7 @@ import UIKit
 
 extension TransferViewController {
     func setupUILayout() {
+        
         self.view.backgroundColor = UIColor.init(named: CUSTOM_COLOR.BACKGROUND.SECONDARY)
         self.title = LITERAL.TRANSFER_TITLE
         collectionView.backgroundColor = .clear
@@ -27,6 +28,7 @@ extension TransferViewController {
     }
     
     @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        
         for cell in collectionView.visibleCells {
             if cell.isKind(of: TextFieldCell.self) {
                 (cell as! TextFieldCell).textField.resignFirstResponder()
@@ -35,26 +37,36 @@ extension TransferViewController {
     }
     
     func setupBarButtons() {
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Logout", style: UIBarButtonItem.Style.plain, target: self, action: #selector(logout))
         navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: ICON.BACK), style: .done, target: self, action: #selector(back))
     }
+    
     @objc fileprivate func logout() {
+        
         viewModel.logout()
     }
+    
     @objc fileprivate func back() {
+        
         viewModel.back()
     }
 }
 
 extension TransferViewController: UICollectionViewDataSource {
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
+        
         return 4
     }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         if indexPath.section == 3 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ButtonCell.reuseidentifier(), for: indexPath) as! ButtonCell
             if cell.button == nil {
@@ -86,7 +98,9 @@ extension TransferViewController: UICollectionViewDataSource {
 }
 
 extension TransferViewController: UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
         let window = UIApplication.shared.windows[0]
         return CGSize.init(width: window.rootViewController!.view.bounds.width, height: TextFieldCell.height)
     }

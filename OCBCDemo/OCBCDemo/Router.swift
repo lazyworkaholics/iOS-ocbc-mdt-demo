@@ -36,18 +36,6 @@ class Router: RouterProtocol {
         launchLoginView()
     }
     
-    func logout() {
-        DispatchQueue.main.async(execute: {() -> Void in
-            
-            if DataManager.apiToken == nil, self.currentRouteState != .loginView {
-                self.launchLoginView()
-                self.loggedInNavigationController = nil
-                self.dashboardViewModel = nil
-                self.dashboardViewController = nil
-            }
-        })
-    }
-    
     func login() {
         DispatchQueue.main.async(execute: {() -> Void in
             
@@ -63,6 +51,18 @@ class Router: RouterProtocol {
                 self.loginViewController = nil
                 self.loginViewModel = nil
                 self.currentRouteState = AppRouteState.dashboardView
+            }
+        })
+    }
+    
+    func logout() {
+        DispatchQueue.main.async(execute: {() -> Void in
+            
+            if DataManager.apiToken == nil, self.currentRouteState != .loginView {
+                self.launchLoginView()
+                self.loggedInNavigationController = nil
+                self.dashboardViewModel = nil
+                self.dashboardViewController = nil
             }
         })
     }

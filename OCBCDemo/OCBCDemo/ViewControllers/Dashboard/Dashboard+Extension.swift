@@ -10,6 +10,7 @@ import UIKit
 extension DashboardViewController {
     
     func setupUILayout() {
+        
         self.view.backgroundColor = UIColor.init(named: CUSTOM_COLOR.BACKGROUND.SECONDARY)
         self.title = LITERAL.DASHBOARD_TITLE
         collectionView.backgroundColor = .clear
@@ -26,18 +27,25 @@ extension DashboardViewController {
     }
     
     func setupBarButtons() {
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Logout", style: .done, target: self, action: #selector(logout))
     }
+    
     @objc fileprivate func logout() {
+        
         viewModel.logout()
     }
 }
 
 extension DashboardViewController: UICollectionViewDataSource {
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
+        
         return 3
     }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         if section == 2 {
             return viewModel.getTransactionsCount() ?? 0
         }
@@ -76,7 +84,9 @@ extension DashboardViewController: UICollectionViewDataSource {
 }
 
 extension DashboardViewController: UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
         let window = UIApplication.shared.windows[0]
         switch indexPath.section {
         case 0:

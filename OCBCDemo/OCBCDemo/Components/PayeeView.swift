@@ -18,10 +18,12 @@ class PayeeView: UIView {
     var accountNoLabel: UILabel!
     
     required init?(coder: NSCoder) {
+        
         super.init(coder: coder)
     }
     
     init(_ indexpath: IndexPath, and reuseIdentifier: String) {
+        
         super.init(frame: .zero)
         self.indexpath = indexpath
         self.reuseIdentifier = reuseIdentifier
@@ -54,18 +56,22 @@ class PayeeView: UIView {
     }
     
     @objc func onClick() {
+        
         delegate?.buttonClick(indexpath, and: reuseIdentifier)
     }
     
     func setImage(_ image: UIImage) {
+        
         imageView.image = image
     }
     
     func setAccountName(_ accountName: String) {
+        
         accountNameLabel.text = accountName
     }
     
     func setAccountNo(_ accountNo: String) {
+        
         accountNoLabel.text = accountNo
     }
 }

@@ -15,6 +15,7 @@ class PayeeCollectionCell: UICollectionViewCell {
     var stackView: UIStackView?
     
     func setupLayout() {
+        
         let parentStackView = UIStackView.init()
         parentStackView.axis = .vertical
         parentStackView.wrap(into: contentView, contentMode: .fill, with: .init(top: 8.0, left: 16.0, bottom: 8.0, right: 16.0))
@@ -42,6 +43,7 @@ class PayeeCollectionCell: UICollectionViewCell {
     }
     
     func loadData(_ payees:[Payee], indexpath: IndexPath) {
+        
         stackView?.removeAllArrangedSubviews()
         self.indexpath = indexpath
         for (index, payee) in payees.enumerated() {
@@ -50,6 +52,7 @@ class PayeeCollectionCell: UICollectionViewCell {
     }
     
     func addPayee(_ payee: Payee, index: Int) {
+        
         let payeeView = PayeeView.init(IndexPath.init(item: index, section: indexpath!.section), and: PayeeCollectionCell.reuseidentifier())
         payeeView.delegate = delegate
         payeeView.layer.cornerRadius = 8.0

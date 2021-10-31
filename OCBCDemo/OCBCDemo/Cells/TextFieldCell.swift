@@ -23,6 +23,7 @@ class TextFieldCell: UICollectionViewCell {
     var button: TertiaryButton?
     
     func setupLayout(_ isLeftIcon:Bool = false, isLeftLabel:Bool = false, isRightButton:Bool = false) {
+        
         contentView.backgroundColor = UIColor.init(named: CUSTOM_COLOR.BACKGROUND.QUATERNARY)
         let stackView = UIStackView.init()
         stackView.axis = .horizontal
@@ -73,6 +74,7 @@ class TextFieldCell: UICollectionViewCell {
     }
     
     @objc func onButtonClick() {
+        
         delegate?.buttonClick(indexPath ?? IndexPath.init(item: 0, section: 0), and: self.reuseIdentifier!)
     }
 }

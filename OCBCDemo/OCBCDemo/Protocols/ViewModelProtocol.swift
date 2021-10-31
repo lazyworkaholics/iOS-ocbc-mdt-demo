@@ -15,6 +15,7 @@ protocol ViewModelProtocol {
 }
 
 extension ViewModelProtocol {
+    
     func errorHandlerOnFailure(session:Session?, error:NSError) {
         
         var message = ""

@@ -8,6 +8,7 @@
 import Foundation
 
 struct DashboardViewModel {
+    
     //MARK:- variables and initializers
     var delegate: ViewModelProtocol?
     var serviceManager: ServiceManagerProtocol!
@@ -36,16 +37,19 @@ struct DashboardViewModel {
     
     //MARK:- routing functions
     func logout() {
+        
         DataManager.apiToken = nil
         router.logout()
     }
     
     func onTransferClick(_ payee: Payee? = nil)  {
+        
         router.navigateToTransferView(with: payee)
     }
     
     // MARK: - DashboardViewController - data handlers
     func getBalance() -> String? {
+        
         if let balance = DataManager.balanceGetter?.balance {
             return "SGD " + String(format: "%.2f", balance)
         }
@@ -53,22 +57,27 @@ struct DashboardViewModel {
     }
     
     func getPayeeCount() -> Int? {
+        
         return DataManager.payeeGetter?.payees?.count
     }
     
     func getAllPayees() -> [Payee] {
+        
         return DataManager.payeeGetter?.payees ?? []
     }
     
     func getPayee(for index:Int) -> Payee? {
+        
         return DataManager.payeeGetter?.payees?[index]
     }
     
     func getTransactionsCount() -> Int? {
+        
         return DataManager.transactionGetter?.transactions?.count
     }
     
     func getTransaction(for index:Int) -> Transaction? {
+        
         return DataManager.transactionGetter?.transactions?[index]
     }
 }

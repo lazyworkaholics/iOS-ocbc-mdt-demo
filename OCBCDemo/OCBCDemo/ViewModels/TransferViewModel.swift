@@ -8,6 +8,7 @@
 import Foundation
 
 struct TransferViewModel {
+    
     //MARK:- variables and initializers
     var delegate: ViewModelProtocol?
     var serviceManager: ServiceManagerProtocol!
@@ -47,7 +48,6 @@ struct TransferViewModel {
     private func presentConfirmAlert(_ transfer: Transfer) {
         
         let titleString = "Transfer SGD " + String(transferAmount!) + " to " + transferAccountNumber! + "?"
-        
         delegate?.showAlert(titleString, message: LITERAL.OK_MESSAGE, actionTitles: [LITERAL.CANCEL, LITERAL.OK], actions: [{alertAction in}, {
             alertAction in
             makeTransfer(transfer)
@@ -55,6 +55,7 @@ struct TransferViewModel {
     }
     
     func makeTransfer(_ transfer: Transfer) {
+        
         delegate?.loadingActivity(true)
         serviceManager.makeTransfer(DataManager.apiToken!, transfer: transfer, onSuccess: {
             makeTransfer in
@@ -74,27 +75,33 @@ struct TransferViewModel {
     
     //MARK:- routing functions
     func logout() {
+        
         DataManager.apiToken = nil
         router.logout()
     }
     
     func back() {
+        
         router.goHome()
     }
     
     // MARK:- setter functions
     mutating func setAccountNumber(_ accoutNumber: String) {
+        
         transferAccountNumber = accoutNumber
     }
     mutating func setAmount(_ amount: Double) {
+        
         transferAmount = amount
     }
     mutating func setDescription(_ desc: String) {
+        
         description = desc
     }
         
     // MARK: - TransferViewController - data handlers
     mutating func getAccountNumber() -> String {
+        
         if transferAccountNumber == nil {
             transferAccountNumber = payee?.accountNo
         }
@@ -102,6 +109,7 @@ struct TransferViewModel {
     }
     
     func getAccountName() -> String {
+        
         return payee?.accountName ?? LITERAL.ACCOUNT_NO
     }
 }

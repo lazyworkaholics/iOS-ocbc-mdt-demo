@@ -8,10 +8,12 @@
 import UIKit
 
 class LoginViewController: GenericViewController {
+    
     //MARK:- variables and initializers
     var viewModel: LoginViewModel!
     
     class func initWithViewModel(_ viewModel: LoginViewModel) -> LoginViewController {
+        
         let viewController = LoginViewController.init()
         viewController.viewModel = viewModel
         viewController.viewModel.delegate = viewController
@@ -21,7 +23,9 @@ class LoginViewController: GenericViewController {
 }
 
 extension LoginViewController: ButtonCellProtocol {
+    
     func buttonClick(_ indexPath: IndexPath, and reuseIdentifier: String) {
+        
         if reuseIdentifier == TextFieldCell.reuseidentifier() {
             viewModel.notUsername()
         } else if reuseIdentifier == ButtonCell.reuseidentifier() {
@@ -37,6 +41,7 @@ extension LoginViewController: ButtonCellProtocol {
 extension LoginViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
         let tag = textField.tag
         if tag < 3 {
             let cell = collectionView.cellForItem(at: IndexPath.init(row: 0, section: tag+1)) as? TextFieldCell
@@ -49,6 +54,7 @@ extension LoginViewController: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
+        
         let tag = textField.tag
         if tag == 2 {
             buttonClick(IndexPath.init(row: 0, section: tag+1), and: ButtonCell.reuseidentifier())

@@ -16,10 +16,12 @@ class GenericViewController: UIViewController {
 extension GenericViewController: ViewModelProtocol {
     
     func showAlert(_ title: String, message: String, actionTitles: [String], actions: [((UIAlertAction) -> Void)?]) {
+        
         presentAlert(with: title, message: message, actionTitles: actionTitles, actions: actions)
     }
     
     func loadingActivity(_ isShow:Bool) {
+        
         DispatchQueue.main.async(execute: {() -> Void in
             if isShow {
                 self.activityindicator.startAnimating()
@@ -30,6 +32,7 @@ extension GenericViewController: ViewModelProtocol {
     }
     
     func reload() {
+        
         DispatchQueue.main.async(execute: {() -> Void in
             self.collectionView.reloadData()
         })
