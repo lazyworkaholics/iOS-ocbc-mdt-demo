@@ -66,7 +66,6 @@ class ViewControllerTests: XCTestCase {
         
         let textField = UITextField()
         textField.tag = 1
-        viewController.textFieldDidEndEditing(textField)
         XCTAssertTrue(viewController.textFieldShouldReturn(textField))
     }
     
