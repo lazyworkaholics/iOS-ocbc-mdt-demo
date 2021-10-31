@@ -29,7 +29,6 @@ struct Transfer: Codable {
             id = try container.decodeIfPresent(String.self, forKey: .id)
             recipientAccountNo = try container.decodeIfPresent(String.self, forKey: .recipientAccountNo)
             amount = try container.decodeIfPresent(Double.self, forKey: .amount)
-            date = try Utilities().getDate(container.decodeIfPresent(String.self, forKey: .date)!)
             description = try container.decodeIfPresent(String.self, forKey: .description)
         } catch {
             throw error

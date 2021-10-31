@@ -18,20 +18,28 @@ class TextFieldCell: UICollectionViewCell {
     var indexPath: IndexPath?
     
     var leftIconView: UIImageView?
+    var leftLabel: PrimaryLabel?
     var textField: PrimaryTextField!
     var button: TertiaryButton?
     
-    func setupLayout(_ isLeftIcon:Bool = false, isRightButton:Bool = false) {
+    func setupLayout(_ isLeftIcon:Bool = false, isLeftLabel:Bool = false, isRightButton:Bool = false) {
         contentView.backgroundColor = UIColor.init(named: CUSTOM_COLOR.BACKGROUND.QUATERNARY)
         let stackView = UIStackView.init()
         stackView.axis = .horizontal
         stackView.spacing = 8.0
         stackView.wrap(into: contentView, contentMode: .fill, with: .init(top: 8.0, left: 16.0, bottom: 8.0, right: 16.0))
         if isLeftIcon {
+            leftLabel = nil
             leftIconView = UIImageView.init()
             leftIconView?.contentMode = .scaleAspectFit
             leftIconView?.setWidth(width: 40)
             stackView.addArrangedSubview(leftIconView!)
+        } else if isLeftLabel {
+            leftIconView = nil
+            leftLabel = PrimaryLabel.init()
+            leftLabel?.setWidth(width: 120)
+            leftLabel?.font = .boldSystemFont(ofSize: 12)
+            stackView.addArrangedSubview(leftLabel!)
         }
         textField = PrimaryTextField.init()
         stackView.addArrangedSubview(textField)
@@ -43,8 +51,10 @@ class TextFieldCell: UICollectionViewCell {
         }
     }
     
-    func loadData(_ leftIcon:UIImage? = nil, text:String, placeholder: String, buttonTitle: String? = nil, indexPath:IndexPath) {
+    func loadData(_ leftIcon:UIImage? = nil, leftLabelText:String? = nil, text:String, placeholder: String, buttonTitle: String? = nil, indexPath:IndexPath) {
+        
         leftIconView?.image = leftIcon
+        leftLabel?.text = leftLabelText
         textField.text = text
         if text != "" {
             textField.isUserInteractionEnabled = false

@@ -46,11 +46,13 @@ extension LoginViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {
+        
         case 0:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCell.reuseidentifier(), for: indexPath) as! ImageCell
             cell.setupLayout()
             cell.loadData(UIImage.init(named: ICON.LAUNCH)!)
             return cell
+        
         case 1,2:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TextFieldCell.reuseidentifier(), for: indexPath) as! TextFieldCell
             if indexPath.section == 1 {
@@ -76,6 +78,7 @@ extension LoginViewController: UICollectionViewDataSource {
                 cell.textField.isSecureTextEntry = true
             }
             return cell
+        
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ButtonCell.reuseidentifier(), for: indexPath) as! ButtonCell
             if cell.button == nil {
@@ -91,7 +94,8 @@ extension LoginViewController: UICollectionViewDataSource {
 extension LoginViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let window = UIApplication.shared.windows[0]
-        switch indexPath.section {
+        switch indexPath.section
+        {
         case 0:
             return CGSize.init(width: window.rootViewController!.view.bounds.width, height: ImageCell.height)
         case 1, 2:

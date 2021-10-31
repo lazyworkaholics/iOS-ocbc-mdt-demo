@@ -36,13 +36,11 @@
 		3AA135FF272BC40400DB7C7D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA135FE272BC40400DB7C7D /* Router.swift */; };
 		3AA13601272BC4F500DB7C7D /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13600272BC4F500DB7C7D /* DashboardViewController.swift */; };
 		3AA13603272BC50C00DB7C7D /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13602272BC50C00DB7C7D /* TransferViewController.swift */; };
-		3AA13605272BC52700DB7C7D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13604272BC52700DB7C7D /* DetailViewController.swift */; };
 		3AA13607272BC54E00DB7C7D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13606272BC54E00DB7C7D /* LoginViewModel.swift */; };
 		3AA13609272BC55A00DB7C7D /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13608272BC55A00DB7C7D /* DashboardViewModel.swift */; };
 		3AA1360B272BC56900DB7C7D /* TransferViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1360A272BC56900DB7C7D /* TransferViewModel.swift */; };
-		3AA1360D272BC5F900DB7C7D /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1360C272BC5F900DB7C7D /* DetailViewModel.swift */; };
 		3AA1360F272BC67B00DB7C7D /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1360E272BC67B00DB7C7D /* RouterProtocol.swift */; };
-		3AA13615272BCECF00DB7C7D /* ViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13614272BCECF00DB7C7D /* ViewModelProtocols.swift */; };
+		3AA13615272BCECF00DB7C7D /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13614272BCECF00DB7C7D /* ViewModelProtocol.swift */; };
 		3AA13617272BD9F500DB7C7D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13616272BD9F500DB7C7D /* UIViewController+Extension.swift */; };
 		3AA1361C272C33CF00DB7C7D /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2DB73B272A465900F8AA1E /* Identifiers.swift */; };
 		3AA1361E272C33E100DB7C7D /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1361D272C33E100DB7C7D /* Font.swift */; };
@@ -68,6 +66,7 @@
 		3AC447AD272DB37200F7E78B /* DashboardViewController+UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447AC272DB37200F7E78B /* DashboardViewController+UIExtension.swift */; };
 		3AC447AF272DBAB900F7E78B /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447AE272DBAB900F7E78B /* UIStackView+Extension.swift */; };
 		3AC447B1272DBEF800F7E78B /* TransferViewController+UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447B0272DBEF800F7E78B /* TransferViewController+UIExtension.swift */; };
+		3AC447B3272E59D200F7E78B /* GenericViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447B2272E59D200F7E78B /* GenericViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,13 +111,11 @@
 		3AA135FE272BC40400DB7C7D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		3AA13600272BC4F500DB7C7D /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		3AA13602272BC50C00DB7C7D /* TransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewController.swift; sourceTree = "<group>"; };
-		3AA13604272BC52700DB7C7D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3AA13606272BC54E00DB7C7D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		3AA13608272BC55A00DB7C7D /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		3AA1360A272BC56900DB7C7D /* TransferViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewModel.swift; sourceTree = "<group>"; };
-		3AA1360C272BC5F900DB7C7D /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		3AA1360E272BC67B00DB7C7D /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
-		3AA13614272BCECF00DB7C7D /* ViewModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocols.swift; sourceTree = "<group>"; };
+		3AA13614272BCECF00DB7C7D /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		3AA13616272BD9F500DB7C7D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		3AA1361D272C33E100DB7C7D /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		3AA1361F272C3D8A00DB7C7D /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
@@ -143,6 +140,7 @@
 		3AC447AC272DB37200F7E78B /* DashboardViewController+UIExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DashboardViewController+UIExtension.swift"; sourceTree = "<group>"; };
 		3AC447AE272DBAB900F7E78B /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		3AC447B0272DBEF800F7E78B /* TransferViewController+UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransferViewController+UIExtension.swift"; sourceTree = "<group>"; };
+		3AC447B2272E59D200F7E78B /* GenericViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,13 +278,10 @@
 		3A2DB72E2729A1CD00F8AA1E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				3A2DB6FB27299E9900F8AA1E /* LoginViewController.swift */,
-				3AA1362F272CECC700DB7C7D /* LoginViewController+UIExtension.swift */,
-				3AA13600272BC4F500DB7C7D /* DashboardViewController.swift */,
-				3AC447AC272DB37200F7E78B /* DashboardViewController+UIExtension.swift */,
-				3AA13602272BC50C00DB7C7D /* TransferViewController.swift */,
-				3AC447B0272DBEF800F7E78B /* TransferViewController+UIExtension.swift */,
-				3AA13604272BC52700DB7C7D /* DetailViewController.swift */,
+				3AC447B2272E59D200F7E78B /* GenericViewController.swift */,
+				3AC447B4272E5B4200F7E78B /* Login */,
+				3AC447B5272E5B5500F7E78B /* Dashboard */,
+				3AC447B6272E5B5D00F7E78B /* Transfer */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -297,7 +292,6 @@
 				3AA13606272BC54E00DB7C7D /* LoginViewModel.swift */,
 				3AA13608272BC55A00DB7C7D /* DashboardViewModel.swift */,
 				3AA1360A272BC56900DB7C7D /* TransferViewModel.swift */,
-				3AA1360C272BC5F900DB7C7D /* DetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -318,7 +312,7 @@
 			children = (
 				3A2DB739272A45FA00F8AA1E /* ServiceProtocols.swift */,
 				3AA1360E272BC67B00DB7C7D /* RouterProtocol.swift */,
-				3AA13614272BCECF00DB7C7D /* ViewModelProtocols.swift */,
+				3AA13614272BCECF00DB7C7D /* ViewModelProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -421,6 +415,33 @@
 				3AA13640272D30C200DB7C7D /* LoginViewControllerTests.swift */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		3AC447B4272E5B4200F7E78B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3A2DB6FB27299E9900F8AA1E /* LoginViewController.swift */,
+				3AA1362F272CECC700DB7C7D /* LoginViewController+UIExtension.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3AC447B5272E5B5500F7E78B /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				3AA13600272BC4F500DB7C7D /* DashboardViewController.swift */,
+				3AC447AC272DB37200F7E78B /* DashboardViewController+UIExtension.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		3AC447B6272E5B5D00F7E78B /* Transfer */ = {
+			isa = PBXGroup;
+			children = (
+				3AA13602272BC50C00DB7C7D /* TransferViewController.swift */,
+				3AC447B0272DBEF800F7E78B /* TransferViewController+UIExtension.swift */,
+			);
+			path = Transfer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -534,6 +555,7 @@
 				3AA13603272BC50C00DB7C7D /* TransferViewController.swift in Sources */,
 				3AA13601272BC4F500DB7C7D /* DashboardViewController.swift in Sources */,
 				3AA13609272BC55A00DB7C7D /* DashboardViewModel.swift in Sources */,
+				3AC447B3272E59D200F7E78B /* GenericViewController.swift in Sources */,
 				3A2DB746272A7CEE00F8AA1E /* Transaction.swift in Sources */,
 				3A65BAE9272B101600332E69 /* Utilities.swift in Sources */,
 				3A2DB738272A439E00F8AA1E /* NetworkManager.swift in Sources */,
@@ -542,14 +564,12 @@
 				3AC447AF272DBAB900F7E78B /* UIStackView+Extension.swift in Sources */,
 				3AA1362E272CE3DF00DB7C7D /* ImageCell.swift in Sources */,
 				3A2DB6FC27299E9900F8AA1E /* LoginViewController.swift in Sources */,
-				3AA13605272BC52700DB7C7D /* DetailViewController.swift in Sources */,
 				3AA13630272CECC700DB7C7D /* LoginViewController+UIExtension.swift in Sources */,
-				3AA13615272BCECF00DB7C7D /* ViewModelProtocols.swift in Sources */,
+				3AA13615272BCECF00DB7C7D /* ViewModelProtocol.swift in Sources */,
 				3AC447B1272DBEF800F7E78B /* TransferViewController+UIExtension.swift in Sources */,
 				3A65BAEB272B9DF500332E69 /* UIView+Extension.swift in Sources */,
 				3AA13632272D0DAE00DB7C7D /* Literals.swift in Sources */,
 				3AC447A3272D5DC800F7E78B /* PayeeCollectionCell.swift in Sources */,
-				3AA1360D272BC5F900DB7C7D /* DetailViewModel.swift in Sources */,
 				3AC447A5272D5E3900F7E78B /* TransactionCell.swift in Sources */,
 				3AA13607272BC54E00DB7C7D /* LoginViewModel.swift in Sources */,
 				3AA13623272C41F300DB7C7D /* Buttons.swift in Sources */,

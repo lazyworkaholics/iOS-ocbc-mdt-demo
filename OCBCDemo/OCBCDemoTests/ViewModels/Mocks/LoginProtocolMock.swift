@@ -8,13 +8,13 @@
 import UIKit
 @testable import OCBCDemo
 
-class LoginProtocolMock: LoginProtocol {
+class LoginProtocolMock: ViewModelProtocol {
     
     var is_showLoadingIndicator_Called = false
     var is_showStaticAlert_Called = false
     var is_reloadData_called = false
     
-    func showAlert(_ title: String, message: String, onClick: ((UIAlertAction) -> Void)?) {
+    func showAlert(_ title: String, message: String, actionTitles: [String], actions: [((UIAlertAction) -> Void)?]) {
         is_showStaticAlert_Called = true
     }
     

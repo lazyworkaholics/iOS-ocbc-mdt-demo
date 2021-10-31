@@ -10,14 +10,8 @@ import UIKit
 protocol RouterProtocol {
     
     func launch()
-    
-    func login()
-    
-    func navigateToTransferView(with payee:Payee?)
-    
-    func navigateToDetailView(with transactionDetails:Transaction?, or transferAcknowledgment:Transfer?)
-    
-    func goHome()
-    
     func logout()
+    func login()
+    func goHome()
+    func navigateToTransferView(with payee:Payee?)
 }

@@ -14,10 +14,12 @@ struct LITERAL {
         }
     }
     static let OK = "OK"
+    static let CANCEL = "Cancel"
     static let ERROR = "Error"
     static let USERNAME = "Username"
     static let PASSWORD = "Password"
     static let LOGIN = "Login"
+    static let SUCCESSFUL = "SUCCESSFUL"
     static let NOTYOU = "Not you?"
     static let BALANCE = "Balance:"
     

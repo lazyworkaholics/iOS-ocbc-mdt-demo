@@ -58,6 +58,7 @@ extension TransferViewController: UICollectionViewDataSource {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ButtonCell.reuseidentifier(), for: indexPath) as! ButtonCell
             if cell.button == nil {
                 cell.setupLayout()
+                cell.delegate = self
             }
             cell.loadData("Send", indexPath: indexPath)
             return cell
@@ -65,15 +66,15 @@ extension TransferViewController: UICollectionViewDataSource {
         else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TextFieldCell.reuseidentifier(), for: indexPath) as! TextFieldCell
             if cell.textField == nil {
-                cell.setupLayout()
+                cell.setupLayout( isLeftLabel: true)
             }
             switch indexPath.row {
             case 0:
-                cell.loadData(text: "", placeholder: "Account Number", indexPath: indexPath)
+                cell.loadData(leftLabelText: "Account Number", text: viewModel.getAccountNumber(), placeholder: "Account Number", indexPath: indexPath)
             case 1:
-                cell.loadData(text: "", placeholder: "Amount", indexPath: indexPath)
+                cell.loadData(leftLabelText: "Amount", text: "345.68", placeholder: "Amount", indexPath: indexPath)
             default:
-                cell.loadData(text: "", placeholder: "Description", indexPath: indexPath)
+                cell.loadData(leftLabelText: "Description", text: "Test desc", placeholder: "Description", indexPath: indexPath)
             }
             return cell
         }

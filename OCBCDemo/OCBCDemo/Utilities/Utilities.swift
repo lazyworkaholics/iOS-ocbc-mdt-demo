@@ -28,6 +28,12 @@ struct Utilities {
         return dateFormatter.string(from: date)
     }
     
+    func getCurrentDateString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        return dateFormatter.string(from: Date())
+    }
+    
     func saveUsername(username: String) {
         let userdefaults = UserDefaults.standard
         userdefaults.setValue(username, forKey: "stored_username")

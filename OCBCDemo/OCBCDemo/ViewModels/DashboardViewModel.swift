@@ -9,7 +9,7 @@ import Foundation
 
 struct DashboardViewModel {
     //MARK:- variables and initializers
-    var delegate: DashboardProtocol?
+    var delegate: ViewModelProtocol?
     var serviceManager: ServiceManagerProtocol!
     var router:RouterProtocol!
     
@@ -24,7 +24,7 @@ struct DashboardViewModel {
         serviceManager.getDashboardData(DataManager.apiToken!, onCompletion: {
             balanceGetter, payeeGetter, transactionGetter, errorSession, error in
             if errorSession != nil || error != nil {
-                delegate?.errorHandlerOnFailure(session: errorSession, error: error!, delegate: delegate!)
+                delegate?.errorHandlerOnFailure(session: errorSession, error: error!)
             }
             DataManager.balanceGetter = balanceGetter
             DataManager.payeeGetter = payeeGetter
@@ -33,6 +33,7 @@ struct DashboardViewModel {
         })
     }
     
+    //MARK:- routing functions
     func logout() {
         DataManager.apiToken = nil
         router.logout()

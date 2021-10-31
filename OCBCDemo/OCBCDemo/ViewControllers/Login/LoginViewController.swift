@@ -7,41 +7,16 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
-    //MARK:- iboutlets and variables
+class LoginViewController: GenericViewController {
+    //MARK:- variables and initializers
     var viewModel: LoginViewModel!
-    var collectionView: UICollectionView = UICollectionView.init(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout.init())
-    var activityindicator: UIActivityIndicatorView! = UIActivityIndicatorView.init(style: .medium)
     
-    //MARK:- init and viewDidLoads
     class func initWithViewModel(_ viewModel: LoginViewModel) -> LoginViewController {
         let viewController = LoginViewController.init()
         viewController.viewModel = viewModel
         viewController.viewModel.delegate = viewController
         viewController.setupUILayout()
         return viewController
-    }
-}
-
-extension LoginViewController: LoginProtocol {
-    func showAlert(_ title: String, message: String, onClick: ((UIAlertAction) -> Void)?) {
-        presentAlert(with: title, message: message, onClick: onClick)
-    }
-    
-    func loadingActivity(_ isShow:Bool) {
-        DispatchQueue.main.async(execute: {() -> Void in
-            if isShow {
-                self.activityindicator.startAnimating()
-            } else {
-                self.activityindicator.stopAnimating()
-            }
-        })
-    }
-    
-    func reload() {
-        DispatchQueue.main.async(execute: {() -> Void in
-            self.collectionView.reloadData()
-        })
     }
 }
 

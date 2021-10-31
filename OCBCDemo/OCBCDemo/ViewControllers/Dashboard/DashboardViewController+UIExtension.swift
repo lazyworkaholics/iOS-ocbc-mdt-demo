@@ -76,12 +76,6 @@ extension DashboardViewController: UICollectionViewDataSource {
     }
 }
 
-extension DashboardViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-    }
-}
-
 extension DashboardViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let window = UIApplication.shared.windows[0]

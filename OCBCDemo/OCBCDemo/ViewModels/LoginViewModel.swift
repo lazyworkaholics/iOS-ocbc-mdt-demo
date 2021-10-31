@@ -9,7 +9,7 @@ import UIKit
 
 struct LoginViewModel {
     //MARK:- variables and initializers
-    var delegate: LoginProtocol?
+    var delegate: ViewModelProtocol?
     var serviceManager: ServiceManagerProtocol!
     var router:RouterProtocol!
     private var isNotUsernameEnabled = false
@@ -32,10 +32,10 @@ struct LoginViewModel {
                 router.login()
             }, onFailure: {
                 session, error in
-                delegate?.errorHandlerOnFailure(session: session, error: error, delegate: delegate!)
+                delegate?.errorHandlerOnFailure(session: session, error: error)
             })
         } else {
-            delegate?.showAlert(LITERAL.ERROR, message: LITERAL.DESCRIPTION.ERROR.LOGIN, onClick: nil)
+            delegate?.showAlert(LITERAL.ERROR, message: LITERAL.DESCRIPTION.ERROR.LOGIN, actionTitles: [], actions: [])
         }
     }
     
