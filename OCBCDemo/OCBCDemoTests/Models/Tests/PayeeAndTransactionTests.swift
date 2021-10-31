@@ -72,6 +72,12 @@ class PayeeAndTransactionTests: XCTestCase {
             let transactionGetter = try decoder.decode(TransactionGetter.self, from: utf8str!)
             XCTAssertEqual(transactionGetter.status, .success, "with the given data status should be success")
             XCTAssertEqual(transactionGetter.transactions?.count, 2)
+            
+            let transaction = transactionGetter.transactions![1]
+            XCTAssertNotNil(transaction.dateString())
+            XCTAssertEqual(transaction.nameAndNumber(), "Max Yee - 1234-000-1234")
+            XCTAssertNotNil(transaction.amountString())
+            
         } catch {
             XCTFail("the given data to coder is valid, should not raise exception here")
         }

@@ -18,7 +18,6 @@ class RouterMock: RouterProtocol {
     var is_dismissSettings_called = false
     
     var is_navigateToTransferView_called = false
-    var is_navigateToDetailView_called = false
     
     var payee_mock:Payee?
     var transaction_mock:Transaction?
@@ -35,12 +34,6 @@ class RouterMock: RouterProtocol {
     func navigateToTransferView(with payee:Payee?) {
         is_navigateToTransferView_called = true
         payee_mock = payee
-    }
-    
-    func navigateToDetailView(with transactionDetails:Transaction?, or transferAcknowledgment:Transfer?) {
-        is_navigateToDetailView_called = true
-        transaction_mock = transactionDetails
-        transferAcknowledgment_mock = transferAcknowledgment
     }
     
     func goHome() {

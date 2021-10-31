@@ -8,7 +8,7 @@
 import UIKit
 @testable import OCBCDemo
 
-class LoginProtocolMock: ViewModelProtocol {
+class ViewModelProtocolMock: ViewModelProtocol {
     
     var is_showLoadingIndicator_Called = false
     var is_showStaticAlert_Called = false

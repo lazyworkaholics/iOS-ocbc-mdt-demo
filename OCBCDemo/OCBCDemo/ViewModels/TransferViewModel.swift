@@ -40,33 +40,36 @@ struct TransferViewModel {
         }
         else {
             let transferObj = Transfer.init(with: transferAmount!, recipientAccountNo: transferAccountNumber!, dateString: dateString!, description: description!)
-            makeTransfer(transferObj)
+            presentConfirmAlert(transferObj)
         }
     }
     
-    private func makeTransfer(_ transfer: Transfer) {
+    private func presentConfirmAlert(_ transfer: Transfer) {
         
         let titleString = "Transfer SGD " + String(transferAmount!) + " to " + transferAccountNumber! + "?"
         
         delegate?.showAlert(titleString, message: LITERAL.OK_MESSAGE, actionTitles: [LITERAL.CANCEL, LITERAL.OK], actions: [{alertAction in}, {
             alertAction in
-            
-            delegate?.loadingActivity(true)
-            serviceManager.makeTransfer(DataManager.apiToken!, transfer: transfer, onSuccess: {
-                makeTransfer in
-                
-                delegate?.loadingActivity(false)
-                let message = "Sent SGD " + String(makeTransfer.response!.amount) + " to " + makeTransfer.response!.recipientAccountNo
-                delegate?.showAlert(LITERAL.SUCCESSFUL,
-                                    message: message,
-                                    actionTitles: [LITERAL.OK],
-                                    actions: [{ alertAction in router.goHome()}])
-            }, onFailure: {
-                session, error in
-                delegate?.errorHandlerOnFailure(session: session, error: error)
-                delegate?.loadingActivity(false)
-            })
+            makeTransfer(transfer)
         }])
+    }
+    
+    func makeTransfer(_ transfer: Transfer) {
+        delegate?.loadingActivity(true)
+        serviceManager.makeTransfer(DataManager.apiToken!, transfer: transfer, onSuccess: {
+            makeTransfer in
+            
+            delegate?.loadingActivity(false)
+            let message = "Sent SGD " + String(makeTransfer.response!.amount) + " to " + makeTransfer.response!.recipientAccountNo
+            delegate?.showAlert(LITERAL.SUCCESSFUL,
+                                message: message,
+                                actionTitles: [LITERAL.OK],
+                                actions: [{ alertAction in router.goHome()}])
+        }, onFailure: {
+            session, error in
+            delegate?.errorHandlerOnFailure(session: session, error: error)
+            delegate?.loadingActivity(false)
+        })
     }
     
     //MARK:- routing functions

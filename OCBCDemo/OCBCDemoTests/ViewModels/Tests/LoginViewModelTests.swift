@@ -20,7 +20,7 @@ class LoginViewModelTests: XCTestCase {
     // This function tests if this events is happening or not...
     func test_notUsername() {
         var viewmodel = LoginViewModel.init()
-        let mockDelegate = LoginProtocolMock.init()
+        let mockDelegate = ViewModelProtocolMock.init()
         viewmodel.delegate = mockDelegate
         viewmodel.notUsername()
         XCTAssertTrue(mockDelegate.is_reloadData_called)
@@ -51,7 +51,7 @@ class LoginViewModelTests: XCTestCase {
     func test_doLogin_success() {
         var viewmodel = LoginViewModel.init()
         
-        let mockDelegate = LoginProtocolMock.init()
+        let mockDelegate = ViewModelProtocolMock.init()
         viewmodel.delegate = mockDelegate
         
         let mockRouter = RouterMock.init()
@@ -76,9 +76,10 @@ class LoginViewModelTests: XCTestCase {
     //      2. alert should be fired from delegate
     // This function tests if these 3 events are happening or not...
     func test_doLogin_failure() {
+        DataManager.apiToken = nil
         var viewmodel = LoginViewModel.init()
         
-        let mockDelegate = LoginProtocolMock.init()
+        let mockDelegate = ViewModelProtocolMock.init()
         viewmodel.delegate = mockDelegate
         
         let mockRouter = RouterMock.init()
@@ -92,7 +93,6 @@ class LoginViewModelTests: XCTestCase {
         viewmodel.serviceManager = mockServiceManager
         
         viewmodel.doLogin(username: "test_username", password: "test_password")
-        XCTAssertNil(DataManager.apiToken)
         XCTAssertTrue(mockDelegate.is_showStaticAlert_Called)
         
         mockServiceManager.mock_error_session = nil
@@ -107,7 +107,7 @@ class LoginViewModelTests: XCTestCase {
     func test_doLogin_emptyCredentials() {
         var viewmodel = LoginViewModel.init()
         
-        let mockDelegate = LoginProtocolMock.init()
+        let mockDelegate = ViewModelProtocolMock.init()
         viewmodel.delegate = mockDelegate
         
         viewmodel.doLogin(username: "", password: "")

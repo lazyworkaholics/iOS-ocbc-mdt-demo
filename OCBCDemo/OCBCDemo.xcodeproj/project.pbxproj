@@ -52,7 +52,7 @@
 		3AA1362E272CE3DF00DB7C7D /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1362D272CE3DF00DB7C7D /* ImageCell.swift */; };
 		3AA13630272CECC700DB7C7D /* Login+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1362F272CECC700DB7C7D /* Login+Extension.swift */; };
 		3AA13632272D0DAE00DB7C7D /* Literals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13631272D0DAE00DB7C7D /* Literals.swift */; };
-		3AA13637272D178700DB7C7D /* LoginProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13636272D178700DB7C7D /* LoginProtocolMock.swift */; };
+		3AA13637272D178700DB7C7D /* ViewModelProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13636272D178700DB7C7D /* ViewModelProtocolMock.swift */; };
 		3AA13639272D179900DB7C7D /* ServiceManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13638272D179900DB7C7D /* ServiceManagerMock.swift */; };
 		3AA1363B272D17A400DB7C7D /* RouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1363A272D17A400DB7C7D /* RouterMock.swift */; };
 		3AA1363D272D22A800DB7C7D /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1363C272D22A800DB7C7D /* LoginViewModelTests.swift */; };
@@ -66,6 +66,9 @@
 		3AC447AF272DBAB900F7E78B /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447AE272DBAB900F7E78B /* UIStackView+Extension.swift */; };
 		3AC447B1272DBEF800F7E78B /* Transfer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447B0272DBEF800F7E78B /* Transfer+Extension.swift */; };
 		3AC447B3272E59D200F7E78B /* GenericViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447B2272E59D200F7E78B /* GenericViewController.swift */; };
+		3AC447B8272E882C00F7E78B /* DashboardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447B7272E882C00F7E78B /* DashboardViewModelTests.swift */; };
+		3AC447BA272E916A00F7E78B /* TransferViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447B9272E916A00F7E78B /* TransferViewModelTests.swift */; };
+		3AC447BC272E958000F7E78B /* ServiceManagerDashboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447BB272E958000F7E78B /* ServiceManagerDashboardTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,7 +128,7 @@
 		3AA1362D272CE3DF00DB7C7D /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		3AA1362F272CECC700DB7C7D /* Login+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login+Extension.swift"; sourceTree = "<group>"; };
 		3AA13631272D0DAE00DB7C7D /* Literals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Literals.swift; sourceTree = "<group>"; };
-		3AA13636272D178700DB7C7D /* LoginProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocolMock.swift; sourceTree = "<group>"; };
+		3AA13636272D178700DB7C7D /* ViewModelProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocolMock.swift; sourceTree = "<group>"; };
 		3AA13638272D179900DB7C7D /* ServiceManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManagerMock.swift; sourceTree = "<group>"; };
 		3AA1363A272D17A400DB7C7D /* RouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterMock.swift; sourceTree = "<group>"; };
 		3AA1363C272D22A800DB7C7D /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
@@ -139,6 +142,9 @@
 		3AC447AE272DBAB900F7E78B /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		3AC447B0272DBEF800F7E78B /* Transfer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transfer+Extension.swift"; sourceTree = "<group>"; };
 		3AC447B2272E59D200F7E78B /* GenericViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericViewController.swift; sourceTree = "<group>"; };
+		3AC447B7272E882C00F7E78B /* DashboardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModelTests.swift; sourceTree = "<group>"; };
+		3AC447B9272E916A00F7E78B /* TransferViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewModelTests.swift; sourceTree = "<group>"; };
+		3AC447BB272E958000F7E78B /* ServiceManagerDashboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManagerDashboardTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -339,6 +345,7 @@
 				3A2DB73D272A556000F8AA1E /* NetworkManagerTests.swift */,
 				3A65BAE4272AEE0800332E69 /* ServiceManagerPostServiceTests.swift */,
 				3A65BAE6272AF37A00332E69 /* ServiceManagerAllGetServiceTests.swift */,
+				3AC447BB272E958000F7E78B /* ServiceManagerDashboardTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -383,7 +390,7 @@
 		3AA13634272D175D00DB7C7D /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				3AA13636272D178700DB7C7D /* LoginProtocolMock.swift */,
+				3AA13636272D178700DB7C7D /* ViewModelProtocolMock.swift */,
 				3AA13638272D179900DB7C7D /* ServiceManagerMock.swift */,
 				3AA1363A272D17A400DB7C7D /* RouterMock.swift */,
 			);
@@ -394,6 +401,8 @@
 			isa = PBXGroup;
 			children = (
 				3AA1363C272D22A800DB7C7D /* LoginViewModelTests.swift */,
+				3AC447B7272E882C00F7E78B /* DashboardViewModelTests.swift */,
+				3AC447B9272E916A00F7E78B /* TransferViewModelTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -593,12 +602,15 @@
 				3A2DB753272AC8F300F8AA1E /* SessionModelTests.swift in Sources */,
 				3A2DB757272AE37A00F8AA1E /* TransferTests.swift in Sources */,
 				3AA1361C272C33CF00DB7C7D /* Identifiers.swift in Sources */,
+				3AC447BA272E916A00F7E78B /* TransferViewModelTests.swift in Sources */,
 				3AA1363D272D22A800DB7C7D /* LoginViewModelTests.swift in Sources */,
+				3AC447BC272E958000F7E78B /* ServiceManagerDashboardTests.swift in Sources */,
 				3A65BAE7272AF37A00332E69 /* ServiceManagerAllGetServiceTests.swift in Sources */,
 				3A65BAE5272AEE0800332E69 /* ServiceManagerPostServiceTests.swift in Sources */,
-				3AA13637272D178700DB7C7D /* LoginProtocolMock.swift in Sources */,
+				3AA13637272D178700DB7C7D /* ViewModelProtocolMock.swift in Sources */,
 				3AA1363B272D17A400DB7C7D /* RouterMock.swift in Sources */,
 				3A65BAE3272AECA100332E69 /* NetworkManagerMock.swift in Sources */,
+				3AC447B8272E882C00F7E78B /* DashboardViewModelTests.swift in Sources */,
 				3A2DB755272AD69A00F8AA1E /* PayeeAndTransactionTests.swift in Sources */,
 				3AA13641272D30C200DB7C7D /* LoginViewControllerTests.swift in Sources */,
 				3A2DB73E272A556000F8AA1E /* NetworkManagerTests.swift in Sources */,
