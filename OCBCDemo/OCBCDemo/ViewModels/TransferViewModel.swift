@@ -20,6 +20,7 @@ struct TransferViewModel {
     private var dateString: String?
     
     init(_ payee: Payee? = nil) {
+        
         serviceManager = ServiceManager.init()
         router = Router.sharedInstance
         self.payee = payee
@@ -27,14 +28,13 @@ struct TransferViewModel {
     
     // MARK: - TransferViewController - action handlers
     mutating func onTransferClick() {
-        transferAmount = 48.48
-        description = "test"
+        
         dateString = Utilities().getCurrentDateString()
-        if transferAccountNumber == nil || transferAccountNumber == "" || transferAmount == nil {
-            delegate?.showAlert(LITERAL.ERROR, message: "Account number and Amount cannot be empty", actionTitles: [], actions: [])
+        if transferAccountNumber == nil || transferAccountNumber == "" || transferAmount == nil || transferAmount == 0 {
+            delegate?.showAlert(LITERAL.ERROR, message: LITERAL.DESCRIPTION.ERROR.EMPTY_ACC, actionTitles: [], actions: [])
         }
         else if description == nil || description == "" {
-            delegate?.showAlert(LITERAL.ERROR, message: "Give a valid description for the purpose of this transfer", actionTitles: [], actions: [])
+            delegate?.showAlert(LITERAL.ERROR, message: LITERAL.DESCRIPTION.ERROR.EMPTY_DESC, actionTitles: [], actions: [])
         }
         else {
             let transferObj = Transfer.init(with: transferAmount!, recipientAccountNo: transferAccountNumber!, dateString: dateString!, description: description!)
@@ -46,7 +46,7 @@ struct TransferViewModel {
         
         let titleString = "Transfer SGD " + String(transferAmount!) + " to " + transferAccountNumber! + "?"
         
-        delegate?.showAlert(titleString, message: "Click OK to confirm", actionTitles: [LITERAL.CANCEL, LITERAL.OK], actions: [{alertAction in}, {
+        delegate?.showAlert(titleString, message: LITERAL.OK_MESSAGE, actionTitles: [LITERAL.CANCEL, LITERAL.OK], actions: [{alertAction in}, {
             alertAction in
             
             delegate?.loadingActivity(true)
@@ -83,5 +83,9 @@ struct TransferViewModel {
             transferAccountNumber = payee?.accountNo
         }
         return transferAccountNumber ?? ""
+    }
+    
+    func getAccountName() -> String {
+        return payee?.accountName ?? LITERAL.ACCOUNT_NO
     }
 }

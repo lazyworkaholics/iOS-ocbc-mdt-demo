@@ -69,6 +69,7 @@ class TextFieldCell: UICollectionViewCell {
             button?.isHidden = true
         }
         self.indexPath = indexPath
+        textField.tag = indexPath.section
     }
     
     @objc func onButtonClick() {

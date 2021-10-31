@@ -30,3 +30,26 @@ extension TransferViewController: ButtonCellProtocol {
         viewModel.onTransferClick()
     }
 }
+
+//MARK: - UITextFieldDelegate functions
+extension TransferViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let tag = textField.tag
+        if tag < 4 {
+            let cell = collectionView.cellForItem(at: IndexPath.init(row: 0, section: tag+1)) as? TextFieldCell
+            if cell != nil {
+                cell?.textField.becomeFirstResponder()
+            }
+        }
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let tag = textField.tag
+        if tag == 2 {
+            buttonClick(IndexPath.init(row: 0, section: tag+1), and: ButtonCell.reuseidentifier())
+        }
+    }
+}

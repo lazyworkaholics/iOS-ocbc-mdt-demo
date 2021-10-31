@@ -66,7 +66,6 @@ extension LoginViewController: UICollectionViewDataSource {
                 }
                 if username != nil {
                     cell.loadData(UIImage.init(named: ICON.USERNAME), text: username ?? "", placeholder: LITERAL.USERNAME, buttonTitle: LITERAL.NOTYOU, indexPath: indexPath)
-                    cell.delegate = self
                 } else {
                     cell.loadData(UIImage.init(named: ICON.USERNAME), text: username ?? "", placeholder: LITERAL.USERNAME, indexPath: indexPath)
                 }
@@ -77,6 +76,8 @@ extension LoginViewController: UICollectionViewDataSource {
                 cell.loadData(UIImage.init(named: ICON.PASSWORD), text: "", placeholder: LITERAL.PASSWORD, indexPath: indexPath)
                 cell.textField.isSecureTextEntry = true
             }
+            cell.textField.delegate = self
+            cell.delegate = self
             return cell
         
         default:

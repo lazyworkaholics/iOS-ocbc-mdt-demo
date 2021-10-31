@@ -50,7 +50,7 @@
 		3AA1362A272C647000DB7C7D /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13629272C647000DB7C7D /* UICollectionViewCell+Extension.swift */; };
 		3AA1362C272CDE2E00DB7C7D /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1362B272CDE2E00DB7C7D /* ButtonCell.swift */; };
 		3AA1362E272CE3DF00DB7C7D /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1362D272CE3DF00DB7C7D /* ImageCell.swift */; };
-		3AA13630272CECC700DB7C7D /* LoginViewController+UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1362F272CECC700DB7C7D /* LoginViewController+UIExtension.swift */; };
+		3AA13630272CECC700DB7C7D /* Login+UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1362F272CECC700DB7C7D /* Login+UIExtension.swift */; };
 		3AA13632272D0DAE00DB7C7D /* Literals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13631272D0DAE00DB7C7D /* Literals.swift */; };
 		3AA13637272D178700DB7C7D /* LoginProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13636272D178700DB7C7D /* LoginProtocolMock.swift */; };
 		3AA13639272D179900DB7C7D /* ServiceManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13638272D179900DB7C7D /* ServiceManagerMock.swift */; };
@@ -63,9 +63,9 @@
 		3AC447A7272D753600F7E78B /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447A6272D753600F7E78B /* Labels.swift */; };
 		3AC447A9272D8E0500F7E78B /* PayeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447A8272D8E0500F7E78B /* PayeeView.swift */; };
 		3AC447AB272DB35A00F7E78B /* KeyValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447AA272DB35A00F7E78B /* KeyValueCell.swift */; };
-		3AC447AD272DB37200F7E78B /* DashboardViewController+UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447AC272DB37200F7E78B /* DashboardViewController+UIExtension.swift */; };
+		3AC447AD272DB37200F7E78B /* Dashboard+UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447AC272DB37200F7E78B /* Dashboard+UIExtension.swift */; };
 		3AC447AF272DBAB900F7E78B /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447AE272DBAB900F7E78B /* UIStackView+Extension.swift */; };
-		3AC447B1272DBEF800F7E78B /* TransferViewController+UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447B0272DBEF800F7E78B /* TransferViewController+UIExtension.swift */; };
+		3AC447B1272DBEF800F7E78B /* Transfer+UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447B0272DBEF800F7E78B /* Transfer+UIExtension.swift */; };
 		3AC447B3272E59D200F7E78B /* GenericViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447B2272E59D200F7E78B /* GenericViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -124,7 +124,7 @@
 		3AA13629272C647000DB7C7D /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
 		3AA1362B272CDE2E00DB7C7D /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 		3AA1362D272CE3DF00DB7C7D /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
-		3AA1362F272CECC700DB7C7D /* LoginViewController+UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+UIExtension.swift"; sourceTree = "<group>"; };
+		3AA1362F272CECC700DB7C7D /* Login+UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login+UIExtension.swift"; sourceTree = "<group>"; };
 		3AA13631272D0DAE00DB7C7D /* Literals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Literals.swift; sourceTree = "<group>"; };
 		3AA13636272D178700DB7C7D /* LoginProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocolMock.swift; sourceTree = "<group>"; };
 		3AA13638272D179900DB7C7D /* ServiceManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManagerMock.swift; sourceTree = "<group>"; };
@@ -137,9 +137,9 @@
 		3AC447A6272D753600F7E78B /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
 		3AC447A8272D8E0500F7E78B /* PayeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeeView.swift; sourceTree = "<group>"; };
 		3AC447AA272DB35A00F7E78B /* KeyValueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueCell.swift; sourceTree = "<group>"; };
-		3AC447AC272DB37200F7E78B /* DashboardViewController+UIExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DashboardViewController+UIExtension.swift"; sourceTree = "<group>"; };
+		3AC447AC272DB37200F7E78B /* Dashboard+UIExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dashboard+UIExtension.swift"; sourceTree = "<group>"; };
 		3AC447AE272DBAB900F7E78B /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
-		3AC447B0272DBEF800F7E78B /* TransferViewController+UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransferViewController+UIExtension.swift"; sourceTree = "<group>"; };
+		3AC447B0272DBEF800F7E78B /* Transfer+UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transfer+UIExtension.swift"; sourceTree = "<group>"; };
 		3AC447B2272E59D200F7E78B /* GenericViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -190,12 +190,12 @@
 				3A2DB72E2729A1CD00F8AA1E /* ViewControllers */,
 				3A2DB72D2729A1C700F8AA1E /* Cells */,
 				3AA13621272C404B00DB7C7D /* Components */,
-				3A2DB72C2729A1BA00F8AA1E /* Storyboards */,
 				3A2DB72B2729A1B100F8AA1E /* Services */,
 				3A2DB72A2729A1A700F8AA1E /* Assets */,
-				3A2DB70527299E9B00F8AA1E /* Info.plist */,
 				3A2DB7282729A19400F8AA1E /* Extensions */,
 				3A2DB7272729A18600F8AA1E /* Utilities */,
+				3A2DB70527299E9B00F8AA1E /* Info.plist */,
+				3A2DB72C2729A1BA00F8AA1E /* Storyboards */,
 			);
 			path = OCBCDemo;
 			sourceTree = "<group>";
@@ -421,7 +421,7 @@
 			isa = PBXGroup;
 			children = (
 				3A2DB6FB27299E9900F8AA1E /* LoginViewController.swift */,
-				3AA1362F272CECC700DB7C7D /* LoginViewController+UIExtension.swift */,
+				3AA1362F272CECC700DB7C7D /* Login+UIExtension.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -430,7 +430,7 @@
 			isa = PBXGroup;
 			children = (
 				3AA13600272BC4F500DB7C7D /* DashboardViewController.swift */,
-				3AC447AC272DB37200F7E78B /* DashboardViewController+UIExtension.swift */,
+				3AC447AC272DB37200F7E78B /* Dashboard+UIExtension.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -439,7 +439,7 @@
 			isa = PBXGroup;
 			children = (
 				3AA13602272BC50C00DB7C7D /* TransferViewController.swift */,
-				3AC447B0272DBEF800F7E78B /* TransferViewController+UIExtension.swift */,
+				3AC447B0272DBEF800F7E78B /* Transfer+UIExtension.swift */,
 			);
 			path = Transfer;
 			sourceTree = "<group>";
@@ -548,7 +548,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A2DB74C272A8ADD00F8AA1E /* Session.swift in Sources */,
-				3AC447AD272DB37200F7E78B /* DashboardViewController+UIExtension.swift in Sources */,
+				3AC447AD272DB37200F7E78B /* Dashboard+UIExtension.swift in Sources */,
 				3AA13617272BD9F500DB7C7D /* UIViewController+Extension.swift in Sources */,
 				3AA1360B272BC56900DB7C7D /* TransferViewModel.swift in Sources */,
 				3AA1362A272C647000DB7C7D /* UICollectionViewCell+Extension.swift in Sources */,
@@ -564,9 +564,9 @@
 				3AC447AF272DBAB900F7E78B /* UIStackView+Extension.swift in Sources */,
 				3AA1362E272CE3DF00DB7C7D /* ImageCell.swift in Sources */,
 				3A2DB6FC27299E9900F8AA1E /* LoginViewController.swift in Sources */,
-				3AA13630272CECC700DB7C7D /* LoginViewController+UIExtension.swift in Sources */,
+				3AA13630272CECC700DB7C7D /* Login+UIExtension.swift in Sources */,
 				3AA13615272BCECF00DB7C7D /* ViewModelProtocol.swift in Sources */,
-				3AC447B1272DBEF800F7E78B /* TransferViewController+UIExtension.swift in Sources */,
+				3AC447B1272DBEF800F7E78B /* Transfer+UIExtension.swift in Sources */,
 				3A65BAEB272B9DF500332E69 /* UIView+Extension.swift in Sources */,
 				3AA13632272D0DAE00DB7C7D /* Literals.swift in Sources */,
 				3AC447A3272D5DC800F7E78B /* PayeeCollectionCell.swift in Sources */,

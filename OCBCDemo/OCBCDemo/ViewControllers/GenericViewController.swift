@@ -9,9 +9,8 @@ import UIKit
 
 class GenericViewController: UIViewController {
     
-    var collectionView: UICollectionView = UICollectionView.init(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout.init())
-    
-    var activityindicator: UIActivityIndicatorView! = UIActivityIndicatorView.init(style: .medium)
+    var collectionView:UICollectionView = UICollectionView.init(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    var activityindicator:UIActivityIndicatorView = UIActivityIndicatorView.init(style: .medium)
 }
 
 extension GenericViewController: ViewModelProtocol {

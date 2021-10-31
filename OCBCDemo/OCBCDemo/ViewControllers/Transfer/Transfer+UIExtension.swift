@@ -38,29 +38,30 @@ extension TransferViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Logout", style: UIBarButtonItem.Style.plain, target: self, action: #selector(logout))
         navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: ICON.BACK), style: .done, target: self, action: #selector(back))
     }
-    
     @objc fileprivate func logout() {
         viewModel.logout()
     }
-    
     @objc fileprivate func back() {
         viewModel.back()
     }
 }
 
 extension TransferViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 4
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.row == 3 {
+        if indexPath.section == 3 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ButtonCell.reuseidentifier(), for: indexPath) as! ButtonCell
             if cell.button == nil {
                 cell.setupLayout()
                 cell.delegate = self
             }
-            cell.loadData("Send", indexPath: indexPath)
+            cell.loadData(LITERAL.SEND, indexPath: indexPath)
             return cell
         }
         else {
@@ -68,14 +69,15 @@ extension TransferViewController: UICollectionViewDataSource {
             if cell.textField == nil {
                 cell.setupLayout( isLeftLabel: true)
             }
-            switch indexPath.row {
+            switch indexPath.section {
             case 0:
-                cell.loadData(leftLabelText: "Account Number", text: viewModel.getAccountNumber(), placeholder: "Account Number", indexPath: indexPath)
+                cell.loadData(leftLabelText: viewModel.getAccountName(), text: viewModel.getAccountNumber(), placeholder: "", indexPath: indexPath)
             case 1:
-                cell.loadData(leftLabelText: "Amount", text: "345.68", placeholder: "Amount", indexPath: indexPath)
+                cell.loadData(leftLabelText: LITERAL.AMOUNT, text: "", placeholder: "", indexPath: indexPath)
             default:
-                cell.loadData(leftLabelText: "Description", text: "Test desc", placeholder: "Description", indexPath: indexPath)
+                cell.loadData(leftLabelText: LITERAL.DESC, text: "", placeholder: "", indexPath: indexPath)
             }
+            cell.textField.delegate = self
             return cell
         }
     }

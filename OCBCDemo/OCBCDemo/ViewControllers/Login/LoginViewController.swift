@@ -18,6 +18,20 @@ class LoginViewController: GenericViewController {
         viewController.setupUILayout()
         return viewController
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(showKeyboard(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(hideKeyboard(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    @objc func showKeyboard(notification:NSNotification) {
+        DispatchQueue.main.async {
+        }
+    }
+    @objc func hideKeyboard(notification:NSNotification) {
+        DispatchQueue.main.async {
+        }
+    }
 }
 
 extension LoginViewController: ButtonCellProtocol {
@@ -29,6 +43,29 @@ extension LoginViewController: ButtonCellProtocol {
             let usernameCell = collectionView.cellForItem(at: IndexPath.init(item: 0, section: 1)) as! TextFieldCell
             let passwordCell = collectionView.cellForItem(at: IndexPath.init(item: 0, section: 2)) as! TextFieldCell
             viewModel.doLogin(username: usernameCell.textField.text ?? "", password: passwordCell.textField.text ?? "")
+        }
+    }
+}
+
+//MARK: - UITextFieldDelegate functions
+extension LoginViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let tag = textField.tag
+        if tag < 3 {
+            let cell = collectionView.cellForItem(at: IndexPath.init(row: 0, section: tag+1)) as? TextFieldCell
+            if cell != nil {
+                cell?.textField.becomeFirstResponder()
+            }
+        }
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let tag = textField.tag
+        if tag == 2 {
+            buttonClick(IndexPath.init(row: 0, section: tag+1), and: ButtonCell.reuseidentifier())
         }
     }
 }

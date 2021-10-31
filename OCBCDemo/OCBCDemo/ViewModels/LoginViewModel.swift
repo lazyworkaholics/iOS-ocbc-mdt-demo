@@ -12,15 +12,18 @@ struct LoginViewModel {
     var delegate: ViewModelProtocol?
     var serviceManager: ServiceManagerProtocol!
     var router:RouterProtocol!
+    
     private var isNotUsernameEnabled = false
     
     init() {
+        
         serviceManager = ServiceManager.init()
         router = Router.sharedInstance
     }
     
     // MARK: - LoginViewController - Action Handlers
     func doLogin(username: String, password: String) {
+        
         if username != "", password != "" {
             delegate?.loadingActivity(true)
             

@@ -28,7 +28,6 @@ extension DashboardViewController {
     func setupBarButtons() {
         navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Logout", style: .done, target: self, action: #selector(logout))
     }
-    
     @objc fileprivate func logout() {
         viewModel.logout()
     }

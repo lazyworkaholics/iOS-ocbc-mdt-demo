@@ -11,15 +11,22 @@ struct LITERAL {
     struct DESCRIPTION {
         struct ERROR {
             static let LOGIN = "Username and Password cannot be nil"
+            static let EMPTY_ACC = "Account number and Amount cannot be empty"
+            static let EMPTY_DESC = "Give a valid description for the purpose of this transfer"
         }
     }
     static let OK = "OK"
+    static let OK_MESSAGE = "Click OK to confirm"
     static let CANCEL = "Cancel"
     static let ERROR = "Error"
     static let USERNAME = "Username"
     static let PASSWORD = "Password"
     static let LOGIN = "Login"
+    static let SEND = "Send"
     static let SUCCESSFUL = "SUCCESSFUL"
+    static let ACCOUNT_NO = "Account Number"
+    static let AMOUNT = "Amount"
+    static let DESC = "Description"
     static let NOTYOU = "Not you?"
     static let BALANCE = "Balance:"
     

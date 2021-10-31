@@ -14,6 +14,7 @@ struct DashboardViewModel {
     var router:RouterProtocol!
     
     init() {
+        
         serviceManager = ServiceManager.init()
         router = Router.sharedInstance
     }
