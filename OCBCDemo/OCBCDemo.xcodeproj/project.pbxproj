@@ -56,7 +56,7 @@
 		3AA13639272D179900DB7C7D /* ServiceManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13638272D179900DB7C7D /* ServiceManagerMock.swift */; };
 		3AA1363B272D17A400DB7C7D /* RouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1363A272D17A400DB7C7D /* RouterMock.swift */; };
 		3AA1363D272D22A800DB7C7D /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA1363C272D22A800DB7C7D /* LoginViewModelTests.swift */; };
-		3AA13641272D30C200DB7C7D /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13640272D30C200DB7C7D /* LoginViewControllerTests.swift */; };
+		3AA13641272D30C200DB7C7D /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA13640272D30C200DB7C7D /* ViewControllerTests.swift */; };
 		3AC447A1272D505B00F7E78B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447A0272D505B00F7E78B /* DataManager.swift */; };
 		3AC447A3272D5DC800F7E78B /* PayeeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447A2272D5DC800F7E78B /* PayeeCollectionCell.swift */; };
 		3AC447A5272D5E3900F7E78B /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447A4272D5E3900F7E78B /* TransactionCell.swift */; };
@@ -70,6 +70,7 @@
 		3AC447BA272E916A00F7E78B /* TransferViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447B9272E916A00F7E78B /* TransferViewModelTests.swift */; };
 		3AC447BC272E958000F7E78B /* ServiceManagerDashboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447BB272E958000F7E78B /* ServiceManagerDashboardTests.swift */; };
 		3AC447BF272E9D1000F7E78B /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447BE272E9D1000F7E78B /* RouterTests.swift */; };
+		3AC447C5272EC20400F7E78B /* PayeeViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC447C4272EC20400F7E78B /* PayeeViewTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,7 +134,7 @@
 		3AA13638272D179900DB7C7D /* ServiceManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManagerMock.swift; sourceTree = "<group>"; };
 		3AA1363A272D17A400DB7C7D /* RouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterMock.swift; sourceTree = "<group>"; };
 		3AA1363C272D22A800DB7C7D /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
-		3AA13640272D30C200DB7C7D /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
+		3AA13640272D30C200DB7C7D /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		3AC447A0272D505B00F7E78B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		3AC447A2272D5DC800F7E78B /* PayeeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeeCollectionCell.swift; sourceTree = "<group>"; };
 		3AC447A4272D5E3900F7E78B /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
@@ -147,6 +148,7 @@
 		3AC447B9272E916A00F7E78B /* TransferViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewModelTests.swift; sourceTree = "<group>"; };
 		3AC447BB272E958000F7E78B /* ServiceManagerDashboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManagerDashboardTests.swift; sourceTree = "<group>"; };
 		3AC447BE272E9D1000F7E78B /* RouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
+		3AC447C4272EC20400F7E78B /* PayeeViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeeViewTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -421,7 +423,7 @@
 		3AA1363F272D30AF00DB7C7D /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				3AA13640272D30C200DB7C7D /* LoginViewControllerTests.swift */,
+				3AA13640272D30C200DB7C7D /* ViewControllerTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -457,6 +459,7 @@
 			isa = PBXGroup;
 			children = (
 				3AC447BE272E9D1000F7E78B /* RouterTests.swift */,
+				3AC447C4272EC20400F7E78B /* PayeeViewTests.swift */,
 			);
 			path = OtherTests;
 			sourceTree = "<group>";
@@ -610,6 +613,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AC447C5272EC20400F7E78B /* PayeeViewTests.swift in Sources */,
 				3A2DB753272AC8F300F8AA1E /* SessionModelTests.swift in Sources */,
 				3A2DB757272AE37A00F8AA1E /* TransferTests.swift in Sources */,
 				3AA1361C272C33CF00DB7C7D /* Identifiers.swift in Sources */,
@@ -623,7 +627,7 @@
 				3A65BAE3272AECA100332E69 /* NetworkManagerMock.swift in Sources */,
 				3AC447B8272E882C00F7E78B /* DashboardViewModelTests.swift in Sources */,
 				3A2DB755272AD69A00F8AA1E /* PayeeAndTransactionTests.swift in Sources */,
-				3AA13641272D30C200DB7C7D /* LoginViewControllerTests.swift in Sources */,
+				3AA13641272D30C200DB7C7D /* ViewControllerTests.swift in Sources */,
 				3A2DB73E272A556000F8AA1E /* NetworkManagerTests.swift in Sources */,
 				3A2DB741272A55FE00F8AA1E /* URLSessionMock.swift in Sources */,
 				3AC447BF272E9D1000F7E78B /* RouterTests.swift in Sources */,
