@@ -31,6 +31,19 @@ extension TransferViewController: ButtonCellProtocol {
     
     func buttonClick(_ indexPath: IndexPath, and reuseIdentifier: String) {
         
+        for cell in collectionView.visibleCells {
+            if cell.isKind(of: TextFieldCell.self) {
+                let refTextField = (cell as! TextFieldCell).textField
+                switch refTextField?.tag {
+                case 0:
+                    viewModel.setAccountNumber(refTextField!.text ?? "")
+                case 1:
+                    viewModel.setAmount(Double(refTextField!.text ?? "")!)
+                default:
+                    viewModel.setDescription(refTextField!.text ?? "")
+                }
+            }
+        }
         viewModel.onTransferClick()
     }
 }
@@ -54,14 +67,6 @@ extension TransferViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         
         let tag = textField.tag
-        switch tag {
-        case 0:
-            viewModel.setAccountNumber(textField.text ?? "")
-        case 1:
-            viewModel.setAmount(Double(textField.text ?? "")!)
-        default:
-            viewModel.setDescription(textField.text ?? "")
-        }
         if tag == 2 {
             buttonClick(IndexPath.init(row: 0, section: tag+1), and: ButtonCell.reuseidentifier())
         }

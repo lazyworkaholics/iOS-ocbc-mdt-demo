@@ -25,8 +25,10 @@ extension GenericViewController: ViewModelProtocol {
         DispatchQueue.main.async(execute: {() -> Void in
             if isShow {
                 self.activityindicator.startAnimating()
+                self.view.isUserInteractionEnabled = false
             } else {
                 self.activityindicator.stopAnimating()
+                self.view.isUserInteractionEnabled = true
             }
         })
     }

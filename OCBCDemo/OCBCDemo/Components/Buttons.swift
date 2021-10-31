@@ -18,7 +18,7 @@ class PrimaryButton: UIButton {
         let colorImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         setBackgroundImage(colorImage, for: .normal)
-        titleLabel?.textColor = UIColor.init(named: CUSTOM_COLOR.FONT.PRIMARY)
+        setTitleColor(UIColor.init(named: CUSTOM_COLOR.FONT.PRIMARY), for: .normal)
         layer.cornerRadius = 8.0
         layer.masksToBounds = true
     }
@@ -29,7 +29,7 @@ class TertiaryButton: UIButton {
     override func draw(_ rect: CGRect) {
         
         super.draw(rect)
-        titleLabel?.textColor = UIColor.init(named: CUSTOM_COLOR.FONT.TERTIARY)
+        setTitleColor(UIColor.init(named: CUSTOM_COLOR.FONT.TERTIARY), for: .normal)
     }
 }
 
