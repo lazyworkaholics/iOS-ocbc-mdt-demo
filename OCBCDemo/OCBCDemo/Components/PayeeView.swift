@@ -36,7 +36,7 @@ class PayeeView: UIView {
         
         imageView = UIImageView.init()
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage.init(named: ICON.USERNAME)
+        imageView.image = UIImage.init(named: ICON.PAYEE)
         stackView.addArrangedSubview(imageView)
         
         accountNameLabel = UILabel.init()

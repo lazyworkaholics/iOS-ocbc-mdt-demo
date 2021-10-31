@@ -107,7 +107,7 @@ extension LoginViewController: UICollectionViewDelegateFlowLayout {
         case 1, 2:
             return CGSize.init(width: window.rootViewController!.view.bounds.width, height: TextFieldCell.height)
         default:
-            return CGSize.init(width: window.rootViewController!.view.bounds.width, height: 100.0)
+            return CGSize.init(width: window.rootViewController!.view.bounds.width, height: 60)
         }
     }
 }

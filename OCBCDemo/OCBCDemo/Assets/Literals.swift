@@ -41,6 +41,7 @@ struct LITERAL {
 
 struct ICON {
     static let APPICON = "appIcon"
+    static let PAYEE = "payee"
     static let BACKGROUND = "background"
     static let BACK = "back"
     static let LAUNCH = "launch"

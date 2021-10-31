@@ -15,7 +15,7 @@ class KeyValueCell: UICollectionViewCell {
     
     var keyLabel: UILabel!
     var valueLabel: UILabel!
-    var accessoryButton: SecondaryButton?
+    var accessoryButton: TertiaryButton?
     
     func setupLayout(_ keyText:String, isButtonShown:Bool = false) {
         
@@ -26,17 +26,17 @@ class KeyValueCell: UICollectionViewCell {
         stackView.wrap(into: contentView, contentMode: .fill, with: .init(top: 8.0, left: 16.0, bottom: 8.0, right: 16.0))
         
         keyLabel = UILabel.init()
-        keyLabel.font = .boldSystemFont(ofSize: 12)
+        keyLabel.font = .boldSystemFont(ofSize: 17)
         keyLabel.text = keyText
-        keyLabel.textAlignment = .right
+        keyLabel.textAlignment = .left
         stackView.addArrangedSubview(keyLabel)
         
         valueLabel = UILabel.init()
-        valueLabel.setWidth(width: 140)
-        valueLabel.font = .boldSystemFont(ofSize: 18)
+        valueLabel.setWidth(width: 130)
+        valueLabel.font = .boldSystemFont(ofSize: 17)
         stackView.addArrangedSubview(valueLabel)
         if isButtonShown {
-            accessoryButton = SecondaryButton.init(type: .custom)
+            accessoryButton = TertiaryButton.init(type: .custom)
             accessoryButton?.setWidth(width: 120.0)
             stackView.addArrangedSubview(accessoryButton!)
             accessoryButton?.addTarget(self, action: #selector(onButtonClick), for: .touchUpInside)

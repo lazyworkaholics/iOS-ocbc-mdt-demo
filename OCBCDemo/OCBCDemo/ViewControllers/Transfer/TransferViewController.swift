@@ -34,13 +34,15 @@ extension TransferViewController: ButtonCellProtocol {
         for cell in collectionView.visibleCells {
             if cell.isKind(of: TextFieldCell.self) {
                 let refTextField = (cell as! TextFieldCell).textField
-                switch refTextField?.tag {
-                case 0:
-                    viewModel.setAccountNumber(refTextField!.text ?? "")
-                case 1:
-                    viewModel.setAmount(Double(refTextField!.text ?? "")!)
-                default:
-                    viewModel.setDescription(refTextField!.text ?? "")
+                if refTextField?.text != "" {
+                    switch refTextField?.tag {
+                    case 0:
+                        viewModel.setAccountNumber(refTextField!.text ?? "")
+                    case 1:
+                        viewModel.setAmount(Double(refTextField!.text ?? "")!)
+                    default:
+                        viewModel.setDescription(refTextField!.text ?? "")
+                    }
                 }
             }
         }
@@ -62,14 +64,6 @@ extension TransferViewController: UITextFieldDelegate {
         }
         textField.resignFirstResponder()
         return true
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        
-        let tag = textField.tag
-        if tag == 2 {
-            buttonClick(IndexPath.init(row: 0, section: tag+1), and: ButtonCell.reuseidentifier())
-        }
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

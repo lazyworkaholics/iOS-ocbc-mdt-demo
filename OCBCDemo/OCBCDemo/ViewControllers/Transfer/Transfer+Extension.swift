@@ -38,8 +38,12 @@ extension TransferViewController {
     
     func setupBarButtons() {
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Logout", style: UIBarButtonItem.Style.plain, target: self, action: #selector(logout))
-        navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: ICON.BACK), style: .done, target: self, action: #selector(back))
+        let rigthBarButton = UIBarButtonItem.init(title: "Logout", style: .done, target: self, action: #selector(logout))
+        rigthBarButton.tintColor = .white
+        navigationItem.rightBarButtonItem = rigthBarButton
+        let leftBarButton = UIBarButtonItem.init(image: UIImage.init(named: ICON.BACK), style: .done, target: self, action: #selector(back))
+        leftBarButton.tintColor = .white
+        navigationItem.leftBarButtonItem = leftBarButton
     }
     
     @objc fileprivate func logout() {
