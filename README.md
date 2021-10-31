@@ -4,6 +4,8 @@ Design Pattern - Followed MVVM to architect the project. View Models are used to
 
 <img width="845" alt="Screenshot 2021-10-31 at 9 42 22 PM" src="https://user-images.githubusercontent.com/4577849/139588196-0eee4489-fc7b-4648-8249-1e677178b5f8.png">
 
+<img width="1235" alt="Screenshot 2021-11-01 at 12 34 44 AM" src="https://user-images.githubusercontent.com/4577849/139593447-9759682e-d864-423b-bb3f-18ee6415291f.png">
+
 Test Driven Development - Code is covered with unit tests using XCTest frameworks. - Code coverage is 81.8%.
 
 <img width="1268" alt="Screenshot 2021-10-31 at 9 50 57 PM" src="https://user-images.githubusercontent.com/4577849/139588259-7515e08c-bd51-4037-b78e-0705c0e37866.png">
