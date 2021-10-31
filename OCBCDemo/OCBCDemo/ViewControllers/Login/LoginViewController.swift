@@ -18,20 +18,6 @@ class LoginViewController: GenericViewController {
         viewController.setupUILayout()
         return viewController
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(showKeyboard(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(hideKeyboard(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    @objc func showKeyboard(notification:NSNotification) {
-        DispatchQueue.main.async {
-        }
-    }
-    @objc func hideKeyboard(notification:NSNotification) {
-        DispatchQueue.main.async {
-        }
-    }
 }
 
 extension LoginViewController: ButtonCellProtocol {
